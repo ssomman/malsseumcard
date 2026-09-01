@@ -1745,7 +1745,9 @@
 
   function getTodayVerse() {
     if (!VERSES.length) return null;
-    const dayIndex = Math.floor(Date.now() / 86400000);
+    const now = new Date();
+    const localMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    const dayIndex = Math.floor(localMidnight / 86400000);
     return VERSES[dayIndex % VERSES.length];
   }
   function renderHome() {
