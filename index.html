@@ -1,0 +1,1822 @@
+<meta charset="UTF-8" />
+<title>말씀카드</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIuunkOyUgOy5tOuTnCIsICJzaG9ydF9uYW1lIjogIuunkOyUgOy5tOuTnCIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjRURFRUU0IiwgInRoZW1lX2NvbG9yIjogIiM0NjU0OEMiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FJQUFBRGR2dnRRQUFBRGIwbEVRVlI0bk8zYzBXM2JNQlNHVWFmb2JPRUM2U1JkSTUya0UzQzd2Z1ZvWGRodWZxc1U3ejNuUFFZZGZhQ3VMTmt2cjIvdkYvaXNMNS8rU3hBUUtUc1FFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBTkFwby92MSthbVp1ODVhK1huZitoNDl1UHkvN21KcTNzSFZDWnF1Yk91VlFMNk1FanRDcXBXYXVWTGdFdDJhaG1nMWI2QnZUMHF0cm1jcTF2UUgrbGpKcVg4WnpXeGp2UTllbG1vLzFqL0w3NGpWWmVKNkFISjVqbHgyYWMrMk9GVUttQWxtOVVvM1FyVFFNNmJxTWEvWEs1MWpHZ0d6VThtSkYwUHJnS0l5SWdJZ0lpSWlBaTNRTUtMK25uNmcrWmxtdDBGWGJRd1o0YlBwUDBSRFVEV3I0eHpEWlZiUi9ROGxhYVY5VjlCaUlrSUhxZnd2N0owODhYNDVUMy8vK25zZ0V0bkMxR3A2b3FCTFRGSERxS1ZyWDlETFJGUFNVWFh5UWcxaElRa2U0QnVSY1dxakJFMzNiMG9EcHZ2bjZCS2FkNFFDZS9rSm4zbHJkN1lkMVBZWVFFUkVSQTlKNkI3anAweUJqM1h2emtJMXF1UWtCbm5rUEh6YlVWeUd2N1U5aVo2Nm05K0NJQnNaYUFpUFFONklueng5eC9sR2s5UkovemhzYllmNzVwR3RCSjlvTlo4VHNZQlFNNlNTNXRONnErTXhCUElTQjZuOEllZDl6Sll1ejhlN0dobWdFdEh5eEcwZTlnMUF4b2VTNmRONnJ0WjZCZDZxbTMrQ0lCc1phQWlBaUlpSUNJQ0lpSWdJZ0lpSWlBaUFpSWlJQ0lDSWlJZ0lnSWlLNEJGWGdXb3NBYjJmdDVvRTJmVVo4N0YxTXFvQzJTbW9WeXFSL1EzZU4zZEUremRDNGRBenAwaTVyTmNybldMcUNuUktDYkR5K3ZiKytYRGRVN2hHUDFyTllyb0FKSmpUMkxLUnZReVpNYUpYTHBGZERDbmtiUlhGb0hkRnhTbzAwdTExb0g5T21rT2hmekJ3RzEvbm1vbklEb2VqZWVNeEFRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJFUkVRRVFFUkVSQVJBUkVSRUJFQkVSRVFFUUVSRVJBUkFSRVJFQkVCRVJFUUVRRVJFUkFSQVJFUkVCRUJjVW44QXBaWnlpSWFrT01rQUFBQUFFbEZUa1N1UW1DQyIsICJzaXplcyI6ICIxOTJ4MTkyIiwgInR5cGUiOiAiaW1hZ2UvcG5nIn0sIHsic3JjIjogImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBZ0FBQUFJQUNBSUFBQUI3R2tPdEFBQUtVVWxFUVZSNG5PM2QzWEhiUmdCRzBTU1QycXdHb2tyVWhsV0pLbEIzR1k4OXRtT0hra2ppWjNmdk9VOStKRUhwdXdJQjBuOSsrdWZ6SHdEMC9IWDJBd0RnSEFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFBQlJBZ0FRSlFBQVVRSUFFQ1VBQUZFQ0FCQWxBQUJSQWdBUUpRQUFVUUlBRUNVQUFGRUNNTEhYbDZlekh3SjFmZ2luOXZmWkQ0RHRmLzBlSHA4ZFZqWm42OWNqQUlsZlZFbmcvcDhpMWlNQUNVNFV1UGJIZ3dJQjZGS0ZJRnZQendTQS8xQ0ZsWmg3M2lZQXZNOUZoZkhaZW00Z0FOekNpY0tKYkQxYkVRQTJvd3A3TVBmc1J3RFlseXJjZWF4Z1B3TEFDVnhVc1BXTVFBQVl3c0luQ3JhZVlRa0E0NXF4Q3VhZWlRZ0FreG1uQ3JhZTJRa0FLOWo3b29LdFowa0N3SnJ1T1ZFdzkwUUlBQ0dXSFg3bVA0UUJpQklBZ0NnQkFJZ1NBSUFvRjRGei92ZE9HRmRIZzM3L1NmQmpVQ01BZktFS3l4djhFOVNjUWdDNFNCVW1aZXY1SUFIZ090NDNHSXF0NXg0Q3dMMmNLQnpEMXJNNUFXQVhxckRIQVlSdENRREhVWVdQSHhZNGdBQndzdFJGQlZ2UFVBU0E0U3h6b21EdUdad0FNSWZCcTJEcm1aRUFNTEZmWnZld0hwaDcxdUM3Z0FDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBSmpET0YvOHVkSkRKYzYzZ1RLV05kYnowclB3TmFJTVJRQTR4eHBEZnkxaFlDZ0N3TDZhUTM4dFllQVVBc0JtYlAweGg5VDdTR3hGQUpobTZGOWZuc2JmdmdNT2p0TUZ0aUlBWE9Rditya0lBOWNTQUF6OTRvU0JTM3dPQUNCS0FBQ2lCQUFnU2dCd1cySFIrUGRUY1FBQkFJZ1NBR1l5K0oycGd6ODgrSVVBQUVRSkFFQ1VBQUJFK1NRd2c1cnhOcFZMajltMUFjWWtBSnhzeHFHL2xqQXdKZ0hnaTRmSDU3My9TaTBNL1N4aDhGcndsUUN3UGZ1eXh3SDBQaEtiRXdCdVoraVA1SDBrTmljQXZNL1FqMHdZdUprQThJT2hYNGt3OEM2ZkErQWI2eC9oaGVZN0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BV0FPRTMwUndrUVBsVGdmQkdNZ3kwem5HMC9FYmZpTVF3QTQyaklyZnh0dFlCd0N3QzdpSzM4YmJlQmdBc0NOVFB3NFI5dmJTdHhHQUpobTVWOWZuc1pmdWxPT21GTUhiaU1BakxYeWJFc2JlSVBiUUFHaUJBQWdTZ0FBb2dRQTk1QVVqWDg1blFNSUFFQ1VBQUJFQ1FBekdmeU8xY0VmSHZ4Q0FBQ2lCQUFnU2dBQW9ud1ZCQ09hOUNiRk54NjJ5d01NU0FENDR1SHgrZmlGbW5UbEYyaEQ2c2p6QmdGZ1I0Ym0vcVBrMUlIOUNBRDNzdktkVXdjV0l3QjhpSlVma0Rad0p3SGdCeXUvREczZ0k5d0d5amZXUDhJTHpYY0NBQkFsQUFCUkFnQVFKUUFBVVFJQUVDVUFBRkVDQUJBbEFJeG9zUzg1V096cHNBeWZCT1pNbldXODlFeDlMSXNUQ1FCSDZBejl0WVNCRXdrQVd6TDBleDlKWnd4c1NBQzRtcFVmOCtCckE5Y1NBQVlkK3RlWHB6VVc3YkRENktTQmF3a0EvcUpmbkRCd2lkdEFBYUlFQUNCS0FBQ2lCQUIzanhTdGNZR2RPd2tBUUpRQUFFUUpBT05hNEJObkN6d0ZGaVlBQUZFQ0FCQWxBQUJSdmdxQ0lheDZWK0tsNStYYUFDTVFBTDU0ZUh3K1pwSldIZnE1d3VCVjRDc0JZSHYyWlk5RDU2U0J6UWtBdHpQMFIvSnVFcHNUQU41bjZFY21ETnhNQVBqQjBLOUVHSGlYMjBENXh2cEhlS0g1VGdBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJRW9BQUtJRUFDQktBQUNpQkFBZ1NnQUFvZ1FBSUVvQUFLSUVBQ0JLQUFDaUJBQWdTZ0FBb2dRQUlFb0FBS0lFQUNCS0FBQ2lCQUFnU2dBQW9nUUFJT3J2c3g4QVIzdDllZnIrNzRmSFp5OUEzTTgvRDlRSVFOcnZ2L3lTc0Raeno4OEVnUCtRaEpXWWU5NG1BTHhERW1aaDdybVdBSEExU1JpQnVlZCtBc0FHSkdGdjVwNDlDQUM3a0lUTkR5QnNUZ0E0aUNSY2RYRGdBQUxBYWJKSk1QY01RZ0FZeUpKSk1QY01Td0FZMm5SSk1QZE1SQUNZekZCSk1QZE1UUUNZM3ZFcmJQZFpnMjhEQllnU0FJQ29Qei85OC9uc3g4Qm12RFhCM2dhL0NNOVZCR0J4a3NBOXpQM2FCQ0JIRXJqRTNOY0lBSklRWmU0UkFQNkhzNFQxbUh0K0p3QjhpQ1RNeGR6ekVRTEFqU1JoSE9hZTJ3Z0FtNUdFWTVoN3RpSUE3RWdTN21mdTJZOEFjQ2hKZUpmRjV6QUN3TW5pU1REM25FZ0FHTTdDU1REM0RFVUFtTUNrU1REM0RFNEFtTktBU1REM1RFY0FXTVRCU1REM0xFQUFXTmFHU1REM0xFa0FTTGd0Qm5hZnRma2Z3UUNpbkFFQVJEa0RBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnQ2dCQUlnU0FJQW9BUUNJRWdDQUtBRUFpQklBZ0NnQkFJZ1NBSUFvQVFDSUVnQ0FLQUVBaUJJQWdDZ0JBSWdTQUlBb0FRQ0lFZ0NBS0FFQWlCSUFnRCthL2dXcmFQTGxwYjN5Y1FBQUFBQkpSVTVFcmtKZ2dnPT0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyJ9XX0=" />
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADKElEQVR4nO3dzXUaQRCFUeTj2NQJyJE4DTkSR9DZeeGd4aEfD6Ou6nuXWsCI+ahuYA48Pb+8XuCWbzf/CuLgHpODSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4qBnH/P3z0tpc+x/8fqn58I0fvy6lzLU7KBnHhx7rFYqZBSPoFscKY2Y26qB/HA8aM7N7BFvHcdO2p7zJq5U1dxX7qDc5bvax2hgYIeLVjrNbHKudjNF3mDWJ44QxM/pGsGkcb57mN0MZ+zVRdUPKmcRBJA4icRCJg2i7OD79zscs9f7VITq/lD38dM5VrxN4kD5xfNUze17db5tcSsax+ISfXQbMdnsOmk+O9zvw+ToqfBp8rFZxnD+6x9U9dsqlahzLLuGj0YApuedYtow2B1w4Ds4hDqLt4vD2ef8N6R2P2/3Nu7dcdGPRLY41N/+zXTrbLSu8nzjotay86REzfNy9zTVXuk3jWG0JHx3TKbmsrFZGvwMuHAfnEAeROIg2iuOQXeGsubXc69XKF568me+i6MazVRzLPn1nr242Wlb4KHHQa1m576EDfOQbX3ax2y6OBZfw0a6bksvKgmU0O+DCcXAOcRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHXa7n+HthRMVPwGfBSzqKxVHlK4JnwRSaxLHad5DPFil0juOcXGbTDraL45BTO3eq4R9Pzy+vlzqqn6qx0saoWxy1ihmlUugZxwq5jOIdbBTHo3MZHVPYN47/KWbskcK1rePY5KfaPk0cRD54IxIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxMEl+QNi8LFYQUSUmwAAAABJRU5ErkJggg==" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="말씀카드" />
+<meta name="theme-color" content="#46548C" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EDEEE4;
+    --surface: #FBFAF4;
+    --surface-2: #E3E3D3;
+    --ink: #23262F;
+    --ink-soft: #6B6D61;
+    --gold: #9C6D1E;
+    --gold-soft: #C99A4A;
+    --indigo: #46548C;
+    --line: rgba(35, 38, 47, 0.16);
+    --shadow: rgba(60, 50, 20, 0.22);
+
+    --cat-love: #9C2424; --cat-salvation: #9C4C24; --cat-providence: #9C7424;
+    --cat-faith: #9C9C24; --cat-peace: #749C24; --cat-wisdom: #4C9C24;
+    --cat-courage: #249C24; --cat-fruit: #249C4C; --cat-prayer: #249C74;
+    --cat-word: #249C9C; --cat-thanks: #24749C; --cat-forgive: #244C9C;
+    --cat-endure: #24249C; --cat-hope: #4C249C; --cat-devotion: #74249C;
+    --cat-mission: #9C249C; --cat-creation: #9C2474; --cat-repent: #9C244C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #11152A;
+      --surface: #1C2142;
+      --surface-2: #262C52;
+      --ink: #F1EFE6;
+      --ink-soft: #AEB1C9;
+      --gold: #E8B85B;
+      --gold-soft: #F0CB82;
+      --indigo: #9AAAF0;
+      --line: rgba(241, 239, 230, 0.16);
+      --shadow: rgba(0, 0, 0, 0.55);
+
+      --cat-love: #DF7A7A; --cat-salvation: #DF9C7A; --cat-providence: #DFBE7A;
+      --cat-faith: #DFDF7A; --cat-peace: #BEDF7A; --cat-wisdom: #9CDF7A;
+      --cat-courage: #7ADF7A; --cat-fruit: #7ADF9C; --cat-prayer: #7ADFBE;
+      --cat-word: #7ADFDF; --cat-thanks: #7ABEDF; --cat-forgive: #7A9CDF;
+      --cat-endure: #7A7ADF; --cat-hope: #9C7ADF; --cat-devotion: #BE7ADF;
+      --cat-mission: #DF7ADF; --cat-creation: #DF7ABE; --cat-repent: #DF7A9C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #11152A;
+    --surface: #1C2142;
+    --surface-2: #262C52;
+    --ink: #F1EFE6;
+    --ink-soft: #AEB1C9;
+    --gold: #E8B85B;
+    --gold-soft: #F0CB82;
+    --indigo: #9AAAF0;
+    --line: rgba(241, 239, 230, 0.16);
+    --shadow: rgba(0, 0, 0, 0.55);
+
+    --cat-love: #DF7A7A; --cat-salvation: #DF9C7A; --cat-providence: #DFBE7A;
+    --cat-faith: #DFDF7A; --cat-peace: #BEDF7A; --cat-wisdom: #9CDF7A;
+    --cat-courage: #7ADF7A; --cat-fruit: #7ADF9C; --cat-prayer: #7ADFBE;
+    --cat-word: #7ADFDF; --cat-thanks: #7ABEDF; --cat-forgive: #7A9CDF;
+    --cat-endure: #7A7ADF; --cat-hope: #9C7ADF; --cat-devotion: #BE7ADF;
+    --cat-mission: #DF7ADF; --cat-creation: #DF7ABE; --cat-repent: #DF7A9C;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Gowun Dodum', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  .app {
+    width: 100%;
+    max-width: 460px;
+    padding: 28px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .home-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+  }
+  .home-btn svg { width: 15px; height: 15px; }
+  .home-btn.active {
+    background: var(--indigo);
+    border-color: var(--indigo);
+    color: var(--paper);
+  }
+  .wordmark {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+  }
+  .subcount {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .chip-row {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+  .chip-row::-webkit-scrollbar { height: 4px; }
+  .chip-row::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+
+  .chip {
+    flex: none;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 14px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .chip.active {
+    color: var(--paper);
+    background: var(--indigo);
+    border-color: var(--indigo);
+  }
+  .chip.add-chip {
+    border-style: dashed;
+    color: var(--indigo);
+    border-color: var(--indigo);
+    font-weight: 600;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 16, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 60;
+  }
+  .modal-backdrop.open { display: flex; }
+  .modal-panel {
+    width: 100%;
+    max-width: 380px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 24px 40px -18px var(--shadow);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .modal-title {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 0 0 4px;
+  }
+  .field-label {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .lookup-status {
+    font-size: 12px;
+    margin: -6px 0 0;
+    min-height: 15px;
+    color: var(--ink-soft);
+  }
+  .lookup-status.found { color: var(--indigo); }
+  .lookup-status.missing { color: #b34747; }
+  .auto-tag {
+    font-size: 11px;
+    color: var(--indigo);
+    font-weight: 600;
+  }
+  .modal-panel input, .modal-panel textarea, .modal-panel select {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    width: 100%;
+  }
+  .modal-panel textarea { resize: vertical; line-height: 1.5; }
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 6px;
+  }
+  .modal-actions .ctrl-btn { height: 42px; padding: 0 18px; width: auto; }
+
+  .progress-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  #posLabel {
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    flex: none;
+  }
+  .progress-track {
+    flex: 1;
+    height: 3px;
+    background: var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+
+  .stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    margin: 6px 0 4px;
+  }
+  .deck-shadow {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+  }
+  .deck-shadow-2 { transform: rotate(5deg) translateY(10px); opacity: 0.35; }
+  .deck-shadow-1 { transform: rotate(-4deg) translateY(6px); opacity: 0.55; }
+
+  .card {
+    position: absolute;
+    inset: 0;
+    perspective: 1400px;
+    cursor: pointer;
+    touch-action: pan-y;
+  }
+  .card:focus-visible .card-inner { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(.2,.8,.2,1);
+  }
+  .card.flipped .card-inner { transform: rotateY(180deg); }
+  @media (prefers-reduced-motion: reduce) {
+    .card-inner { transition: none; }
+  }
+
+  .card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 30px -14px var(--shadow);
+    border-top: 3px solid var(--accent, var(--gold));
+    padding: 30px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-back { transform: rotateY(180deg); overflow-y: auto; }
+
+  .category-chip {
+    align-self: flex-start;
+    font-size: 12px;
+    color: var(--accent, var(--indigo));
+    border: 1px solid var(--accent, var(--indigo));
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+
+  .card-front {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+  .card-front .category-chip { position: absolute; top: 30px; left: 26px; }
+  .icon-wrap { width: 78px; height: 78px; color: var(--accent, var(--gold)); }
+  .icon-wrap svg { width: 100%; height: 100%; }
+  .reference {
+    font-family: 'Gowun Batang', serif;
+    font-weight: 700;
+    font-size: clamp(23px, 6.4vw, 30px);
+    word-break: keep-all;
+    text-wrap: balance;
+    color: var(--accent, var(--ink));
+  }
+  .hint {
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  .card-back {
+    justify-content: center;
+    gap: 22px;
+  }
+  .verse-text {
+    font-family: 'Gowun Batang', serif;
+    font-size: clamp(18px, 5.6vw, 23px);
+    line-height: 1.66;
+    word-break: keep-all;
+    text-align: center;
+    margin: 0;
+  }
+  .reference-small {
+    font-size: 14px;
+    text-align: center;
+    color: var(--accent, var(--gold));
+    margin: 0;
+  }
+
+  .mastery-btn, .favorite-btn, .delete-btn {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .mastery-btn { top: 22px; right: 22px; }
+  .favorite-btn { top: 22px; right: 64px; }
+  .delete-btn { bottom: 22px; left: 22px; display: none; color: #b34747; }
+  .delete-btn.visible { display: flex; }
+  .mastery-btn.is-mastered {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--surface);
+  }
+  .favorite-btn.is-favorite {
+    background: #c14a5f;
+    border-color: #c14a5f;
+    color: #fff;
+  }
+  .favorite-btn svg { fill: none; }
+  .favorite-btn.is-favorite svg { fill: currentColor; }
+  .mastery-btn svg, .favorite-btn svg, .delete-btn svg { width: 16px; height: 16px; }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 56px 1fr 56px;
+    gap: 10px;
+  }
+  .ctrl-btn {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 14px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .ctrl-btn svg { width: 18px; height: 18px; }
+  .ctrl-btn-primary {
+    background: var(--indigo);
+    color: var(--paper);
+    border-color: var(--indigo);
+    font-weight: 600;
+  }
+
+  .footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .switch-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  .switch-label input { accent-color: var(--gold); width: 15px; height: 15px; }
+  .text-btn {
+    background: none;
+    border: none;
+    color: var(--indigo);
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 0;
+  }
+
+  .empty-state {
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    border: 1px dashed var(--line);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    padding: 30px;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+
+  .home-view {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .home-eyebrow {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .home-stage.stage { aspect-ratio: 3 / 4; margin: 0 0 4px; }
+  .home-stats {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+  .home-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .study-view {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .back-to-list-btn { align-self: flex-start; padding: 0; margin: -8px 0 -8px; }
+  .verse-list {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 62vh;
+    overflow-y: auto;
+  }
+  .verse-list.visible { display: flex; }
+  .verse-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Gowun Dodum', sans-serif;
+    color: var(--ink);
+  }
+  .verse-list-item .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+  .verse-list-item .info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .verse-list-item .ref { font-family: 'Gowun Batang', serif; font-weight: 700; font-size: 14px; }
+  .verse-list-item .preview {
+    font-size: 12px;
+    color: var(--ink-soft);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .verse-list-empty {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 14px;
+    padding: 40px 20px;
+  }
+  .church-footer {
+    margin: 6px 0 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+</style>
+
+<div class="app">
+  <div class="app-header">
+    <div class="header-left">
+      <button class="home-btn" id="homeBtn" aria-label="홈">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"></path></svg>
+      </button>
+      <span class="wordmark">말씀카드</span>
+    </div>
+    <span class="subcount" id="totalLabel"></span>
+  </div>
+
+  <div class="home-view" id="homeView">
+    <p class="home-eyebrow">오늘의 암송 구절</p>
+    <div class="stage home-stage">
+      <div class="deck-shadow deck-shadow-2"></div>
+      <div class="deck-shadow deck-shadow-1"></div>
+      <div class="card" id="homeCard" tabindex="0" role="button" aria-label="탭하여 말씀 확인">
+        <button class="mastery-btn" id="homeMasteryBtn" aria-pressed="false" aria-label="암송 완료 표시">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </button>
+        <button class="favorite-btn" id="homeFavoriteBtn" aria-pressed="false" aria-label="즐겨찾기">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-10-9.3C.4 8 1.7 4.5 5 3.5c2.1-.6 4.2.3 5.6 2.1l1.4 1.8 1.4-1.8C14.8 3.8 16.9 2.9 19 3.5c3.3 1 4.6 4.5 3 7.7-2.5 4.7-10 9.3-10 9.3Z"></path></svg>
+        </button>
+        <div class="card-inner">
+          <div class="card-face card-front">
+            <span class="chip category-chip" id="homeCategory"></span>
+            <div class="icon-wrap" id="homeIcon"></div>
+            <p class="reference" id="homeRef"></p>
+            <p class="hint">탭하여 말씀 확인</p>
+          </div>
+          <div class="card-face card-back">
+            <p class="verse-text" id="homeText"></p>
+            <p class="reference-small" id="homeRefSmall"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="home-stats" id="homeStats"></p>
+    <button class="ctrl-btn ctrl-btn-primary" id="homeStartBtn">전체 구절 학습하기</button>
+    <div class="home-actions">
+      <button class="ctrl-btn" id="homeFavoritesBtn">즐겨찾기</button>
+      <button class="ctrl-btn" id="homeMasteredBtn">암송 완료</button>
+      <button class="ctrl-btn" id="homeAddBtn">말씀 추가</button>
+    </div>
+  </div>
+
+  <div class="study-view" id="studyView">
+  <div class="chip-row" id="chipRow"></div>
+
+  <button class="text-btn back-to-list-btn" id="backToListBtn" style="display:none;">← 목록으로</button>
+
+  <div class="progress-row" id="progressRow">
+    <span id="posLabel">0 / 0</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <div class="verse-list" id="verseList"></div>
+
+  <div class="stage" id="stage">
+    <div class="deck-shadow deck-shadow-2"></div>
+    <div class="deck-shadow deck-shadow-1"></div>
+    <div class="card" id="card" tabindex="0" role="button" aria-label="탭하여 말씀 확인, 좌우로 넘기면 다음 카드">
+      <button class="mastery-btn" id="masteryBtn" aria-pressed="false" aria-label="암송 완료 표시">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </button>
+      <button class="favorite-btn" id="favoriteBtn" aria-pressed="false" aria-label="즐겨찾기">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-10-9.3C.4 8 1.7 4.5 5 3.5c2.1-.6 4.2.3 5.6 2.1l1.4 1.8 1.4-1.8C14.8 3.8 16.9 2.9 19 3.5c3.3 1 4.6 4.5 3 7.7-2.5 4.7-10 9.3-10 9.3Z"></path></svg>
+      </button>
+      <button class="delete-btn" id="deleteBtn" aria-label="이 카드 삭제" title="삭제">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 20 7"></polyline><path d="M6 7l1 13a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-13"></path><path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"></path></svg>
+      </button>
+      <div class="card-inner">
+        <div class="card-face card-front">
+          <span class="chip category-chip" id="frontCategory"></span>
+          <div class="icon-wrap" id="frontIcon"></div>
+          <p class="reference" id="frontRef"></p>
+          <p class="hint">탭하여 말씀 확인</p>
+        </div>
+        <div class="card-face card-back">
+          <p class="verse-text" id="backText"></p>
+          <p class="reference-small" id="backRef"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <p id="emptyMessage">이 조건에 맞는 카드를 모두 학습했어요.</p>
+    <button class="text-btn" id="emptyResetBtn">외운 카드 다시 포함하기</button>
+  </div>
+
+  <div class="controls" id="controls">
+    <button class="ctrl-btn" id="prevBtn" aria-label="이전 카드">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="ctrl-btn ctrl-btn-primary" id="flipBtn">뒤집기</button>
+    <button class="ctrl-btn" id="nextBtn" aria-label="다음 카드">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </div>
+
+  <div class="footer-row">
+    <label class="switch-label">
+      <input type="checkbox" id="reviewOnly" />
+      <span>외운 카드 숨기기</span>
+    </label>
+    <button class="text-btn" id="shuffleBtn">순서 섞기</button>
+  </div>
+  </div>
+
+  <p class="church-footer">세움교회</p>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-panel">
+    <h2 class="modal-title">내 구절 추가하기</h2>
+    <label class="field-label" for="inputRef">성경 참조</label>
+    <input type="text" id="inputRef" placeholder="예: 요한복음 3:16, 요 3:16" />
+    <p class="lookup-status" id="lookupStatus"></p>
+    <label class="field-label" for="inputText">본문</label>
+    <textarea id="inputText" rows="4" placeholder="참조를 입력하면 자동으로 채워져요 (찾지 못하면 직접 입력)"></textarea>
+    <label class="field-label" for="inputCategory">카테고리 <span id="categoryAutoTag" class="auto-tag"></span></label>
+    <select id="inputCategory"></select>
+    <div class="modal-actions">
+      <button class="text-btn" id="modalCancel">취소</button>
+      <button class="ctrl-btn ctrl-btn-primary" id="modalSubmit">카드 만들기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const VERSES = [
+    {"id":"jhn3_16","reference":"요한복음 3:16","text":"하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 그를 믿는 자마다 멸망하지 않고 영생을 얻게 하려 하심이라","category":"하나님의 사랑"},
+    {"id":"jhn1_1","reference":"요한복음 1:1","text":"태초에 말씀이 계시니라 이 말씀이 하나님과 함께 계셨으니 이 말씀은 곧 하나님이시니라","category":"하나님의 사랑"},
+    {"id":"1jn4_9","reference":"요한일서 4:9","text":"하나님의 사랑이 우리에게 이렇게 나타난 바 되었으니 하나님이 자기의 독생자를 세상에 보내심은 그로 말미암아 우리를 살리려 하심이라","category":"하나님의 사랑"},
+    {"id":"rom5_8","reference":"로마서 5:8","text":"우리가 아직 죄인 되었을 때에 그리스도께서 우리를 위하여 죽으심으로 하나님께서 우리에 대한 자기의 사랑을 확증하셨느니라","category":"하나님의 사랑"},
+    {"id":"jhn14_6","reference":"요한복음 14:6","text":"예수께서 이르시되 내가 곧 길이요 진리요 생명이니 나로 말미암지 않고는 아버지께로 올 자가 없느니라","category":"구원의 확신"},
+    {"id":"rom10_9","reference":"로마서 10:9","text":"네가 만일 네 입으로 예수를 주로 시인하며 또 하나님께서 그를 죽은 자 가운데서 살리신 것을 네 마음에 믿으면 구원을 받으리라","category":"구원의 확신"},
+    {"id":"eph2_8_9","reference":"에베소서 2:8-9","text":"너희는 그 은혜에 의하여 믿음으로 말미암아 구원을 받았으니 이것은 너희에게서 난 것이 아니요 하나님의 선물이라 행위에서 난 것이 아니니 이는 누구든지 자랑하지 못하게 함이라","category":"구원의 확신"},
+    {"id":"1jn1_9","reference":"요한일서 1:9","text":"만일 우리가 우리 죄를 자백하면 그는 미쁘시고 의로우사 우리 죄를 사하시며 우리를 모든 불의에서 깨끗하게 하실 것이요","category":"구원의 확신"},
+    {"id":"2co5_17","reference":"고린도후서 5:17","text":"그런즉 누구든지 그리스도 안에 있으면 새로운 피조물이라 이전 것은 지나갔으니 보라 새 것이 되었도다","category":"구원의 확신"},
+    {"id":"eph1_7","reference":"에베소서 1:7","text":"우리는 그리스도 안에서 그의 은혜의 풍성함을 따라 그의 피로 말미암아 속량 곧 죄 사함을 받았느니라","category":"구원의 확신"},
+    {"id":"tit3_5","reference":"디도서 3:5","text":"우리를 구원하시되 우리가 행한 바 의로운 행위로 말미암지 아니하고 오직 그의 긍휼하심을 따라 중생의 씻음과 성령의 새롭게 하심으로 하셨나니","category":"구원의 확신"},
+    {"id":"jhn5_24","reference":"요한복음 5:24","text":"내가 진실로 진실로 너희에게 이르노니 내 말을 듣고 또 나 보내신 이를 믿는 자는 영생을 얻었고 심판에 이르지 아니하나니 사망에서 생명으로 옮겼느니라","category":"구원의 확신"},
+    {"id":"rom8_28","reference":"로마서 8:28","text":"우리가 알거니와 하나님을 사랑하는 자 곧 그의 뜻대로 부르심을 입은 자들에게는 모든 것이 합력하여 선을 이루느니라","category":"하나님의 섭리"},
+    {"id":"rom8_31","reference":"로마서 8:31","text":"그런즉 이 일에 대하여 우리가 무슨 말 하리요 만일 하나님이 우리를 위하시면 누가 우리를 대적하리요","category":"하나님의 섭리"},
+    {"id":"lam3_22_23","reference":"예레미야애가 3:22-23","text":"여호와의 인자와 긍휼이 무궁하시므로 우리가 진멸되지 아니함이니이다 이것들이 아침마다 새로우니 주의 성실하심이 크시도소이다","category":"하나님의 섭리"},
+    {"id":"rom8_18","reference":"로마서 8:18","text":"생각하건대 현재의 고난은 장차 우리에게 나타날 영광과 비교할 수 없도다","category":"하나님의 섭리"},
+    {"id":"zep3_17","reference":"스바냐 3:17","text":"너의 하나님 여호와가 너의 가운데에 계시니 그는 구원을 베푸실 전능자이시라 그가 너로 말미암아 기쁨을 이기지 못하시며 너를 잠잠히 사랑하시며 너로 말미암아 즐거이 부르며 기뻐하시리라","category":"하나님의 섭리"},
+    {"id":"rom12_2","reference":"로마서 12:2","text":"너희는 이 세대를 본받지 말고 오직 마음을 새롭게 함으로 변화를 받아 하나님의 선하시고 기뻐하시고 온전하신 뜻이 무엇인지 분별하도록 하라","category":"믿음의 삶"},
+    {"id":"php4_13","reference":"빌립보서 4:13","text":"내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라","category":"믿음의 삶"},
+    {"id":"mat6_33","reference":"마태복음 6:33","text":"그런즉 너희는 먼저 그의 나라와 그의 의를 구하라 그리하면 이 모든 것을 너희에게 더하시리라","category":"믿음의 삶"},
+    {"id":"mat28_19_20","reference":"마태복음 28:19-20","text":"그러므로 너희는 가서 모든 민족을 제자로 삼아 아버지와 아들과 성령의 이름으로 세례를 베풀고 내가 너희에게 분부한 모든 것을 가르쳐 지키게 하라 볼지어다 내가 세상 끝날까지 너희와 항상 함께 있으리라 하시니라","category":"믿음의 삶"},
+    {"id":"gal2_20","reference":"갈라디아서 2:20","text":"내가 그리스도와 함께 십자가에 못 박혔나니 그런즉 이제는 내가 사는 것이 아니요 오직 내 안에 그리스도께서 사시는 것이라 이제 내가 육체 가운데 사는 것은 나를 사랑하사 나를 위하여 자기 자신을 버리신 하나님의 아들을 믿는 믿음 안에서 사는 것이라","category":"믿음의 삶"},
+    {"id":"1th5_16_18","reference":"데살로니가전서 5:16-18","text":"항상 기뻐하라 쉬지 말고 기도하라 범사에 감사하라 이것이 그리스도 예수 안에서 너희를 향하신 하나님의 뜻이니라","category":"믿음의 삶"},
+    {"id":"jhn14_15","reference":"요한복음 14:15","text":"너희가 나를 사랑하면 나의 계명을 지키리라","category":"믿음의 삶"},
+    {"id":"2ti1_7","reference":"디모데후서 1:7","text":"하나님이 우리에게 주신 것은 두려워하는 마음이 아니요 오직 능력과 사랑과 절제하는 마음이니","category":"믿음의 삶"},
+    {"id":"php4_6_7","reference":"빌립보서 4:6-7","text":"아무 것도 염려하지 말고 다만 모든 일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라","category":"평강과 위로"},
+    {"id":"psa23_1","reference":"시편 23:1","text":"여호와는 나의 목자시니 내게 부족함이 없으리로다","category":"평강과 위로"},
+    {"id":"psa46_1","reference":"시편 46:1","text":"하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라","category":"평강과 위로"},
+    {"id":"mat11_28","reference":"마태복음 11:28","text":"수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라","category":"평강과 위로"},
+    {"id":"heb13_5","reference":"히브리서 13:5","text":"돈을 사랑하지 말고 있는 바를 족한 줄로 알라 그가 친히 말씀하시기를 내가 결코 너희를 버리지 아니하고 너희를 떠나지 아니하리라 하셨느니라","category":"평강과 위로"},
+    {"id":"psa55_22","reference":"시편 55:22","text":"네 짐을 여호와께 맡기라 그가 너를 붙드시고 의인의 요동함을 영원히 허락하지 아니하시리로다","category":"평강과 위로"},
+    {"id":"psa42_11","reference":"시편 42:11","text":"내 영혼아 네가 어찌하여 낙심하며 어찌하여 내 속에서 불안해 하는가 너는 하나님께 소망을 두라 나는 그가 나타나 도우심으로 말미암아 내 하나님을 여전히 찬송하리로다","category":"평강과 위로"},
+    {"id":"psa121_1_2","reference":"시편 121:1-2","text":"내가 산을 향하여 눈을 들리라 나의 도움이 어디서 올까 나의 도움은 천지를 지으신 여호와에게서로다","category":"평강과 위로"},
+    {"id":"psa91_1_2","reference":"시편 91:1-2","text":"지존자의 은밀한 곳에 거주하며 전능자의 그늘 아래에 사는 자여, 나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리니","category":"평강과 위로"},
+    {"id":"pro3_5_6","reference":"잠언 3:5-6","text":"너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라","category":"지혜와 신뢰"},
+    {"id":"pro16_3","reference":"잠언 16:3","text":"너의 행사를 여호와께 맡기라 그리하면 네가 경영하는 것이 이루어지리라","category":"지혜와 신뢰"},
+    {"id":"psa119_105","reference":"시편 119:105","text":"주의 말씀은 내 발에 등이요 내 길에 빛이니이다","category":"지혜와 신뢰"},
+    {"id":"heb11_1","reference":"히브리서 11:1","text":"믿음은 바라는 것들의 실상이요 보이지 않는 것들의 증거니","category":"지혜와 신뢰"},
+    {"id":"pro4_23","reference":"잠언 4:23","text":"모든 지킬 만한 것 중에 더욱 네 마음을 지키라 생명의 근원이 이에서 남이니라","category":"지혜와 신뢰"},
+    {"id":"jas1_5","reference":"야고보서 1:5","text":"너희 중에 누구든지 지혜가 부족하거든 모든 사람에게 후히 주시고 꾸짖지 아니하시는 하나님께 구하라 그리하면 주시리라","category":"지혜와 신뢰"},
+    {"id":"isa41_10","reference":"이사야 41:10","text":"두려워하지 말라 내가 너와 함께 함이라 놀라지 말라 나는 네 하나님이 됨이라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라","category":"담대함"},
+    {"id":"jos1_9","reference":"여호수아 1:9","text":"내가 네게 명령한 것이 아니냐 강하고 담대하라 두려워하지 말며 놀라지 말라 네가 어디로 가든지 네 하나님 여호와가 너와 함께 하느니라 하시니라","category":"담대함"},
+    {"id":"jer29_11","reference":"예레미야 29:11","text":"여호와의 말씀이니라 너희를 향한 나의 생각을 내가 아나니 평안이요 재앙이 아니니라 너희에게 미래와 희망을 주는 것이니라","category":"담대함"},
+    {"id":"1co10_13","reference":"고린도전서 10:13","text":"사람이 감당할 시험 밖에는 너희가 당한 것이 없나니 오직 하나님은 미쁘사 너희가 감당하지 못할 시험 당함을 허락하지 아니하시고 시험 당할 즈음에 또한 피할 길을 내사 너희로 능히 감당하게 하시느니라","category":"담대함"},
+    {"id":"isa40_31","reference":"이사야 40:31","text":"오직 여호와를 앙망하는 자는 새 힘을 얻으리니 독수리가 날개치며 올라감 같을 것이요 달음박질하여도 곤비하지 아니하겠고 걸어가도 피곤하지 아니하리로다","category":"담대함"},
+    {"id":"jas4_7","reference":"야고보서 4:7","text":"그런즉 너희는 하나님께 복종할지어다 마귀를 대적하라 그리하면 너희를 피하리라","category":"담대함"},
+    {"id":"gal5_22_23","reference":"갈라디아서 5:22-23","text":"오직 성령의 열매는 사랑과 희락과 화평과 오래 참음과 자비와 양선과 충성과 온유와 절제니 이같은 것을 금지할 법이 없느니라","category":"성령의 열매"},
+    {"id":"jhn14_26","reference":"요한복음 14:26","text":"보혜사 곧 아버지께서 내 이름으로 보내실 성령 그가 너희에게 모든 것을 가르치고 내가 너희에게 말한 모든 것을 생각나게 하리라","category":"성령의 열매"},
+    {"id":"rom8_26","reference":"로마서 8:26","text":"이와 같이 성령도 우리의 연약함을 도우시나니 우리는 마땅히 기도할 바를 알지 못하나 오직 성령이 말할 수 없는 탄식으로 우리를 위하여 친히 간구하시느니라","category":"성령의 열매"},
+    {"id":"mat7_7","reference":"마태복음 7:7","text":"구하라 그리하면 너희에게 주실 것이요 찾으라 그리하면 찾아낼 것이요 문을 두드리라 그리하면 너희에게 열릴 것이니","category":"기도"},
+    {"id":"mat6_6","reference":"마태복음 6:6","text":"너는 기도할 때에 네 골방에 들어가 문을 닫고 은밀한 중에 계신 네 아버지께 기도하라","category":"기도"},
+    {"id":"jhn15_7","reference":"요한복음 15:7","text":"너희가 내 안에 거하고 내 말이 너희 안에 거하면 무엇이든지 원하는 대로 구하라 그리하면 이루리라","category":"기도"},
+    {"id":"jer33_3","reference":"예레미야 33:3","text":"너는 내게 부르짖으라 내가 네게 응답하겠고 네가 알지 못하는 크고 은밀한 일을 네게 보이리라","category":"기도"},
+    {"id":"jas5_16","reference":"야고보서 5:16","text":"그러므로 너희 죄를 서로 고백하며 병이 낫기를 위하여 서로 기도하라 의인의 간구는 역사하는 힘이 큼이니라","category":"기도"},
+    {"id":"2ti3_16","reference":"디모데후서 3:16","text":"모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니","category":"말씀"},
+    {"id":"jos1_8","reference":"여호수아 1:8","text":"이 율법책을 네 입에서 떠나지 말게 하며 주야로 그것을 묵상하여 그 안에 기록된 대로 다 지켜 행하라 그리하면 네 길이 평탄하게 될 것이며 네가 형통하리라","category":"말씀"},
+    {"id":"heb4_12","reference":"히브리서 4:12","text":"하나님의 말씀은 살아 있고 활력이 있어 좌우에 날선 어떤 검보다도 예리하여 혼과 영과 및 관절과 골수를 찔러 쪼개기까지 하며 또 마음의 생각과 뜻을 판단하나니","category":"말씀"},
+    {"id":"psa1_2_3","reference":"시편 1:2-3","text":"오직 여호와의 율법을 즐거워하여 그의 율법을 주야로 묵상하는도다 그는 시냇가에 심은 나무가 철을 따라 열매를 맺으며 그 잎사귀가 마르지 아니함 같으니 그가 하는 모든 일이 다 형통하리로다","category":"말씀"},
+    {"id":"mat4_4","reference":"마태복음 4:4","text":"예수께서 대답하여 이르시되 기록되었으되 사람이 떡으로만 살 것이 아니요 하나님의 입으로부터 나오는 모든 말씀으로 살 것이라 하였느니라","category":"말씀"},
+    {"id":"psa100_4_5","reference":"시편 100:4-5","text":"감사함으로 그의 문에 들어가며 찬송함으로 그의 궁정에 들어가서 그에게 감사하며 그의 이름을 송축할지어다 여호와는 선하시니 그의 인자하심이 영원하고 그의 성실하심이 대대에 이르리로다","category":"감사와 찬양"},
+    {"id":"col3_17","reference":"골로새서 3:17","text":"또 무엇을 하든지 말에나 일에나 다 주 예수의 이름으로 하고 그를 힘입어 하나님 아버지께 감사하라","category":"감사와 찬양"},
+    {"id":"psa118_24","reference":"시편 118:24","text":"이 날은 여호와께서 정하신 것이라 이 날에 우리가 즐거워하고 기뻐하리로다","category":"감사와 찬양"},
+    {"id":"psa34_1","reference":"시편 34:1","text":"내가 여호와를 항상 송축함이여 내 입술로 항상 주를 찬양하리이다","category":"감사와 찬양"},
+    {"id":"eph5_20","reference":"에베소서 5:20","text":"범사에 우리 주 예수 그리스도의 이름으로 항상 아버지 하나님께 감사하며","category":"감사와 찬양"},
+    {"id":"jhn13_34","reference":"요한복음 13:34","text":"새 계명을 너희에게 주노니 서로 사랑하라 내가 너희를 사랑한 것 같이 너희도 서로 사랑하라","category":"사랑과 용서"},
+    {"id":"1co13_4_5","reference":"고린도전서 13:4-5","text":"사랑은 오래 참고 사랑은 온유하며 시기하지 아니하며 사랑은 자랑하지 아니하며 교만하지 아니하며 무례히 행하지 아니하며 자기의 유익을 구하지 아니하며 성내지 아니하며 악한 것을 생각하지 아니하며","category":"사랑과 용서"},
+    {"id":"1co13_13","reference":"고린도전서 13:13","text":"그런즉 믿음, 소망, 사랑, 이 세 가지는 항상 있을 것인데 그 중의 제일은 사랑이라","category":"사랑과 용서"},
+    {"id":"mat22_37_39","reference":"마태복음 22:37-39","text":"네 마음을 다하고 목숨을 다하고 뜻을 다하여 주 너의 하나님을 사랑하라 이것이 크고 첫째 되는 계명이요 둘째도 그와 같으니 네 이웃을 네 자신 같이 사랑하라","category":"사랑과 용서"},
+    {"id":"eph4_32","reference":"에베소서 4:32","text":"서로 친절하게 하며 불쌍히 여기며 서로 용서하기를 하나님이 그리스도 안에서 너희를 용서하심과 같이 하라","category":"사랑과 용서"},
+    {"id":"col3_13","reference":"골로새서 3:13","text":"누가 누구에게 불만이 있거든 서로 용납하여 피차 용서하되 주께서 너희를 용서하신 것 같이 너희도 그리하고","category":"사랑과 용서"},
+    {"id":"mat6_14","reference":"마태복음 6:14","text":"너희가 사람의 잘못을 용서하면 너희 하늘 아버지께서도 너희 잘못을 용서하시려니와","category":"사랑과 용서"},
+    {"id":"1jn4_19","reference":"요한일서 4:19","text":"우리가 사랑함은 그가 먼저 우리를 사랑하셨음이라","category":"사랑과 용서"},
+    {"id":"jas1_2_3","reference":"야고보서 1:2-3","text":"내 형제들아 너희가 여러 가지 시험을 당하거든 온전히 기쁘게 여기라 이는 너희 믿음의 시련이 인내를 만들어 내는 줄 너희가 앎이라","category":"인내와 연단"},
+    {"id":"rom5_3_4","reference":"로마서 5:3-4","text":"다만 이뿐 아니라 우리가 환난 중에도 즐거워하나니 이는 환난은 인내를, 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다","category":"인내와 연단"},
+    {"id":"jas1_12","reference":"야고보서 1:12","text":"시험을 참는 자는 복이 있나니 이는 시련을 견디어 낸 자가 주께서 자기를 사랑하는 자들에게 약속하신 생명의 면류관을 얻을 것이기 때문이라","category":"인내와 연단"},
+    {"id":"gal6_9","reference":"갈라디아서 6:9","text":"우리가 선을 행하되 낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라","category":"인내와 연단"},
+    {"id":"heb12_1","reference":"히브리서 12:1","text":"이러므로 우리에게 구름 같이 둘러싼 허다한 증인들이 있으니 모든 무거운 것과 얽매이기 쉬운 죄를 벗어 버리고 인내로써 우리 앞에 당한 경주를 하며","category":"인내와 연단"},
+    {"id":"rom15_13","reference":"로마서 15:13","text":"소망의 하나님이 모든 기쁨과 평강을 믿음 안에서 너희에게 충만하게 하사 성령의 능력으로 소망이 넘치게 하시기를 원하노라","category":"소망과 영생"},
+    {"id":"psa130_5","reference":"시편 130:5","text":"나 곧 내 영혼은 여호와를 기다리며 나는 주의 말씀을 바라는도다","category":"소망과 영생"},
+    {"id":"1pe1_3","reference":"베드로전서 1:3","text":"우리 주 예수 그리스도의 아버지 하나님을 찬송하리로다 그의 많으신 긍휼대로 예수 그리스도를 죽은 자 가운데서 부활하게 하심으로 말미암아 우리를 거듭나게 하사 산 소망이 있게 하시며","category":"소망과 영생"},
+    {"id":"rev21_4","reference":"요한계시록 21:4","text":"모든 눈물을 그 눈에서 닦아 주시니 다시는 사망이 없고 애통하는 것이나 곡하는 것이나 아픈 것이 다시 있지 아니하리니 처음 것들이 다 지나갔음이러라","category":"소망과 영생"},
+    {"id":"jhn11_25","reference":"요한복음 11:25","text":"예수께서 이르시되 나는 부활이요 생명이니 나를 믿는 자는 죽어도 살겠고","category":"소망과 영생"},
+    {"id":"php3_20","reference":"빌립보서 3:20","text":"그러나 우리의 시민권은 하늘에 있는지라 거기로부터 구원하는 자 곧 주 예수 그리스도를 기다리노니","category":"소망과 영생"},
+    {"id":"rom12_1","reference":"로마서 12:1","text":"그러므로 형제들아 내가 하나님의 모든 자비하심으로 너희를 권하노니 너희 몸을 하나님이 기뻐하시는 거룩한 산 제물로 드리라 이는 너희가 드릴 영적 예배니라","category":"순종과 헌신"},
+    {"id":"mat16_24","reference":"마태복음 16:24","text":"이에 예수께서 제자들에게 이르시되 누구든지 나를 따라오려거든 자기를 부인하고 자기 십자가를 지고 나를 따를 것이니라","category":"순종과 헌신"},
+    {"id":"jos24_15","reference":"여호수아 24:15","text":"오직 나와 내 집은 여호와를 섬기겠노라","category":"순종과 헌신"},
+    {"id":"1sa15_22","reference":"사무엘상 15:22","text":"순종이 제사보다 낫고 듣는 것이 숫양의 기름보다 나으니","category":"순종과 헌신"},
+    {"id":"pro21_3","reference":"잠언 21:3","text":"공의와 정의를 행하는 것은 제사 드리는 것보다 여호와께서 기쁘게 여기시느니라","category":"순종과 헌신"},
+    {"id":"mrk16_15","reference":"마가복음 16:15","text":"또 이르시되 너희는 온 천하에 다니며 만민에게 복음을 전파하라","category":"전도와 사명"},
+    {"id":"rom1_16","reference":"로마서 1:16","text":"내가 복음을 부끄러워하지 아니하노니 이 복음은 모든 믿는 자에게 구원을 주시는 하나님의 능력이 됨이라","category":"전도와 사명"},
+    {"id":"act1_8","reference":"사도행전 1:8","text":"오직 성령이 너희에게 임하시면 너희가 권능을 받고 예루살렘과 온 유대와 사마리아와 땅 끝까지 이르러 내 증인이 되리라","category":"전도와 사명"},
+    {"id":"2co5_20","reference":"고린도후서 5:20","text":"그러므로 우리가 그리스도를 대신하여 사신이 되어 하나님이 우리를 통하여 너희를 권면하시는 것 같이 그리스도를 대신하여 간청하노니 너희는 하나님과 화목하라","category":"전도와 사명"},
+    {"id":"psa19_1","reference":"시편 19:1","text":"하늘이 하나님의 영광을 선포하고 궁창이 그의 손으로 하신 일을 나타내는도다","category":"창조와 하나님의 성품"},
+    {"id":"psa139_14","reference":"시편 139:14","text":"내가 주께 감사하옴은 나를 지으심이 심히 기묘하심이라 주께서 하시는 일이 기이함을 내 영혼이 잘 아나이다","category":"창조와 하나님의 성품"},
+    {"id":"gen1_1","reference":"창세기 1:1","text":"태초에 하나님이 천지를 창조하시니라","category":"창조와 하나님의 성품"},
+    {"id":"jas1_17","reference":"야고보서 1:17","text":"온갖 좋은 은사와 온전한 선물이 다 위로부터 빛들의 아버지께로부터 내려오나니 그는 변함도 없으시고 회전하는 그림자도 없으시니라","category":"창조와 하나님의 성품"},
+    {"id":"rom3_23","reference":"로마서 3:23","text":"모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니","category":"죄와 회개"},
+    {"id":"rom6_23","reference":"로마서 6:23","text":"죄의 삯은 사망이요 하나님의 은사는 그리스도 예수 우리 주 안에 있는 영생이니라","category":"죄와 회개"},
+    {"id":"psa51_10","reference":"시편 51:10","text":"하나님이여 내 속에 정한 마음을 창조하시고 내 안에 정직한 영을 새롭게 하소서","category":"죄와 회개"},
+    {"id":"act3_19","reference":"사도행전 3:19","text":"그러므로 너희가 회개하고 돌이켜 너희 죄 없이 함을 받으라 이같이 하면 새롭게 되는 날이 주 앞으로부터 이를 것이요","category":"죄와 회개"}
+  ];
+
+  const CUSTOM_KEY = 'malsseumcard.custom.v1';
+  function loadCustomVerses() {
+    try {
+      const raw = localStorage.getItem(CUSTOM_KEY);
+      const arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr.filter(v => v && v.id && v.reference && v.text && v.category) : [];
+    } catch (e) { return []; }
+  }
+  function saveCustomVerses(arr) {
+    try { localStorage.setItem(CUSTOM_KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+  loadCustomVerses().forEach(v => VERSES.push(v));
+
+  const CATEGORY_SLUG = {
+    "하나님의 사랑": "love", "구원의 확신": "salvation", "하나님의 섭리": "providence",
+    "믿음의 삶": "faith", "평강과 위로": "peace", "지혜와 신뢰": "wisdom",
+    "담대함": "courage", "성령의 열매": "fruit", "기도": "prayer",
+    "말씀": "word", "감사와 찬양": "thanks", "사랑과 용서": "forgive",
+    "인내와 연단": "endure", "소망과 영생": "hope", "순종과 헌신": "devotion",
+    "전도와 사명": "mission", "창조와 하나님의 성품": "creation", "죄와 회개": "repent",
+  };
+
+  const ICONS = {
+    love: [{poly:[[50,28],[41,14],[27,11],[13,21],[12,39],[50,83],[88,39],[87,21],[73,11],[59,14]]}],
+    salvation: [
+      {poly:[[42,18],[58,18],[58,33],[77,33],[77,49],[58,49],[58,90],[42,90],[42,49],[23,49],[23,33],[42,33]]},
+      {line:[[50,2],[50,12]]}, {line:[[28,6],[36,15]]}, {line:[[72,6],[64,15]]},
+    ],
+    providence: [
+      {poly:[[16,58],[22,76],[50,84],[78,76],[84,58],[66,66],[50,70],[34,66]]},
+      {circle:[50,30,7], fill:true},
+      {line:[[50,8],[50,16]]}, {line:[[32,14],[38,21]]}, {line:[[68,14],[62,21]]},
+    ],
+    faith: [
+      {line:[[50,90],[50,52]]},
+      {poly:[[50,58],[32,50],[26,35],[40,33],[50,50]]},
+      {poly:[[50,58],[68,50],[74,35],[60,33],[50,50]]},
+      {line:[[28,90],[72,90]]},
+    ],
+    peace: [
+      {polyline:[[12,52],[32,38],[44,48],[56,36],[70,44],[88,32]]},
+      {circle:[74,62,5]},
+    ],
+    wisdom: [
+      {rect:[41,55,59,87]},
+      {poly:[[50,18],[59,34],[54,47],[50,42],[46,47],[41,34]]},
+      {line:[[35,87],[65,87]]},
+    ],
+    courage: [
+      {poly:[[50,11],[80,22],[80,50],[64,80],[50,90],[36,80],[20,50],[20,22]]},
+      {poly:[[46,44],[50,36],[54,44],[50,52]]},
+    ],
+    fruit: [
+      {polyline:[[24,82],[46,56],[76,26]]},
+      {circle:[30,74,5.5], fill:true}, {circle:[52,48,6], fill:true}, {circle:[70,30,5], fill:true},
+      {poly:[[46,56],[34,48],[50,44]]},
+    ],
+    prayer: [
+      {poly:[[50,13],[33,32],[29,50],[33,68],[50,87],[67,68],[71,50],[67,32]]},
+      {line:[[50,18],[50,82]]},
+    ],
+    word: [
+      {poly:[[50,24],[15,19],[15,78],[50,84]]}, {poly:[[50,24],[85,19],[85,78],[50,84]]},
+      {line:[[50,24],[50,84]]},
+      {line:[[23,38],[41,36]]}, {line:[[23,48],[41,46]]}, {line:[[23,58],[39,56]]},
+      {line:[[59,36],[77,38]]}, {line:[[59,46],[77,48]]}, {line:[[61,56],[77,58]]},
+    ],
+    thanks: [
+      {ellipse:[38,72,9,6.5], fill:true},
+      {line:[[49,74],[49,18]]},
+      {poly:[[49,18],[74,28],[68,42],[49,34]]},
+    ],
+    forgive: [
+      {poly:[[62,50],[57,42],[50,40],[43,45],[43,53],[62,72],[81,53],[81,45],[74,40],[67,42]]},
+      {poly:[[40,66],[35,58],[28,56],[21,61],[21,69],[40,88],[59,69],[59,61],[52,56],[45,58]]},
+    ],
+    endure: [
+      {rect:[58,66,85,88]}, {rect:[34,46,61,88]}, {rect:[10,26,37,88]},
+      {line:[[12,26],[12,12]]}, {poly:[[12,12],[28,18],[12,24]]},
+    ],
+    hope: [
+      {circle:[50,20,9]},
+      {line:[[50,33],[50,76]]}, {line:[[31,46],[69,46]]},
+      {polyline:[[50,78],[26,68],[31,56]]}, {polyline:[[50,78],[74,68],[69,56]]},
+    ],
+    devotion: [
+      {poly:[[22,86],[78,86],[64,58],[36,58]]},
+      {poly:[[50,30],[56,42],[53,51],[50,47],[47,51],[44,42]]},
+    ],
+    mission: [
+      {circle:[50,50,34]}, {ellipse:[50,50,34,10]}, {ellipse:[50,50,13,34]},
+    ],
+    creation: [
+      {circle:[50,50,11]},
+      {line:[[66,50],[72,50]]}, {line:[[61.3,61.3],[65.6,65.6]]}, {line:[[50,66],[50,72]]},
+      {line:[[38.7,61.3],[34.4,65.6]]}, {line:[[34,50],[28,50]]}, {line:[[38.7,38.7],[34.4,34.4]]},
+      {line:[[50,34],[50,28]]}, {line:[[61.3,38.7],[65.6,34.4]]},
+    ],
+    repent: [
+      {ellipse:[27,50,19,16]}, {ellipse:[53,50,19,16]},
+      {arc:[77,50,19,18,-55,205]},
+    ],
+  };
+
+  function describeArc(cx, cy, rx, ry, startDeg, endDeg) {
+    const toRad = d => d * Math.PI / 180;
+    const sx = cx + rx * Math.cos(toRad(startDeg));
+    const sy = cy + ry * Math.sin(toRad(startDeg));
+    const ex = cx + rx * Math.cos(toRad(endDeg));
+    const ey = cy + ry * Math.sin(toRad(endDeg));
+    const large = ((endDeg - startDeg + 360) % 360) > 180 ? 1 : 0;
+    return `M ${sx} ${sy} A ${rx} ${ry} 0 ${large} 1 ${ex} ${ey}`;
+  }
+
+  function svgIconMarkup(slug) {
+    const ops = ICONS[slug];
+    if (!ops) return '';
+    let s = '';
+    for (const op of ops) {
+      if (op.poly) s += `<polygon points="${op.poly.map(p => p.join(',')).join(' ')}" />`;
+      else if (op.line) s += `<polyline points="${op.line.map(p => p.join(',')).join(' ')}" />`;
+      else if (op.polyline) s += `<polyline points="${op.polyline.map(p => p.join(',')).join(' ')}" />`;
+      else if (op.rect) {
+        const [x1, y1, x2, y2] = op.rect;
+        s += `<rect x="${x1}" y="${y1}" width="${x2 - x1}" height="${y2 - y1}" />`;
+      } else if (op.circle) {
+        const [cx, cy, r] = op.circle;
+        s += `<circle cx="${cx}" cy="${cy}" r="${r}"${op.fill ? ' fill="currentColor"' : ''} />`;
+      } else if (op.ellipse) {
+        const [cx, cy, rx, ry] = op.ellipse;
+        s += `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"${op.fill ? ' fill="currentColor"' : ''} />`;
+      } else if (op.arc) {
+        const [cx, cy, rx, ry, a0, a1] = op.arc;
+        s += `<path d="${describeArc(cx, cy, rx, ry, a0, a1)}" />`;
+      }
+    }
+    return `<svg viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">${s}</g></svg>`;
+  }
+
+  const STORAGE_KEY = 'malsseumcard.mastered.v2';
+  const FAVORITES_KEY = 'malsseumcard.favorites.v1';
+  const ORDER_KEY = 'malsseumcard.order.v2';
+
+  function loadMastered() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? new Set(JSON.parse(raw)) : new Set();
+    } catch (e) { return new Set(); }
+  }
+  function saveMastered(set) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify([...set])); } catch (e) {}
+  }
+  function loadFavorites() {
+    try {
+      const raw = localStorage.getItem(FAVORITES_KEY);
+      return raw ? new Set(JSON.parse(raw)) : new Set();
+    } catch (e) { return new Set(); }
+  }
+  function saveFavorites(set) {
+    try { localStorage.setItem(FAVORITES_KEY, JSON.stringify([...set])); } catch (e) {}
+  }
+  function loadOrder() {
+    try {
+      const raw = localStorage.getItem(ORDER_KEY);
+      const arr = raw ? JSON.parse(raw) : null;
+      return Array.isArray(arr) && arr.length === VERSES.length ? arr : null;
+    } catch (e) { return null; }
+  }
+  function saveOrder(order) {
+    try { localStorage.setItem(ORDER_KEY, JSON.stringify(order)); } catch (e) {}
+  }
+
+  let mastered = loadMastered();
+  let favorites = loadFavorites();
+  let baseOrder = loadOrder() || VERSES.map((_, i) => i);
+  let category = 'all';
+  let hideMastered = false;
+  let pos = 0;
+  let flipped = false;
+  let viewMode = 'deck';
+  function isListCategory(cat) { return cat === '__favorites__' || cat === '__mastered__'; }
+
+  const els = {
+    chipRow: document.getElementById('chipRow'),
+    progressRow: document.getElementById('progressRow'),
+    verseList: document.getElementById('verseList'),
+    backToListBtn: document.getElementById('backToListBtn'),
+    stage: document.getElementById('stage'),
+    empty: document.getElementById('emptyState'),
+    controls: document.getElementById('controls'),
+    card: document.getElementById('card'),
+    frontCategory: document.getElementById('frontCategory'),
+    frontIcon: document.getElementById('frontIcon'),
+    frontRef: document.getElementById('frontRef'),
+    backText: document.getElementById('backText'),
+    backRef: document.getElementById('backRef'),
+    masteryBtn: document.getElementById('masteryBtn'),
+    favoriteBtn: document.getElementById('favoriteBtn'),
+    deleteBtn: document.getElementById('deleteBtn'),
+    posLabel: document.getElementById('posLabel'),
+    progressFill: document.getElementById('progressFill'),
+    totalLabel: document.getElementById('totalLabel'),
+    reviewOnly: document.getElementById('reviewOnly'),
+  };
+
+  els.totalLabel.textContent = `총 ${VERSES.length}구절`;
+
+  const SPECIAL_CHIP_LABELS = { all: '전체', __favorites__: '즐겨찾기', __mastered__: '암송 완료' };
+  const categories = ['all', '__favorites__', '__mastered__', ...Array.from(new Set(VERSES.map(v => v.category)))];
+  categories.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'chip';
+    btn.dataset.cat = cat;
+    btn.textContent = SPECIAL_CHIP_LABELS[cat] || cat;
+    btn.addEventListener('click', () => selectCategory(cat));
+    els.chipRow.appendChild(btn);
+  });
+
+  const addChip = document.createElement('button');
+  addChip.className = 'chip add-chip';
+  addChip.textContent = '+ 추가';
+  addChip.addEventListener('click', openAddModal);
+  els.chipRow.prepend(addChip);
+
+  // ---------- reference parsing + verse auto-fill ----------
+  const BOOK_ALIASES = {
+    "창세기":"창세기","창":"창세기", "출애굽기":"출애굽기","출":"출애굽기",
+    "레위기":"레위기","레":"레위기", "민수기":"민수기","민":"민수기",
+    "신명기":"신명기","신":"신명기", "여호수아":"여호수아","수":"여호수아",
+    "사사기":"사사기","삿":"사사기", "룻기":"룻기","룻":"룻기",
+    "사무엘상":"사무엘상","삼상":"사무엘상", "사무엘하":"사무엘하","삼하":"사무엘하",
+    "열왕기상":"열왕기상","왕상":"열왕기상", "열왕기하":"열왕기하","왕하":"열왕기하",
+    "역대상":"역대상","대상":"역대상", "역대하":"역대하","대하":"역대하",
+    "에스라":"에스라","스":"에스라", "느헤미야":"느헤미야","느":"느헤미야",
+    "에스더":"에스더","에":"에스더", "욥기":"욥기","욥":"욥기",
+    "시편":"시편","시":"시편", "잠언":"잠언","잠":"잠언",
+    "전도서":"전도서","전":"전도서", "아가":"아가","아":"아가",
+    "이사야":"이사야","사":"이사야", "예레미야":"예레미야","렘":"예레미야",
+    "예레미야애가":"예레미야애가","애":"예레미야애가", "에스겔":"에스겔","겔":"에스겔",
+    "다니엘":"다니엘","단":"다니엘", "호세아":"호세아","호":"호세아",
+    "요엘":"요엘","욜":"요엘", "아모스":"아모스","암":"아모스",
+    "오바댜":"오바댜","옵":"오바댜", "요나":"요나","욘":"요나",
+    "미가":"미가","미":"미가", "나훔":"나훔","나":"나훔",
+    "하박국":"하박국","합":"하박국", "스바냐":"스바냐","습":"스바냐",
+    "학개":"학개","학":"학개", "스가랴":"스가랴","슥":"스가랴",
+    "말라기":"말라기","말":"말라기",
+    "마태복음":"마태복음","마":"마태복음","마태":"마태복음",
+    "마가복음":"마가복음","막":"마가복음","마가":"마가복음",
+    "누가복음":"누가복음","눅":"누가복음","누가":"누가복음",
+    "요한복음":"요한복음","요":"요한복음","요한":"요한복음",
+    "사도행전":"사도행전","행":"사도행전",
+    "로마서":"로마서","롬":"로마서",
+    "고린도전서":"고린도전서","고전":"고린도전서",
+    "고린도후서":"고린도후서","고후":"고린도후서",
+    "갈라디아서":"갈라디아서","갈":"갈라디아서",
+    "에베소서":"에베소서","엡":"에베소서",
+    "빌립보서":"빌립보서","빌":"빌립보서",
+    "골로새서":"골로새서","골":"골로새서",
+    "데살로니가전서":"데살로니가전서","살전":"데살로니가전서",
+    "데살로니가후서":"데살로니가후서","살후":"데살로니가후서",
+    "디모데전서":"디모데전서","딤전":"디모데전서",
+    "디모데후서":"디모데후서","딤후":"디모데후서",
+    "디도서":"디도서","딛":"디도서",
+    "빌레몬서":"빌레몬서","몬":"빌레몬서",
+    "히브리서":"히브리서","히":"히브리서",
+    "야고보서":"야고보서","약":"야고보서",
+    "베드로전서":"베드로전서","벧전":"베드로전서",
+    "베드로후서":"베드로후서","벧후":"베드로후서",
+    "요한일서":"요한일서","요일":"요한일서",
+    "요한이서":"요한이서","요이":"요한이서",
+    "요한삼서":"요한삼서","요삼":"요한삼서",
+    "유다서":"유다서","유":"유다서",
+    "요한계시록":"요한계시록","계":"요한계시록",
+  };
+
+  function parseReference(raw) {
+    const input = (raw || '').trim().replace(/\s+/g, ' ');
+    if (!input) return null;
+    const m = input.match(/^(.+?)\s*(\d+)\s*[:장]\s*(\d+)(?:\s*[-~]\s*(\d+))?\s*절?$/);
+    if (!m) return null;
+    const book = BOOK_ALIASES[m[1].trim()];
+    if (!book) return null;
+    const chapter = parseInt(m[2], 10);
+    const verseStart = parseInt(m[3], 10);
+    const verseEnd = m[4] ? parseInt(m[4], 10) : verseStart;
+    return { book, chapter, verseStart, verseEnd };
+  }
+
+  const BIBLE_LOOKUP = [
+  {"reference":"창세기 1:27","book":"창세기","chapter":1,"verseStart":27,"verseEnd":27,"text":"하나님이 자기 형상 곧 하나님의 형상대로 사람을 창조하시되 남자와 여자를 창조하시고"},
+  {"reference":"창세기 1:31","book":"창세기","chapter":1,"verseStart":31,"verseEnd":31,"text":"하나님이 지으신 그 모든 것을 보시니 보시기에 심히 좋았더라 저녁이 되고 아침이 되니 이는 여섯째 날이니라"},
+  {"reference":"창세기 2:24","book":"창세기","chapter":2,"verseStart":24,"verseEnd":24,"text":"이러므로 남자가 부모를 떠나 그의 아내와 합하여 둘이 한 몸을 이룰지로다"},
+  {"reference":"창세기 12:2-3","book":"창세기","chapter":12,"verseStart":2,"verseEnd":3,"text":"내가 너로 큰 민족을 이루고 네게 복을 주어 네 이름을 창대하게 하리니 너는 복이 될지라 너를 축복하는 자에게는 내가 복을 내리고 너를 저주하는 자에게는 내가 저주하리니 땅의 모든 족속이 너로 말미암아 복을 얻을 것이라 하신지라"},
+  {"reference":"창세기 15:6","book":"창세기","chapter":15,"verseStart":6,"verseEnd":6,"text":"아브람이 여호와를 믿으니 여호와께서 이를 그의 의로 여기시고"},
+  {"reference":"창세기 50:20","book":"창세기","chapter":50,"verseStart":20,"verseEnd":20,"text":"당신들은 나를 해하려 하였으나 하나님은 그것을 선으로 바꾸사 오늘과 같이 많은 백성의 생명을 구원하게 하시려 하셨나니"},
+  {"reference":"출애굽기 3:14","book":"출애굽기","chapter":3,"verseStart":14,"verseEnd":14,"text":"하나님이 모세에게 이르시되 나는 스스로 있는 자이니라 또 이르시되 너는 이스라엘 자손에게 이같이 이르기를 스스로 있는 자가 나를 너희에게 보내셨다 하라"},
+  {"reference":"출애굽기 14:14","book":"출애굽기","chapter":14,"verseStart":14,"verseEnd":14,"text":"여호와께서 너희를 위하여 싸우시리니 너희는 가만히 있을지니라"},
+  {"reference":"출애굽기 20:3","book":"출애굽기","chapter":20,"verseStart":3,"verseEnd":3,"text":"너는 나 외에는 다른 신들을 네게 두지 말라"},
+  {"reference":"출애굽기 20:12","book":"출애굽기","chapter":20,"verseStart":12,"verseEnd":12,"text":"네 부모를 공경하라 그리하면 네 하나님 여호와가 네게 준 땅에서 네 생명이 길리라"},
+  {"reference":"출애굽기 20:13","book":"출애굽기","chapter":20,"verseStart":13,"verseEnd":13,"text":"살인하지 말라"},
+  {"reference":"출애굽기 33:14","book":"출애굽기","chapter":33,"verseStart":14,"verseEnd":14,"text":"여호와께서 이르시되 내가 친히 가리라 내가 너를 쉬게 하리라"},
+  {"reference":"레위기 19:18","book":"레위기","chapter":19,"verseStart":18,"verseEnd":18,"text":"원수를 갚지 말며 동포를 원망하지 말며 네 이웃 사랑하기를 네 자신과 같이 사랑하라 나는 여호와이니라"},
+  {"reference":"민수기 6:24-26","book":"민수기","chapter":6,"verseStart":24,"verseEnd":26,"text":"여호와는 네게 복을 주시고 너를 지키시기를 원하며 여호와는 그의 얼굴을 네게 비추사 은혜 베푸시기를 원하며 여호와는 그 얼굴을 네게로 향하여 드사 평강 주시기를 원하노라 할지니라"},
+  {"reference":"신명기 6:4-7","book":"신명기","chapter":6,"verseStart":4,"verseEnd":7,"text":"이스라엘아 들으라 우리 하나님 여호와는 오직 유일한 여호와이시니 너는 마음을 다하고 뜻을 다하고 힘을 다하여 네 하나님 여호와를 사랑하라 오늘 내가 네게 명하는 이 말씀을 너는 마음에 새기고 네 자녀에게 부지런히 가르치며 집에 앉았을 때에든지 길을 갈 때에든지 누워 있을 때에든지 일어날 때에든지 이 말씀을 강론할 것이며"},
+  {"reference":"신명기 8:3","book":"신명기","chapter":8,"verseStart":3,"verseEnd":3,"text":"너를 낮추시며 너를 주리게 하시며 또 너도 알지 못하며 네 조상들도 알지 못하던 만나를 네게 먹이신 것은 사람이 떡으로만 사는 것이 아니요 여호와의 입에서 나오는 모든 말씀으로 사는 줄을 네가 알게 하려 하심이니라"},
+  {"reference":"신명기 31:6","book":"신명기","chapter":31,"verseStart":6,"verseEnd":6,"text":"너희는 강하고 담대하라 두려워하지 말라 그들 앞에서 떨지 말라 이는 네 하나님 여호와 그가 너와 함께 가시며 결코 너를 떠나지 아니하시며 버리지 아니하실 것임이라 하고"},
+  {"reference":"신명기 31:8","book":"신명기","chapter":31,"verseStart":8,"verseEnd":8,"text":"그리하면 여호와 그가 네 앞에서 가시며 너와 함께 하사 너를 떠나지 아니하시며 버리지 아니하시리니 너는 두려워하지 말라 놀라지 말라"},
+  {"reference":"여호수아 21:45","book":"여호수아","chapter":21,"verseStart":45,"verseEnd":45,"text":"여호와께서 이스라엘 족속에게 말씀하신 선한 말씀이 하나도 남음이 없이 다 응하였더라"},
+  {"reference":"사사기 6:12","book":"사사기","chapter":6,"verseStart":12,"verseEnd":12,"text":"여호와의 사자가 기드온에게 나타나 이르되 큰 용사여 여호와께서 너와 함께 계시도다 하매"},
+  {"reference":"룻기 1:16","book":"룻기","chapter":1,"verseStart":16,"verseEnd":16,"text":"룻이 이르되 내게 어머니를 떠나며 어머니를 따르지 말고 돌아가라 강권하지 마옵소서 어머니께서 가시는 곳에 나도 가고 어머니께서 머무시는 곳에서 나도 머물겠나이다 어머니의 백성이 나의 백성이 되고 어머니의 하나님이 나의 하나님이 되시리니"},
+  {"reference":"사무엘상 16:7","book":"사무엘상","chapter":16,"verseStart":7,"verseEnd":7,"text":"그의 용모와 키를 보지 말라 내가 이미 그를 버렸노라 내가 보는 것은 사람과 같지 아니하니 사람은 외모를 보거니와 나 여호와는 중심을 보느니라 하시더라"},
+  {"reference":"사무엘상 17:45","book":"사무엘상","chapter":17,"verseStart":45,"verseEnd":45,"text":"다윗이 블레셋 사람에게 이르되 너는 칼과 창과 단창으로 내게 나아 오거니와 나는 만군의 여호와의 이름 곧 네가 모욕하는 이스라엘 군대의 하나님의 이름으로 네게 나아가노라"},
+  {"reference":"사무엘하 22:2-3","book":"사무엘하","chapter":22,"verseStart":2,"verseEnd":3,"text":"이르되 여호와는 나의 반석이시요 나의 요새시요 나를 위하여 나를 건지시는 자시요 내가 피할 나의 반석의 하나님이시요 나의 방패시요 나의 구원의 뿔이시요 나의 높은 망대시요 그에게 피할 나의 피난처시요 나의 구원자시라 나를 폭력에서 구원하셨도다"},
+  {"reference":"열왕기상 8:23","book":"열왕기상","chapter":8,"verseStart":23,"verseEnd":23,"text":"이르되 이스라엘의 하나님 여호와여 위로 하늘과 아래로 땅에 주와 같은 신이 없나이다 주께서는 온 마음으로 주의 앞에서 행하는 종들에게 언약을 지키시고 은혜를 베푸시나이다"},
+  {"reference":"열왕기하 6:16","book":"열왕기하","chapter":6,"verseStart":16,"verseEnd":16,"text":"대답하되 두려워하지 말라 우리와 함께 한 자가 그들과 함께 한 자보다 많으니라 하고"},
+  {"reference":"역대상 16:11","book":"역대상","chapter":16,"verseStart":11,"verseEnd":11,"text":"여호와와 그의 능력을 구할지어다 항상 그의 얼굴을 찾을지어다"},
+  {"reference":"역대상 16:34","book":"역대상","chapter":16,"verseStart":34,"verseEnd":34,"text":"여호와께 감사하라 그는 선하시며 그의 인자하심이 영원함이로다"},
+  {"reference":"역대상 29:11","book":"역대상","chapter":29,"verseStart":11,"verseEnd":11,"text":"여호와여 위대하심과 권능과 영광과 승리와 위엄이 다 주께 속하였사오니 천지에 있는 것이 다 주의 것이로소이다 여호와여 주권도 주께 속하였사오니 주는 높으사 만물의 머리이심이니이다"},
+  {"reference":"역대하 7:14","book":"역대하","chapter":7,"verseStart":14,"verseEnd":14,"text":"내 이름으로 일컫는 내 백성이 그들의 악한 길에서 떠나 스스로 낮추고 기도하여 내 얼굴을 찾으면 내가 하늘에서 듣고 그들의 죄를 사하고 그들의 땅을 고칠지라"},
+  {"reference":"느헤미야 8:10","book":"느헤미야","chapter":8,"verseStart":10,"verseEnd":10,"text":"느헤미야가 또 그들에게 이르기를 너희는 가서 살진 것을 먹고 단 것을 마시되 준비하지 못한 자에게는 나누어 주라 이 날은 우리 주의 성일이니 근심하지 말라 여호와로 인하여 기뻐하는 것이 너희의 힘이니라 하고"},
+  {"reference":"에스더 4:14","book":"에스더","chapter":4,"verseStart":14,"verseEnd":14,"text":"이 때에 네가 만일 잠잠하여 말이 없으면 유다인은 다른 데로 말미암아 놓임과 구원을 얻으려니와 너와 네 아버지 집은 멸망하리라 네가 왕후의 자리를 얻은 것이 이 때를 위함이 아닌지 누가 알겠느냐 하니"},
+  {"reference":"욥기 23:10","book":"욥기","chapter":23,"verseStart":10,"verseEnd":10,"text":"그러나 내가 가는 길을 그가 아시나니 그가 나를 단련하신 후에는 내가 순금 같이 되어 나오리라"},
+  {"reference":"욥기 42:2","book":"욥기","chapter":42,"verseStart":2,"verseEnd":2,"text":"주께서는 못 하실 일이 없사오며 무슨 계획이든지 못 이루실 것이 없는 줄 아오니"},
+  {"reference":"시편 1:1","book":"시편","chapter":1,"verseStart":1,"verseEnd":1,"text":"복 있는 사람은 악인들의 꾀를 따르지 아니하며 죄인들의 길에 서지 아니하며 오만한 자들의 자리에 앉지 아니하고"},
+  {"reference":"시편 8:3-4","book":"시편","chapter":8,"verseStart":3,"verseEnd":4,"text":"주의 손가락으로 만드신 주의 하늘과 주께서 베풀어 두신 달과 별들을 내가 보오니 사람이 무엇이기에 주께서 그를 생각하시며 인자가 무엇이기에 주께서 그를 돌보시나이까"},
+  {"reference":"시편 16:11","book":"시편","chapter":16,"verseStart":11,"verseEnd":11,"text":"주께서 생명의 길을 내게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다"},
+  {"reference":"시편 18:2","book":"시편","chapter":18,"verseStart":2,"verseEnd":2,"text":"여호와는 나의 반석이시요 나의 요새시요 나를 건지시는 이시요 나의 하나님이시요 내가 그 안에 피할 나의 바위시요 나의 방패시요 나의 구원의 뿔이시요 나의 산성이시로다"},
+  {"reference":"시편 19:14","book":"시편","chapter":19,"verseStart":14,"verseEnd":14,"text":"나의 반석이시요 나의 구속자이신 여호와여 내 입의 말과 마음의 묵상이 주님 앞에 열납되기를 원하나이다"},
+  {"reference":"시편 27:1","book":"시편","chapter":27,"verseStart":1,"verseEnd":1,"text":"여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요"},
+  {"reference":"시편 30:5","book":"시편","chapter":30,"verseStart":5,"verseEnd":5,"text":"그의 노염은 잠깐이요 그의 은총은 평생이로다 저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다"},
+  {"reference":"시편 32:8","book":"시편","chapter":32,"verseStart":8,"verseEnd":8,"text":"내가 네 갈 길을 가르쳐 보이고 너를 주목하여 훈계하리로다"},
+  {"reference":"시편 34:8","book":"시편","chapter":34,"verseStart":8,"verseEnd":8,"text":"너희는 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다"},
+  {"reference":"시편 34:18","book":"시편","chapter":34,"verseStart":18,"verseEnd":18,"text":"여호와는 마음이 상한 자를 가까이 하시고 충심으로 통회하는 자를 구원하시는도다"},
+  {"reference":"시편 37:4-5","book":"시편","chapter":37,"verseStart":4,"verseEnd":5,"text":"또 여호와를 기뻐하라 그가 네 마음의 소원을 네게 이루어 주시리로다 네 길을 여호와께 맡기라 그를 의지하면 그가 이루시고"},
+  {"reference":"시편 40:1-3","book":"시편","chapter":40,"verseStart":1,"verseEnd":3,"text":"내가 여호와를 기다리고 기다렸더니 귀를 기울이사 나의 부르짖음을 들으셨도다 나를 기가 막힐 웅덩이와 수렁에서 끌어올리시고 내 발을 반석 위에 두사 내 걸음을 견고하게 하셨도다 새 노래 곧 우리 하나님께 올릴 찬송을 내 입에 두셨으니 많은 사람이 보고 두려워하여 여호와를 의지하리로다"},
+  {"reference":"시편 46:10","book":"시편","chapter":46,"verseStart":10,"verseEnd":10,"text":"이르시기를 너희는 가만히 있어 내가 하나님 됨을 알지어다 내가 뭇 나라 중에서 높임을 받으리라 내가 세계 중에서 높임을 받으리라 하시도다"},
+  {"reference":"시편 56:3","book":"시편","chapter":56,"verseStart":3,"verseEnd":3,"text":"내가 두려워하는 날에는 내가 주를 의지하리이다"},
+  {"reference":"시편 62:1","book":"시편","chapter":62,"verseStart":1,"verseEnd":1,"text":"나의 영혼이 잠잠히 하나님만 바람이여 나의 구원이 그에게서 나오는도다"},
+  {"reference":"시편 84:11","book":"시편","chapter":84,"verseStart":11,"verseEnd":11,"text":"여호와 하나님은 해요 방패이시라 여호와께서 은혜와 영화를 주시며 정직하게 행하는 자에게 좋은 것을 아끼지 아니하실 것임이니이다"},
+  {"reference":"시편 86:5","book":"시편","chapter":86,"verseStart":5,"verseEnd":5,"text":"주는 선하사 사죄하기를 즐거워하시며 주께 부르짖는 자에게 인자함이 후하심이니이다"},
+  {"reference":"시편 90:12","book":"시편","chapter":90,"verseStart":12,"verseEnd":12,"text":"우리에게 우리 날 계수함을 가르치사 지혜로운 마음을 얻게 하소서"},
+  {"reference":"시편 100:1-3","book":"시편","chapter":100,"verseStart":1,"verseEnd":3,"text":"온 땅이여 여호와께 즐거운 찬송을 부를지어다 기쁨으로 여호와를 섬기며 노래하면서 그의 앞에 나아갈지어다 여호와가 우리 하나님이신 줄 너희는 알지어다 그는 우리를 지으신 이요 우리는 그의 것이니 그의 백성이요 그의 기르시는 양이로다"},
+  {"reference":"시편 103:1-2","book":"시편","chapter":103,"verseStart":1,"verseEnd":2,"text":"내 영혼아 여호와를 송축하라 내 속에 있는 것들아 다 그의 거룩한 이름을 송축하라 내 영혼아 여호와를 송축하며 그의 모든 은택을 잊지 말지어다"},
+  {"reference":"시편 103:12","book":"시편","chapter":103,"verseStart":12,"verseEnd":12,"text":"동이 서에서 먼 것 같이 우리의 죄과를 우리에게서 멀리 옮기셨으며"},
+  {"reference":"시편 107:1","book":"시편","chapter":107,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
+  {"reference":"시편 118:1","book":"시편","chapter":118,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그의 인자하심이 영원함이로다"},
+  {"reference":"시편 118:6","book":"시편","chapter":118,"verseStart":6,"verseEnd":6,"text":"여호와는 내 편이시라 내가 두려워하지 아니하리니 사람이 내게 어찌할까"},
+  {"reference":"시편 119:11","book":"시편","chapter":119,"verseStart":11,"verseEnd":11,"text":"내가 주께 범죄하지 아니하려 하여 주의 말씀을 내 마음에 두었나이다"},
+  {"reference":"시편 126:5-6","book":"시편","chapter":126,"verseStart":5,"verseEnd":6,"text":"눈물을 흘리며 씨를 뿌리는 자는 기쁨으로 거두리로다 울며 씨를 뿌리러 나가는 자는 반드시 기쁨으로 그 곡식 단을 가지고 돌아오리로다"},
+  {"reference":"시편 127:1","book":"시편","chapter":127,"verseStart":1,"verseEnd":1,"text":"여호와께서 집을 세우지 아니하시면 세우는 자의 수고가 헛되며 여호와께서 성을 지키지 아니하시면 파수꾼의 깨어 있음이 헛되도다"},
+  {"reference":"시편 133:1","book":"시편","chapter":133,"verseStart":1,"verseEnd":1,"text":"보라 형제가 연합하여 동거함이 어찌 그리 선하고 아름다운고"},
+  {"reference":"시편 136:1","book":"시편","chapter":136,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
+  {"reference":"시편 138:8","book":"시편","chapter":138,"verseStart":8,"verseEnd":8,"text":"여호와께서 나를 위하여 보상해 주시리이다 여호와여 주의 인자하심이 영원하오니 주의 손으로 지으신 것을 버리지 마옵소서"},
+  {"reference":"시편 139:1-2","book":"시편","chapter":139,"verseStart":1,"verseEnd":2,"text":"여호와여 주께서 나를 살펴 보셨으므로 나를 아시나이다 주께서 내가 앉고 일어섬을 아시고 멀리서도 나의 생각을 밝히 아시오며"},
+  {"reference":"시편 139:23-24","book":"시편","chapter":139,"verseStart":23,"verseEnd":24,"text":"하나님이여 나를 살피사 내 마음을 아시며 나를 시험하사 내 뜻을 아옵소서 내게 무슨 악한 행위가 있나 보시고 나를 영원한 길로 인도하소서"},
+  {"reference":"시편 143:8","book":"시편","chapter":143,"verseStart":8,"verseEnd":8,"text":"아침에 나로 하여금 주의 인자한 말씀을 듣게 하소서 내가 주를 의뢰함이니이다 내가 다닐 길을 알게 하소서 내가 내 영혼을 주께 드림이니이다"},
+  {"reference":"시편 145:18","book":"시편","chapter":145,"verseStart":18,"verseEnd":18,"text":"여호와께서는 자기에게 간구하는 모든 자 곧 진실하게 간구하는 모든 자에게 가까이 하시는도다"},
+  {"reference":"시편 150:6","book":"시편","chapter":150,"verseStart":6,"verseEnd":6,"text":"호흡이 있는 자마다 여호와를 찬양할지어다 할렐루야"},
+  {"reference":"잠언 1:7","book":"잠언","chapter":1,"verseStart":7,"verseEnd":7,"text":"여호와를 경외하는 것이 지식의 근본이거늘 미련한 자는 지혜와 훈계를 멸시하느니라"},
+  {"reference":"잠언 9:10","book":"잠언","chapter":9,"verseStart":10,"verseEnd":10,"text":"여호와를 경외하는 것이 지혜의 근본이요 거룩하신 자를 아는 것이 명철이니라"},
+  {"reference":"잠언 13:20","book":"잠언","chapter":13,"verseStart":20,"verseEnd":20,"text":"지혜로운 자와 동행하면 지혜를 얻고 미련한 자와 사귀면 해를 받느니라"},
+  {"reference":"잠언 15:1","book":"잠언","chapter":15,"verseStart":1,"verseEnd":1,"text":"유순한 대답은 분노를 쉬게 하여도 과격한 말은 노를 격동하느니라"},
+  {"reference":"잠언 16:9","book":"잠언","chapter":16,"verseStart":9,"verseEnd":9,"text":"사람이 마음으로 자기의 길을 계획할지라도 그의 걸음을 인도하시는 이는 여호와시니라"},
+  {"reference":"잠언 17:17","book":"잠언","chapter":17,"verseStart":17,"verseEnd":17,"text":"친구는 사랑이 끊어지지 아니하고 형제는 위급한 때를 위하여 났느니라"},
+  {"reference":"잠언 18:10","book":"잠언","chapter":18,"verseStart":10,"verseEnd":10,"text":"여호와의 이름은 견고한 망대라 의인은 그리로 달려가서 안전함을 얻느니라"},
+  {"reference":"잠언 18:24","book":"잠언","chapter":18,"verseStart":24,"verseEnd":24,"text":"많은 친구를 얻는 자는 해를 당하게 되거니와 어떤 친구는 형제보다 친밀하니라"},
+  {"reference":"잠언 19:21","book":"잠언","chapter":19,"verseStart":21,"verseEnd":21,"text":"사람의 마음에는 많은 계획이 있어도 오직 여호와의 뜻만이 완전히 서리라"},
+  {"reference":"잠언 22:6","book":"잠언","chapter":22,"verseStart":6,"verseEnd":6,"text":"마땅히 행할 길을 아이에게 가르치라 그리하면 늙어도 그것을 떠나지 아니하리라"},
+  {"reference":"잠언 27:1","book":"잠언","chapter":27,"verseStart":1,"verseEnd":1,"text":"너는 내일 일을 자랑하지 말라 하루 동안에 무슨 일이 일어날는지 네가 알 수 없음이니라"},
+  {"reference":"잠언 27:17","book":"잠언","chapter":27,"verseStart":17,"verseEnd":17,"text":"철이 철을 날카롭게 하는 것 같이 사람이 그의 친구의 얼굴을 빛나게 하느니라"},
+  {"reference":"잠언 29:18","book":"잠언","chapter":29,"verseStart":18,"verseEnd":18,"text":"묵시가 없으면 백성이 방자히 행하거니와 율법을 지키는 자는 복이 있느니라"},
+  {"reference":"전도서 3:1","book":"전도서","chapter":3,"verseStart":1,"verseEnd":1,"text":"범사에 기한이 있고 천하 만사가 다 때가 있나니"},
+  {"reference":"전도서 3:11","book":"전도서","chapter":3,"verseStart":11,"verseEnd":11,"text":"하나님이 모든 것을 지으시되 때를 따라 아름답게 하셨고 또 사람들에게는 영원을 사모하는 마음을 주셨느니라 그러나 하나님이 하시는 일의 시종을 사람으로 측량할 수 없게 하셨도다"},
+  {"reference":"전도서 12:1","book":"전도서","chapter":12,"verseStart":1,"verseEnd":1,"text":"너는 청년의 때에 너의 창조주를 기억하라 곧 곤고한 날이 이르기 전에, 나는 아무 낙이 없다고 할 해들이 가깝기 전에"},
+  {"reference":"아가 2:16","book":"아가","chapter":2,"verseStart":16,"verseEnd":16,"text":"내 사랑하는 자는 내게 속하였고 나는 그에게 속하였도다 그가 백합화 가운데에서 양 떼를 먹이는구나"},
+  {"reference":"이사야 1:18","book":"이사야","chapter":1,"verseStart":18,"verseEnd":18,"text":"여호와께서 말씀하시되 오라 우리가 서로 변론하자 너희의 죄가 주홍 같을지라도 눈과 같이 희어질 것이요 진홍 같이 붉을지라도 양털 같이 희게 되리라"},
+  {"reference":"이사야 6:8","book":"이사야","chapter":6,"verseStart":8,"verseEnd":8,"text":"내가 또 주의 목소리를 들으니 주께서 이르시되 내가 누구를 보내며 누가 우리를 위하여 갈꼬 하시니 그 때에 내가 이르되 내가 여기 있나이다 나를 보내소서 하였더니"},
+  {"reference":"이사야 9:6","book":"이사야","chapter":9,"verseStart":6,"verseEnd":6,"text":"이는 한 아기가 우리에게 났고 한 아들을 우리에게 주신 바 되었는데 그의 어깨에는 정사를 메었고 그의 이름은 기묘자라, 모사라, 전능하신 하나님이라, 영존하시는 아버지라, 평강의 왕이라 할 것임이라"},
+  {"reference":"이사야 26:3","book":"이사야","chapter":26,"verseStart":3,"verseEnd":3,"text":"주께서 심지가 견고한 자를 평강하고 평강하도록 지키시리니 이는 그가 주를 신뢰함이니이다"},
+  {"reference":"이사야 40:8","book":"이사야","chapter":40,"verseStart":8,"verseEnd":8,"text":"풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영원히 서리라 하라"},
+  {"reference":"이사야 41:13","book":"이사야","chapter":41,"verseStart":13,"verseEnd":13,"text":"이는 나 여호와 너의 하나님이 네 오른손을 붙들고 네게 이르기를 두려워하지 말라 내가 너를 도우리라 할 것임이니라"},
+  {"reference":"이사야 43:1-2","book":"이사야","chapter":43,"verseStart":1,"verseEnd":2,"text":"야곱아 너를 창조하신 여호와께서 지금 말씀하시느니라 이스라엘아 너를 지으신 이가 말씀하시느니라 너는 두려워하지 말라 내가 너를 구속하였고 내가 너를 지명하여 불렀나니 너는 내 것이라 네가 물 가운데로 지날 때에 내가 너와 함께 할 것이라 강을 건널 때에 물이 너를 침몰하지 못할 것이며 네가 불 가운데로 지날 때에 타지도 아니할 것이요 불꽃이 너를 사르지도 못하리니"},
+  {"reference":"이사야 53:5","book":"이사야","chapter":53,"verseStart":5,"verseEnd":5,"text":"그가 찔림은 우리의 허물 때문이요 그가 상함은 우리의 죄악 때문이라 그가 징계를 받으므로 우리는 평화를 누리고 그가 채찍에 맞으므로 우리는 나음을 받았도다"},
+  {"reference":"이사야 53:6","book":"이사야","chapter":53,"verseStart":6,"verseEnd":6,"text":"우리는 다 양 같아서 그릇 행하여 각기 제 길로 갔거늘 여호와께서는 우리 모두의 죄악을 그에게 담당시키셨도다"},
+  {"reference":"이사야 55:8-9","book":"이사야","chapter":55,"verseStart":8,"verseEnd":9,"text":"이는 내 생각이 너희의 생각과 다르며 내 길은 너희의 길과 다름이니라 여호와의 말씀이니라 이는 하늘이 땅보다 높음 같이 내 길은 너희의 길보다 높으며 내 생각은 너희의 생각보다 높음이니라"},
+  {"reference":"이사야 64:8","book":"이사야","chapter":64,"verseStart":8,"verseEnd":8,"text":"그러나 여호와여, 이제 주는 우리 아버지시니이다 우리는 진흙이요 주는 토기장이시니 우리는 다 주의 손으로 지으신 것이니이다"},
+  {"reference":"예레미야 1:5","book":"예레미야","chapter":1,"verseStart":5,"verseEnd":5,"text":"내가 너를 모태에 짓기 전에 너를 알았고 네가 배에서 나오기 전에 너를 성별하였고 너를 여러 나라의 선지자로 세웠노라 하시기로"},
+  {"reference":"예레미야 17:7-8","book":"예레미야","chapter":17,"verseStart":7,"verseEnd":8,"text":"그러나 무릇 여호와를 의지하며 여호와를 의뢰하는 그 사람은 복을 받을 것이라 그는 물 가에 심어진 나무가 그 뿌리를 강변에 뻗치고 더위가 올지라도 두려워하지 아니하며 그 잎이 청청하며 가무는 해에도 걱정이 없고 결실이 그치지 아니함 같으리라"},
+  {"reference":"예레미야 31:3","book":"예레미야","chapter":31,"verseStart":3,"verseEnd":3,"text":"옛적에 여호와께서 나에게 나타나사 내가 영원한 사랑으로 너를 사랑하기에 인자함으로 너를 이끌었다 하였노라"},
+  {"reference":"예레미야 32:17","book":"예레미야","chapter":32,"verseStart":17,"verseEnd":17,"text":"슬프도소이다 주 여호와여 주께서 큰 능력과 펴신 팔로 천지를 지으셨사오니 주에게는 할 수 없는 일이 없으시니이다"},
+  {"reference":"예레미야애가 3:24-25","book":"예레미야애가","chapter":3,"verseStart":24,"verseEnd":25,"text":"내 심령에 이르기를 여호와는 나의 기업이시니 그러므로 내가 그를 바라리라 하도다 기다리는 자들에게나 구하는 영혼들에게 여호와는 선하시도다"},
+  {"reference":"에스겔 36:26","book":"에스겔","chapter":36,"verseStart":26,"verseEnd":26,"text":"또 새 영을 너희 속에 두고 새 마음을 너희에게 주되 너희 육신에서 굳은 마음을 제거하고 부드러운 마음을 줄 것이며"},
+  {"reference":"다니엘 1:8","book":"다니엘","chapter":1,"verseStart":8,"verseEnd":8,"text":"다니엘은 뜻을 정하여 왕의 음식과 그가 마시는 포도주로 자기를 더럽히지 아니하리라 하고 자기를 더럽히지 아니하도록 환관장에게 구하니"},
+  {"reference":"다니엘 3:17-18","book":"다니엘","chapter":3,"verseStart":17,"verseEnd":18,"text":"왕이여 우리가 섬기는 하나님이 계시다면 우리를 맹렬히 타는 풀무불 가운데에서 능히 건져내시겠고 왕의 손에서도 건져내시리이다 그렇게 하지 아니하실지라도 왕이여 우리가 왕의 신들을 섬기지도 아니하고 왕이 세우신 금 신상에게 절하지도 아니할 줄을 아옵소서"},
+  {"reference":"호세아 6:3","book":"호세아","chapter":6,"verseStart":3,"verseEnd":3,"text":"그러므로 우리가 여호와를 알자 힘써 여호와를 알자 그의 나타나심은 새벽 빛 같이 어김없나니 비와 같이, 땅을 적시는 늦은 비와 같이 우리에게 임하시리라 하니라"},
+  {"reference":"요엘 2:28-29","book":"요엘","chapter":2,"verseStart":28,"verseEnd":29,"text":"그 후에 내가 내 영을 만민에게 부어 주리니 너희 자녀들이 장래 일을 말할 것이며 너희 늙은이는 꿈을 꾸며 너희 젊은이는 이상을 볼 것이며 그 때에 내가 또 내 영을 남종과 여종에게 부어 줄 것이며"},
+  {"reference":"아모스 5:24","book":"아모스","chapter":5,"verseStart":24,"verseEnd":24,"text":"오직 정의를 물 같이, 공의를 마르지 않는 강 같이 흐르게 할지어다"},
+  {"reference":"미가 6:8","book":"미가","chapter":6,"verseStart":8,"verseEnd":8,"text":"사람아 주께서 선한 것이 무엇임을 네게 보이셨나니 여호와께서 네게 구하시는 것은 오직 정의를 행하며 인자를 사랑하며 겸손하게 네 하나님과 함께 행하는 것이 아니냐"},
+  {"reference":"나훔 1:7","book":"나훔","chapter":1,"verseStart":7,"verseEnd":7,"text":"여호와는 선하시며 환난 날에 산성이시라 그는 자기에게 피하는 자들을 아시느니라"},
+  {"reference":"하박국 2:4","book":"하박국","chapter":2,"verseStart":4,"verseEnd":4,"text":"보라 그의 마음은 교만하며 그 속에서 정직하지 못하나 의인은 그의 믿음으로 말미암아 살리라"},
+  {"reference":"하박국 3:17-18","book":"하박국","chapter":3,"verseStart":17,"verseEnd":18,"text":"비록 무화과나무가 무성하지 못하며 포도나무에 열매가 없으며 감람나무에 소출이 없으며 밭에 먹을 것이 없으며 우리에 양이 없으며 외양간에 소가 없을지라도 나는 여호와로 말미암아 즐거워하며 나의 구원의 하나님으로 말미암아 기뻐하리로다"},
+  {"reference":"스가랴 4:6","book":"스가랴","chapter":4,"verseStart":6,"verseEnd":6,"text":"여호와께서 스룹바벨에게 하신 말씀이 이러하니라 만군의 여호와께서 말씀하시되 이는 힘으로 되지 아니하며 능력으로 되지 아니하고 오직 나의 영으로 되느니라"},
+  {"reference":"말라기 3:10","book":"말라기","chapter":3,"verseStart":10,"verseEnd":10,"text":"만군의 여호와가 이르노라 너희의 온전한 십일조를 창고에 들여 나의 집에 양식이 있게 하고 그것으로 나를 시험하여 내가 하늘 문을 열고 너희에게 복을 쌓을 곳이 없도록 붓지 아니하나 보라"},
+  {"reference":"마태복음 5:16","book":"마태복음","chapter":5,"verseStart":16,"verseEnd":16,"text":"이같이 너희 빛이 사람 앞에 비치게 하여 그들로 너희 착한 행실을 보고 하늘에 계신 너희 아버지께 영광을 돌리게 하라"},
+  {"reference":"마태복음 5:44","book":"마태복음","chapter":5,"verseStart":44,"verseEnd":44,"text":"나는 너희에게 이르노니 너희 원수를 사랑하며 너희를 박해하는 자를 위하여 기도하라"},
+  {"reference":"마태복음 6:19-21","book":"마태복음","chapter":6,"verseStart":19,"verseEnd":21,"text":"너희를 위하여 보물을 땅에 쌓아 두지 말라 거기는 좀과 동록이 해하며 도둑이 구멍을 뚫고 도둑질하느니라 오직 너희를 위하여 보물을 하늘에 쌓아 두라 거기는 좀이나 동록이 해하지 못하며 도둑이 구멍을 뚫지도 못하고 도둑질도 못하느니라 네 보물 있는 그 곳에는 네 마음도 있느니라"},
+  {"reference":"마태복음 6:26","book":"마태복음","chapter":6,"verseStart":26,"verseEnd":26,"text":"공중의 새를 보라 심지도 않고 거두지도 않고 창고에 모아들이지도 아니하되 너희 하늘 아버지께서 기르시나니 너희는 이것들보다 귀하지 아니하냐"},
+  {"reference":"마태복음 7:1","book":"마태복음","chapter":7,"verseStart":1,"verseEnd":1,"text":"비판을 받지 아니하려거든 비판하지 말라"},
+  {"reference":"마태복음 7:12","book":"마태복음","chapter":7,"verseStart":12,"verseEnd":12,"text":"그러므로 무엇이든지 남에게 대접을 받고자 하는 대로 너희도 남을 대접하라 이것이 율법이요 선지자니라"},
+  {"reference":"마태복음 10:28","book":"마태복음","chapter":10,"verseStart":28,"verseEnd":28,"text":"몸은 죽여도 영혼은 능히 죽이지 못하는 자들을 두려워하지 말고 오직 몸과 영혼을 능히 지옥에 멸하실 수 있는 이를 두려워하라"},
+  {"reference":"마태복음 10:32","book":"마태복음","chapter":10,"verseStart":32,"verseEnd":32,"text":"누구든지 사람 앞에서 나를 시인하면 나도 하늘에 계신 내 아버지 앞에서 그를 시인할 것이요"},
+  {"reference":"마태복음 11:29-30","book":"마태복음","chapter":11,"verseStart":29,"verseEnd":30,"text":"나는 마음이 온유하고 겸손하니 나의 멍에를 메고 내게 배우라 그리하면 너희 마음이 쉼을 얻으리니 이는 내 멍에는 쉽고 내 짐은 가벼움이라 하시니라"},
+  {"reference":"마태복음 16:16","book":"마태복음","chapter":16,"verseStart":16,"verseEnd":16,"text":"시몬 베드로가 대답하여 이르되 주는 그리스도시요 살아 계신 하나님의 아들이시니이다"},
+  {"reference":"마태복음 16:26","book":"마태복음","chapter":16,"verseStart":26,"verseEnd":26,"text":"사람이 만일 온 천하를 얻고도 제 목숨을 잃으면 무엇이 유익하리요 사람이 무엇을 주고 제 목숨과 바꾸겠느냐"},
+  {"reference":"마태복음 17:20","book":"마태복음","chapter":17,"verseStart":20,"verseEnd":20,"text":"이르시되 너희 믿음이 작은 까닭이니라 진실로 너희에게 이르노니 만일 너희에게 믿음이 겨자씨 한 알 만큼만 있어도 이 산을 명하여 여기서 저기로 옮겨지라 하면 옮겨질 것이요 또 너희가 못할 것이 없으리라"},
+  {"reference":"마태복음 18:20","book":"마태복음","chapter":18,"verseStart":20,"verseEnd":20,"text":"두세 사람이 내 이름으로 모인 곳에는 나도 그들 중에 있느니라"},
+  {"reference":"마태복음 19:26","book":"마태복음","chapter":19,"verseStart":26,"verseEnd":26,"text":"예수께서 그들을 보시며 이르시되 사람으로는 할 수 없으나 하나님으로서는 다 하실 수 있느니라"},
+  {"reference":"마태복음 24:35","book":"마태복음","chapter":24,"verseStart":35,"verseEnd":35,"text":"천지는 없어질지언정 내 말은 없어지지 아니하리라"},
+  {"reference":"마태복음 25:21","book":"마태복음","chapter":25,"verseStart":21,"verseEnd":21,"text":"그 주인이 이르되 잘하였도다 착하고 충성된 종아 네가 적은 일에 충성하였으매 내가 많은 것을 네게 맡기리니 네 주인의 즐거움에 참여할지어다 하고"},
+  {"reference":"마태복음 25:40","book":"마태복음","chapter":25,"verseStart":40,"verseEnd":40,"text":"임금이 대답하여 이르시되 내가 진실로 너희에게 이르노니 너희가 여기 내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라 하시고"},
+  {"reference":"마태복음 26:41","book":"마태복음","chapter":26,"verseStart":41,"verseEnd":41,"text":"시험에 들지 않게 깨어 기도하라 마음에는 원이로되 육신이 약하도다"},
+  {"reference":"마태복음 28:6","book":"마태복음","chapter":28,"verseStart":6,"verseEnd":6,"text":"그가 여기 계시지 않고 그가 말씀하시던 대로 살아나셨느니라 와서 그가 누우셨던 곳을 보라"},
+  {"reference":"마가복음 8:36","book":"마가복음","chapter":8,"verseStart":36,"verseEnd":36,"text":"사람이 만일 온 천하를 얻고도 자기 목숨을 잃으면 무엇이 유익하리요"},
+  {"reference":"마가복음 9:23","book":"마가복음","chapter":9,"verseStart":23,"verseEnd":23,"text":"예수께서 이르시되 할 수 있거든이 무슨 말이냐 믿는 자에게는 능히 하지 못할 일이 없느니라 하시니"},
+  {"reference":"마가복음 10:45","book":"마가복음","chapter":10,"verseStart":45,"verseEnd":45,"text":"인자가 온 것은 섬김을 받으려 함이 아니라 도리어 섬기려 하고 자기 목숨을 많은 사람의 대속물로 주려 함이니라"},
+  {"reference":"마가복음 12:30-31","book":"마가복음","chapter":12,"verseStart":30,"verseEnd":31,"text":"네 마음을 다하고 목숨을 다하고 뜻을 다하고 힘을 다하여 주 너의 하나님을 사랑하라 하신 것이요 둘째는 이것이니 네 이웃을 네 자신과 같이 사랑하라 하신 것이라 이보다 더 큰 계명이 없느니라"},
+  {"reference":"마가복음 16:16","book":"마가복음","chapter":16,"verseStart":16,"verseEnd":16,"text":"믿고 세례를 받는 사람은 구원을 얻을 것이요 믿지 않는 사람은 정죄를 받으리라"},
+  {"reference":"누가복음 1:37","book":"누가복음","chapter":1,"verseStart":37,"verseEnd":37,"text":"대저 하나님의 모든 말씀은 능하지 못하심이 없느니라"},
+  {"reference":"누가복음 2:10-11","book":"누가복음","chapter":2,"verseStart":10,"verseEnd":11,"text":"천사가 이르되 무서워하지 말라 보라 내가 온 백성에게 미칠 큰 기쁨의 좋은 소식을 너희에게 전하노라 오늘 다윗의 동네에 너희를 위하여 구주가 나셨으니 곧 그리스도 주시니라"},
+  {"reference":"누가복음 6:38","book":"누가복음","chapter":6,"verseStart":38,"verseEnd":38,"text":"주라 그리하면 너희에게 줄 것이니 곧 후히 되어 누르고 흔들어 넘치도록 하여 너희에게 안겨 주리라 너희가 헤아리는 그 헤아림으로 너희도 헤아림을 도로 받을 것이니라"},
+  {"reference":"누가복음 9:23","book":"누가복음","chapter":9,"verseStart":23,"verseEnd":23,"text":"또 무리에게 이르시되 아무든지 나를 따라오려거든 자기를 부인하고 날마다 제 십자가를 지고 나를 따를 것이니라"},
+  {"reference":"누가복음 11:9-10","book":"누가복음","chapter":11,"verseStart":9,"verseEnd":10,"text":"내가 또 너희에게 이르노니 구하라 그러면 너희에게 주실 것이요 찾으라 그러면 찾아낼 것이요 문을 두드리라 그러면 너희에게 열릴 것이니 구하는 이마다 받을 것이요 찾는 이는 찾아낼 것이요 두드리는 이에게는 열릴 것이니라"},
+  {"reference":"누가복음 15:7","book":"누가복음","chapter":15,"verseStart":7,"verseEnd":7,"text":"내가 너희에게 이르노니 이와 같이 죄인 한 사람이 회개하면 하늘에서는 회개할 것 없는 의인 아흔아홉으로 말미암아 기뻐하는 것보다 더하리라"},
+  {"reference":"누가복음 18:1","book":"누가복음","chapter":18,"verseStart":1,"verseEnd":1,"text":"예수께서 그들에게 항상 기도하고 낙심하지 말아야 할 것을 비유로 말씀하여"},
+  {"reference":"누가복음 19:10","book":"누가복음","chapter":19,"verseStart":10,"verseEnd":10,"text":"인자가 온 것은 잃어버린 자를 찾아 구원하려 함이니라"},
+  {"reference":"누가복음 22:42","book":"누가복음","chapter":22,"verseStart":42,"verseEnd":42,"text":"아버지여 만일 아버지의 뜻이거든 이 잔을 내게서 옮기시옵소서 그러나 내 원대로 마시옵고 아버지의 원대로 되기를 원하나이다 하시니"},
+  {"reference":"누가복음 24:6","book":"누가복음","chapter":24,"verseStart":6,"verseEnd":6,"text":"여기 계시지 않고 살아나셨느니라 갈릴리에 계실 때에 너희에게 어떻게 말씀하셨는지를 기억하라"},
+  {"reference":"요한복음 1:12","book":"요한복음","chapter":1,"verseStart":12,"verseEnd":12,"text":"영접하는 자 곧 그 이름을 믿는 자들에게는 하나님의 자녀가 되는 권세를 주셨으니"},
+  {"reference":"요한복음 3:3","book":"요한복음","chapter":3,"verseStart":3,"verseEnd":3,"text":"예수께서 대답하여 이르시되 진실로 진실로 네게 이르노니 사람이 거듭나지 아니하면 하나님의 나라를 볼 수 없느니라"},
+  {"reference":"요한복음 3:17","book":"요한복음","chapter":3,"verseStart":17,"verseEnd":17,"text":"하나님이 그 아들을 세상에 보내신 것은 세상을 심판하려 하심이 아니요 그로 말미암아 세상이 구원을 받게 하려 하심이라"},
+  {"reference":"요한복음 3:36","book":"요한복음","chapter":3,"verseStart":36,"verseEnd":36,"text":"아들을 믿는 자에게는 영생이 있고 아들에게 순종하지 아니하는 자는 영생을 보지 못하고 도리어 하나님의 진노가 그 위에 머물러 있느니라"},
+  {"reference":"요한복음 4:24","book":"요한복음","chapter":4,"verseStart":24,"verseEnd":24,"text":"하나님은 영이시니 예배하는 자가 영과 진리로 예배할지니라"},
+  {"reference":"요한복음 6:35","book":"요한복음","chapter":6,"verseStart":35,"verseEnd":35,"text":"나는 생명의 떡이니 내게 오는 자는 결코 주리지 아니할 터이요 나를 믿는 자는 영원히 목마르지 아니하리라"},
+  {"reference":"요한복음 8:12","book":"요한복음","chapter":8,"verseStart":12,"verseEnd":12,"text":"예수께서 또 말씀하여 이르시되 나는 세상의 빛이니 나를 따르는 자는 어둠에 다니지 아니하고 생명의 빛을 얻으리라"},
+  {"reference":"요한복음 8:32","book":"요한복음","chapter":8,"verseStart":32,"verseEnd":32,"text":"진리를 알지니 진리가 너희를 자유롭게 하리라"},
+  {"reference":"요한복음 8:36","book":"요한복음","chapter":8,"verseStart":36,"verseEnd":36,"text":"그러므로 아들이 너희를 자유롭게 하면 너희가 참으로 자유로우리라"},
+  {"reference":"요한복음 9:25","book":"요한복음","chapter":9,"verseStart":25,"verseEnd":25,"text":"대답하되 그가 죄인인지 내가 알지 못하나 한 가지 아는 것은 내가 맹인으로 있다가 지금 보는 그것이니이다"},
+  {"reference":"요한복음 10:10","book":"요한복음","chapter":10,"verseStart":10,"verseEnd":10,"text":"도둑이 오는 것은 도둑질하고 죽이고 멸망시키려는 것뿐이요 내가 온 것은 양으로 생명을 얻게 하고 더 풍성히 얻게 하려는 것이라"},
+  {"reference":"요한복음 10:11","book":"요한복음","chapter":10,"verseStart":11,"verseEnd":11,"text":"나는 선한 목자라 선한 목자는 양들을 위하여 목숨을 버리거니와"},
+  {"reference":"요한복음 10:27-28","book":"요한복음","chapter":10,"verseStart":27,"verseEnd":28,"text":"내 양은 내 음성을 들으며 나는 그들을 알며 그들은 나를 따르느니라 내가 그들에게 영생을 주노니 영원히 멸망하지 아니할 것이요 또 그들을 내 손에서 빼앗을 자가 없느니라"},
+  {"reference":"요한복음 13:35","book":"요한복음","chapter":13,"verseStart":35,"verseEnd":35,"text":"너희가 서로 사랑하면 이로써 모든 사람이 너희가 내 제자인 줄 알리라"},
+  {"reference":"요한복음 14:1","book":"요한복음","chapter":14,"verseStart":1,"verseEnd":1,"text":"너희는 마음에 근심하지 말라 하나님을 믿으니 또 나를 믿으라"},
+  {"reference":"요한복음 14:27","book":"요한복음","chapter":14,"verseStart":27,"verseEnd":27,"text":"평안을 너희에게 끼치노니 곧 나의 평안을 너희에게 주노라 내가 너희에게 주는 것은 세상이 주는 것과 같지 아니하니라 너희는 마음에 근심하지도 말고 두려워하지도 말라"},
+  {"reference":"요한복음 15:5","book":"요한복음","chapter":15,"verseStart":5,"verseEnd":5,"text":"나는 포도나무요 너희는 가지라 그가 내 안에, 내가 그 안에 거하면 사람이 열매를 많이 맺나니 나를 떠나서는 너희가 아무 것도 할 수 없음이라"},
+  {"reference":"요한복음 15:13","book":"요한복음","chapter":15,"verseStart":13,"verseEnd":13,"text":"사람이 친구를 위하여 자기 목숨을 버리면 이보다 더 큰 사랑이 없나니"},
+  {"reference":"요한복음 16:33","book":"요한복음","chapter":16,"verseStart":33,"verseEnd":33,"text":"이것을 너희에게 이르는 것은 너희로 내 안에서 평안을 누리게 하려 함이라 세상에서는 너희가 환난을 당하나 담대하라 내가 세상을 이기었노라"},
+  {"reference":"요한복음 17:3","book":"요한복음","chapter":17,"verseStart":3,"verseEnd":3,"text":"영생은 곧 유일하신 참 하나님과 그가 보내신 자 예수 그리스도를 아는 것이니이다"},
+  {"reference":"요한복음 20:29","book":"요한복음","chapter":20,"verseStart":29,"verseEnd":29,"text":"예수께서 이르시되 너는 나를 본 고로 믿느냐 보지 못하고 믿는 자들은 복되도다 하시니라"},
+  {"reference":"요한복음 21:17","book":"요한복음","chapter":21,"verseStart":17,"verseEnd":17,"text":"세 번째 이르시되 요한의 아들 시몬아 네가 나를 사랑하느냐 하시니 주께서 세 번째 네가 나를 사랑하느냐 하시므로 베드로가 근심하여 이르되 주님 모든 것을 아시오매 내가 주님을 사랑하는 줄을 주님께서 아시나이다 예수께서 이르시되 내 양을 먹이라"},
+  {"reference":"사도행전 1:11","book":"사도행전","chapter":1,"verseStart":11,"verseEnd":11,"text":"이르되 갈릴리 사람들아 어찌하여 서서 하늘을 쳐다보느냐 너희 가운데서 하늘로 올려지신 이 예수는 하늘로 가심을 본 그대로 오시리라 하였느니라"},
+  {"reference":"사도행전 2:38","book":"사도행전","chapter":2,"verseStart":38,"verseEnd":38,"text":"베드로가 이르되 너희가 회개하여 각각 예수 그리스도의 이름으로 세례를 받고 죄 사함을 받으라 그리하면 성령의 선물을 받으리니"},
+  {"reference":"사도행전 2:42","book":"사도행전","chapter":2,"verseStart":42,"verseEnd":42,"text":"그들이 사도의 가르침을 받아 서로 교제하고 떡을 떼며 오로지 기도하기를 힘쓰니라"},
+  {"reference":"사도행전 4:12","book":"사도행전","chapter":4,"verseStart":12,"verseEnd":12,"text":"다른 이로써는 구원을 받을 수 없나니 천하 사람 중에 구원을 받을 만한 다른 이름을 우리에게 주신 일이 없음이라 하였더라"},
+  {"reference":"사도행전 16:31","book":"사도행전","chapter":16,"verseStart":31,"verseEnd":31,"text":"이르되 주 예수를 믿으라 그리하면 너와 네 집이 구원을 받으리라 하고"},
+  {"reference":"사도행전 20:24","book":"사도행전","chapter":20,"verseStart":24,"verseEnd":24,"text":"내가 달려갈 길과 주 예수께 받은 사명 곧 하나님의 은혜의 복음을 증언하는 일을 마치려 함에는 나의 생명조차 조금도 귀한 것으로 여기지 아니하노라"},
+  {"reference":"사도행전 20:35","book":"사도행전","chapter":20,"verseStart":35,"verseEnd":35,"text":"범사에 여러분에게 모본을 보여준 바와 같이 수고하여 약한 사람들을 돕고 또 주 예수께서 친히 말씀하신 바 주는 것이 받는 것보다 복이 있다 하심을 기억하여야 할지니라"},
+  {"reference":"로마서 1:17","book":"로마서","chapter":1,"verseStart":17,"verseEnd":17,"text":"복음에는 하나님의 의가 나타나서 믿음으로 믿음에 이르게 하나니 기록된 바 오직 의인은 믿음으로 말미암아 살리라 함과 같으니라"},
+  {"reference":"로마서 5:1","book":"로마서","chapter":5,"verseStart":1,"verseEnd":1,"text":"그러므로 우리가 믿음으로 의롭다 하심을 받았으니 우리 주 예수 그리스도로 말미암아 하나님과 화평을 누리자"},
+  {"reference":"로마서 5:5","book":"로마서","chapter":5,"verseStart":5,"verseEnd":5,"text":"소망이 우리를 부끄럽게 하지 아니함은 우리에게 주신 성령으로 말미암아 하나님의 사랑이 우리 마음에 부은 바 됨이니"},
+  {"reference":"로마서 6:4","book":"로마서","chapter":6,"verseStart":4,"verseEnd":4,"text":"그러므로 우리가 그의 죽으심과 합하여 세례를 받음으로 그와 함께 장사되었나니 이는 아버지의 영광으로 말미암아 그리스도를 죽은 자 가운데서 살리심과 같이 우리로 또한 새 생명 가운데서 행하게 하려 함이라"},
+  {"reference":"로마서 8:1","book":"로마서","chapter":8,"verseStart":1,"verseEnd":1,"text":"그러므로 이제 그리스도 예수 안에 있는 자에게는 결코 정죄함이 없나니"},
+  {"reference":"로마서 8:2","book":"로마서","chapter":8,"verseStart":2,"verseEnd":2,"text":"이는 그리스도 예수 안에 있는 생명의 성령의 법이 죄와 사망의 법에서 너를 해방하였음이라"},
+  {"reference":"로마서 8:9","book":"로마서","chapter":8,"verseStart":9,"verseEnd":9,"text":"만일 너희 속에 하나님의 영이 거하시면 너희가 육신에 있지 아니하고 영에 있나니 누구든지 그리스도의 영이 없으면 그리스도의 사람이 아니라"},
+  {"reference":"로마서 8:16-17","book":"로마서","chapter":8,"verseStart":16,"verseEnd":17,"text":"성령이 친히 우리의 영과 더불어 우리가 하나님의 자녀인 것을 증언하시나니 자녀이면 또한 상속자 곧 하나님의 상속자요 그리스도와 함께 한 상속자니 우리가 그와 함께 영광을 받기 위하여 고난도 함께 받아야 할 것이니라"},
+  {"reference":"로마서 8:32","book":"로마서","chapter":8,"verseStart":32,"verseEnd":32,"text":"자기 아들을 아끼지 아니하시고 우리 모든 사람을 위하여 내주신 이가 어찌 그 아들과 함께 모든 것을 우리에게 주시지 아니하겠느냐"},
+  {"reference":"로마서 8:38-39","book":"로마서","chapter":8,"verseStart":38,"verseEnd":39,"text":"내가 확신하노니 사망이나 생명이나 천사들이나 권세자들이나 현재 일이나 장래 일이나 능력이나 높음이나 깊음이나 다른 어떤 피조물이라도 우리를 우리 주 그리스도 예수 안에 있는 하나님의 사랑에서 끊을 수 없으리라"},
+  {"reference":"로마서 10:13","book":"로마서","chapter":10,"verseStart":13,"verseEnd":13,"text":"누구든지 주의 이름을 부르는 자는 구원을 받으리라"},
+  {"reference":"로마서 10:17","book":"로마서","chapter":10,"verseStart":17,"verseEnd":17,"text":"그러므로 믿음은 들음에서 나며 들음은 그리스도의 말씀으로 말미암았느니라"},
+  {"reference":"로마서 12:9-12","book":"로마서","chapter":12,"verseStart":9,"verseEnd":12,"text":"사랑에는 거짓이 없나니 악을 미워하고 선에 속하라 형제를 사랑하여 서로 우애하고 존경하기를 서로 먼저 하며 부지런하여 게으르지 말고 열심을 품고 주를 섬기라 소망 중에 즐거워하며 환난 중에 참으며 기도에 항상 힘쓰며"},
+  {"reference":"로마서 14:8","book":"로마서","chapter":14,"verseStart":8,"verseEnd":8,"text":"우리가 살아도 주를 위하여 살고 죽어도 주를 위하여 죽나니 그러므로 사나 죽으나 우리가 주의 것이로다"},
+  {"reference":"고린도전서 2:9","book":"고린도전서","chapter":2,"verseStart":9,"verseEnd":9,"text":"기록된 바 하나님이 자기를 사랑하는 자들을 위하여 예비하신 모든 것은 눈으로 보지 못하고 귀로 듣지 못하고 사람의 마음으로 생각하지도 못하였다 함과 같으니라"},
+  {"reference":"고린도전서 3:16","book":"고린도전서","chapter":3,"verseStart":16,"verseEnd":16,"text":"너희는 너희가 하나님의 성전인 것과 하나님의 성령이 너희 안에 계시는 것을 알지 못하느냐"},
+  {"reference":"고린도전서 6:19-20","book":"고린도전서","chapter":6,"verseStart":19,"verseEnd":20,"text":"너희 몸은 너희가 하나님께로부터 받은 바 너희 가운데 계신 성령의 전인 줄을 알지 못하느냐 너희는 너희 자신의 것이 아니라 값으로 산 것이 되었으니 그런즉 너희 몸으로 하나님께 영광을 돌리라"},
+  {"reference":"고린도전서 10:31","book":"고린도전서","chapter":10,"verseStart":31,"verseEnd":31,"text":"그런즉 너희가 먹든지 마시든지 무엇을 하든지 다 하나님의 영광을 위하여 하라"},
+  {"reference":"고린도전서 12:27","book":"고린도전서","chapter":12,"verseStart":27,"verseEnd":27,"text":"너희는 그리스도의 몸이요 지체의 각 부분이라"},
+  {"reference":"고린도전서 13:1-3","book":"고린도전서","chapter":13,"verseStart":1,"verseEnd":3,"text":"내가 사람의 방언과 천사의 말을 할지라도 사랑이 없으면 소리 나는 구리와 울리는 꽹과리가 되고 내가 예언하는 능력이 있어 모든 비밀과 모든 지식을 알고 또 산을 옮길 만한 모든 믿음이 있을지라도 사랑이 없으면 내가 아무 것도 아니요 내가 내게 있는 모든 것으로 구제하고 또 내 몸을 불사르게 내줄지라도 사랑이 없으면 내게 아무 유익이 없느니라"},
+  {"reference":"고린도전서 15:57-58","book":"고린도전서","chapter":15,"verseStart":57,"verseEnd":58,"text":"우리 주 예수 그리스도로 말미암아 우리에게 승리를 주시는 하나님께 감사하노니 그러므로 내 사랑하는 형제들아 견실하며 흔들리지 말고 항상 주의 일에 더욱 힘쓰는 자들이 되라 이는 너희 수고가 주 안에서 헛되지 않은 줄 앎이라"},
+  {"reference":"고린도후서 1:3-4","book":"고린도후서","chapter":1,"verseStart":3,"verseEnd":4,"text":"찬송하리로다 그는 우리 주 예수 그리스도의 하나님이시요 자비의 아버지시요 모든 위로의 하나님이시며 우리의 모든 환난 중에서 우리를 위로하사 우리로 하여금 하나님께 받는 위로로써 모든 환난 중에 있는 자들을 능히 위로하게 하시는 이시로다"},
+  {"reference":"고린도후서 3:17","book":"고린도후서","chapter":3,"verseStart":17,"verseEnd":17,"text":"주는 영이시니 주의 영이 계신 곳에는 자유가 있느니라"},
+  {"reference":"고린도후서 4:16-18","book":"고린도후서","chapter":4,"verseStart":16,"verseEnd":18,"text":"그러므로 우리가 낙심하지 아니하노니 우리의 겉사람은 낡아지나 우리의 속사람은 날로 새로워지도다 우리가 잠시 받는 환난의 경한 것이 지극히 크고 영원한 영광의 중한 것을 우리에게 이루게 함이니 우리가 주목하는 것은 보이는 것이 아니요 보이지 않는 것이니 보이는 것은 잠깐이요 보이지 않는 것은 영원함이라"},
+  {"reference":"고린도후서 5:7","book":"고린도후서","chapter":5,"verseStart":7,"verseEnd":7,"text":"이는 우리가 믿음으로 행하고 보는 것으로 행하지 아니함이로라"},
+  {"reference":"고린도후서 5:21","book":"고린도후서","chapter":5,"verseStart":21,"verseEnd":21,"text":"하나님이 죄를 알지도 못하신 이를 우리를 대신하여 죄로 삼으신 것은 우리로 하여금 그 안에서 하나님의 의가 되게 하려 하심이라"},
+  {"reference":"고린도후서 9:7-8","book":"고린도후서","chapter":9,"verseStart":7,"verseEnd":8,"text":"각각 그 마음에 정한 대로 할 것이요 인색함으로나 억지로 하지 말지니 하나님은 즐겨 내는 자를 사랑하시느니라 하나님이 능히 모든 은혜를 너희에게 넘치게 하시나니 이는 너희로 모든 일에 항상 모든 것이 넉넉하여 모든 착한 일을 넘치게 하게 하려 하심이라"},
+  {"reference":"갈라디아서 3:26","book":"갈라디아서","chapter":3,"verseStart":26,"verseEnd":26,"text":"너희가 다 믿음으로 말미암아 그리스도 예수 안에서 하나님의 아들이 되었으니"},
+  {"reference":"갈라디아서 3:28","book":"갈라디아서","chapter":3,"verseStart":28,"verseEnd":28,"text":"너희는 유대인이나 헬라인이나 종이나 자유인이나 남자나 여자나 다 그리스도 예수 안에서 하나이니라"},
+  {"reference":"갈라디아서 5:1","book":"갈라디아서","chapter":5,"verseStart":1,"verseEnd":1,"text":"그리스도께서 우리를 자유롭게 하려고 자유를 주셨으니 그러므로 굳건하게 서서 다시는 종의 멍에를 메지 말라"},
+  {"reference":"갈라디아서 5:16","book":"갈라디아서","chapter":5,"verseStart":16,"verseEnd":16,"text":"내가 이르노니 너희는 성령을 따라 행하라 그리하면 육체의 욕심을 이루지 아니하리라"},
+  {"reference":"에베소서 2:10","book":"에베소서","chapter":2,"verseStart":10,"verseEnd":10,"text":"우리는 그가 만드신 바라 그리스도 예수 안에서 선한 일을 위하여 지으심을 받은 자니 이 일은 하나님이 전에 예비하사 우리로 그 가운데서 행하게 하려 하심이니라"},
+  {"reference":"에베소서 3:20","book":"에베소서","chapter":3,"verseStart":20,"verseEnd":20,"text":"우리 가운데서 역사하시는 능력대로 우리가 구하거나 생각하는 모든 것에 더 넘치도록 능히 하실 이에게"},
+  {"reference":"에베소서 4:29","book":"에베소서","chapter":4,"verseStart":29,"verseEnd":29,"text":"무릇 더러운 말은 너희 입 밖에도 내지 말고 오직 덕을 세우는 데 소용되는 대로 선한 말을 하여 듣는 자들에게 은혜를 끼치게 하라"},
+  {"reference":"에베소서 5:25","book":"에베소서","chapter":5,"verseStart":25,"verseEnd":25,"text":"남편들아 아내 사랑하기를 그리스도께서 교회를 사랑하시고 그 교회를 위하여 자신을 주심 같이 하라"},
+  {"reference":"에베소서 6:10","book":"에베소서","chapter":6,"verseStart":10,"verseEnd":10,"text":"끝으로 너희가 주 안에서와 그 힘의 능력으로 강건하여지고"},
+  {"reference":"에베소서 6:11","book":"에베소서","chapter":6,"verseStart":11,"verseEnd":11,"text":"마귀의 간계를 능히 대적하기 위하여 하나님의 전신 갑주를 입으라"},
+  {"reference":"에베소서 6:13","book":"에베소서","chapter":6,"verseStart":13,"verseEnd":13,"text":"그러므로 하나님의 전신 갑주를 취하라 이는 악한 날에 너희가 능히 대적하고 모든 일을 행한 후에 서기 위함이라"},
+  {"reference":"빌립보서 1:6","book":"빌립보서","chapter":1,"verseStart":6,"verseEnd":6,"text":"너희 안에서 착한 일을 시작하신 이가 그리스도 예수의 날까지 이루실 줄을 우리는 확신하노라"},
+  {"reference":"빌립보서 1:21","book":"빌립보서","chapter":1,"verseStart":21,"verseEnd":21,"text":"이는 내게 사는 것이 그리스도니 죽는 것도 유익함이라"},
+  {"reference":"빌립보서 2:3-4","book":"빌립보서","chapter":2,"verseStart":3,"verseEnd":4,"text":"아무 일에든지 다툼이나 허영으로 하지 말고 오직 겸손한 마음으로 각각 자기보다 남을 낫게 여기고 각각 자기 일을 돌볼뿐더러 또한 각각 다른 사람들의 일을 돌보아 나의 기쁨을 충만하게 하라"},
+  {"reference":"빌립보서 2:9-11","book":"빌립보서","chapter":2,"verseStart":9,"verseEnd":11,"text":"이러므로 하나님이 그를 지극히 높여 모든 이름 위에 뛰어난 이름을 주사 하늘에 있는 자들과 땅에 있는 자들과 땅 아래에 있는 자들로 모든 무릎을 예수의 이름에 꿇게 하시고 모든 입으로 예수 그리스도를 주라 시인하여 하나님 아버지께 영광을 돌리게 하셨느니라"},
+  {"reference":"빌립보서 3:8","book":"빌립보서","chapter":3,"verseStart":8,"verseEnd":8,"text":"또한 모든 것을 해로 여김은 내 주 그리스도 예수를 아는 지식이 가장 고상하기 때문이라 내가 그를 위하여 모든 것을 잃어버리고 배설물로 여김은 그리스도를 얻고"},
+  {"reference":"빌립보서 3:14","book":"빌립보서","chapter":3,"verseStart":14,"verseEnd":14,"text":"푯대를 향하여 그리스도 예수 안에서 하나님이 위에서 부르신 부름의 상을 위하여 달려가노라"},
+  {"reference":"빌립보서 4:4","book":"빌립보서","chapter":4,"verseStart":4,"verseEnd":4,"text":"주 안에서 항상 기뻐하라 내가 다시 말하노니 기뻐하라"},
+  {"reference":"빌립보서 4:8","book":"빌립보서","chapter":4,"verseStart":8,"verseEnd":8,"text":"끝으로 형제들아 무엇에든지 참되며 무엇에든지 경건하며 무엇에든지 옳으며 무엇에든지 정결하며 무엇에든지 사랑 받을 만하며 무엇에든지 칭찬 받을 만하며 무슨 덕이 있든지 무슨 기림이 있든지 이것들을 생각하라"},
+  {"reference":"빌립보서 4:11","book":"빌립보서","chapter":4,"verseStart":11,"verseEnd":11,"text":"내가 궁핍하므로 말하는 것이 아니니라 어떠한 형편에든지 나는 자족하기를 배웠노니"},
+  {"reference":"빌립보서 4:19","book":"빌립보서","chapter":4,"verseStart":19,"verseEnd":19,"text":"나의 하나님이 그리스도 예수 안에서 영광 가운데 그 풍성한 대로 너희 모든 쓸 것을 채우시리라"},
+  {"reference":"골로새서 1:16-17","book":"골로새서","chapter":1,"verseStart":16,"verseEnd":17,"text":"만물이 그에게서 창조되되 하늘과 땅에서 보이는 것들과 보이지 않는 것들과 혹은 왕권들이나 주권들이나 통치자들이나 권세들이나 만물이 다 그로 말미암고 그를 위하여 창조되었고 또한 그가 만물보다 먼저 계시고 만물이 그 안에 함께 섰느니라"},
+  {"reference":"골로새서 3:2","book":"골로새서","chapter":3,"verseStart":2,"verseEnd":2,"text":"위의 것을 생각하고 땅의 것을 생각하지 말라"},
+  {"reference":"골로새서 3:15","book":"골로새서","chapter":3,"verseStart":15,"verseEnd":15,"text":"그리스도의 평강이 너희 마음을 주장하게 하라 너희는 평강을 위하여 한 몸으로 부르심을 받았나니 너희는 또한 감사하는 자가 되라"},
+  {"reference":"골로새서 3:23","book":"골로새서","chapter":3,"verseStart":23,"verseEnd":23,"text":"무슨 일을 하든지 마음을 다하여 주께 하듯 하고 사람에게 하듯 하지 말라"},
+  {"reference":"데살로니가전서 5:11","book":"데살로니가전서","chapter":5,"verseStart":11,"verseEnd":11,"text":"그러므로 피차 권면하고 서로 덕을 세우기를 너희가 하는 것 같이 하라"},
+  {"reference":"데살로니가전서 5:23","book":"데살로니가전서","chapter":5,"verseStart":23,"verseEnd":23,"text":"평강의 하나님이 친히 너희를 온전히 거룩하게 하시고 또 너희의 온 영과 혼과 몸이 우리 주 예수 그리스도께서 강림하실 때에 흠 없게 보전되기를 원하노라"},
+  {"reference":"데살로니가후서 3:3","book":"데살로니가후서","chapter":3,"verseStart":3,"verseEnd":3,"text":"주는 미쁘사 너희를 굳건하게 하시고 악한 자에게서 지키시리라"},
+  {"reference":"디모데전서 4:12","book":"디모데전서","chapter":4,"verseStart":12,"verseEnd":12,"text":"누구든지 네 연소함을 업신여기지 못하게 하고 오직 말과 행실과 사랑과 믿음과 정절에 있어서 믿는 자에게 본이 되어"},
+  {"reference":"디모데전서 6:6","book":"디모데전서","chapter":6,"verseStart":6,"verseEnd":6,"text":"그러나 자족하는 마음이 있으면 경건은 큰 이익이 되느니라"},
+  {"reference":"디모데전서 6:10","book":"디모데전서","chapter":6,"verseStart":10,"verseEnd":10,"text":"돈을 사랑함이 일만 악의 뿌리가 되나니 이것을 탐내는 자들은 미혹을 받아 믿음에서 떠나 많은 근심으로써 자기를 찔렀도다"},
+  {"reference":"디모데전서 6:12","book":"디모데전서","chapter":6,"verseStart":12,"verseEnd":12,"text":"믿음의 선한 싸움을 싸우라 영생을 취하라 이를 위하여 네가 부르심을 받았고 많은 증인 앞에서 선한 증언을 하였도다"},
+  {"reference":"디모데후서 2:15","book":"디모데후서","chapter":2,"verseStart":15,"verseEnd":15,"text":"너는 진리의 말씀을 옳게 분별하며 부끄러울 것이 없는 일꾼으로 인정된 자로 자신을 하나님 앞에 드리기를 힘쓰라"},
+  {"reference":"디모데후서 4:7-8","book":"디모데후서","chapter":4,"verseStart":7,"verseEnd":8,"text":"나는 선한 싸움을 싸우고 나의 달려갈 길을 마치고 믿음을 지켰으니 이제 후로는 나를 위하여 의의 면류관이 예비되었으므로 주 곧 의로우신 재판장이 그 날에 내게 주실 것이며 내게만 아니라 주의 나타나심을 사모하는 모든 자에게도 주실 것이니라"},
+  {"reference":"디도서 2:11-12","book":"디도서","chapter":2,"verseStart":11,"verseEnd":12,"text":"모든 사람에게 구원을 주시는 하나님의 은혜가 나타나 우리를 양육하시되 경건하지 않은 것과 이 세상 정욕을 다 버리고 신중함과 의로움과 경건함으로 이 세상에 살고"},
+  {"reference":"히브리서 1:3","book":"히브리서","chapter":1,"verseStart":3,"verseEnd":3,"text":"이는 하나님의 영광의 광채시요 그 본체의 형상이시라 그의 능력의 말씀으로 만물을 붙드시며 죄를 정결하게 하는 일을 하시고 높은 곳에 계신 지극히 크신 이의 우편에 앉으셨느니라"},
+  {"reference":"히브리서 4:15-16","book":"히브리서","chapter":4,"verseStart":15,"verseEnd":16,"text":"우리에게 있는 대제사장은 우리의 연약함을 동정하지 못하실 이가 아니요 모든 일에 우리와 똑같이 시험을 받으신 이로되 죄는 없으시니라 그러므로 우리는 긍휼하심을 받고 때를 따라 돕는 은혜를 얻기 위하여 은혜의 보좌 앞에 담대히 나아갈 것이니라"},
+  {"reference":"히브리서 10:24-25","book":"히브리서","chapter":10,"verseStart":24,"verseEnd":25,"text":"서로 돌아보아 사랑과 선행을 격려하며 모이기를 폐하는 어떤 사람들의 습관과 같이 하지 말고 오직 권하여 그 날이 가까움을 볼수록 더욱 그리하자"},
+  {"reference":"히브리서 11:6","book":"히브리서","chapter":11,"verseStart":6,"verseEnd":6,"text":"믿음이 없이는 하나님을 기쁘시게 하지 못하나니 하나님께 나아가는 자는 반드시 그가 계신 것과 또한 그가 자기를 찾는 자들에게 상 주시는 이심을 믿어야 할지니라"},
+  {"reference":"히브리서 12:2","book":"히브리서","chapter":12,"verseStart":2,"verseEnd":2,"text":"믿음의 주요 또 온전하게 하시는 이인 예수를 바라보자 그는 그 앞에 있는 기쁨을 위하여 십자가를 참으사 부끄러움을 개의치 아니하시더니 하나님 보좌 우편에 앉으셨느니라"},
+  {"reference":"히브리서 13:8","book":"히브리서","chapter":13,"verseStart":8,"verseEnd":8,"text":"예수 그리스도는 어제나 오늘이나 영원토록 동일하시니라"},
+  {"reference":"야고보서 1:19","book":"야고보서","chapter":1,"verseStart":19,"verseEnd":19,"text":"내 사랑하는 형제들아 너희가 알지니 사람마다 듣기는 속히 하고 말하기는 더디 하며 성내기도 더디 하라"},
+  {"reference":"야고보서 1:22","book":"야고보서","chapter":1,"verseStart":22,"verseEnd":22,"text":"너희는 말씀을 행하는 자가 되고 듣기만 하여 자신을 속이는 자가 되지 말라"},
+  {"reference":"야고보서 1:27","book":"야고보서","chapter":1,"verseStart":27,"verseEnd":27,"text":"하나님 아버지 앞에서 정결하고 더러움이 없는 경건은 곧 고아와 과부를 그 환난중에 돌보고 또 자기를 지켜 세속에 물들지 아니하는 그것이니라"},
+  {"reference":"야고보서 2:17","book":"야고보서","chapter":2,"verseStart":17,"verseEnd":17,"text":"이와 같이 행함이 없는 믿음은 그 자체가 죽은 것이라"},
+  {"reference":"야고보서 2:26","book":"야고보서","chapter":2,"verseStart":26,"verseEnd":26,"text":"영혼 없는 몸이 죽은 것 같이 행함이 없는 믿음은 죽은 것이니라"},
+  {"reference":"야고보서 3:17","book":"야고보서","chapter":3,"verseStart":17,"verseEnd":17,"text":"오직 위로부터 난 지혜는 첫째 성결하고 다음에 화평하고 관용하고 양순하며 긍휼과 선한 열매가 가득하고 편견과 거짓이 없나니"},
+  {"reference":"야고보서 4:14","book":"야고보서","chapter":4,"verseStart":14,"verseEnd":14,"text":"내일 일을 너희가 알지 못하는도다 너희 생명이 무엇이냐 너희는 잠깐 보이다가 없어지는 안개니라"},
+  {"reference":"베드로전서 1:6-7","book":"베드로전서","chapter":1,"verseStart":6,"verseEnd":7,"text":"그러므로 너희가 이제 여러 가지 시험으로 말미암아 잠깐 근심하게 되지 않을 수 없으나 오히려 크게 기뻐하는도다 너희 믿음의 확실함은 불로 연단하여도 없어질 금보다 더 귀하여 예수 그리스도께서 나타나실 때에 칭찬과 영광과 존귀를 얻게 할 것이니라"},
+  {"reference":"베드로전서 2:9","book":"베드로전서","chapter":2,"verseStart":9,"verseEnd":9,"text":"그러나 너희는 택하신 족속이요 왕 같은 제사장들이요 거룩한 나라요 그의 소유가 된 백성이니 이는 너희를 어두운 데서 불러 내어 그의 기이한 빛에 들어가게 하신 이의 아름다운 덕을 선포하게 하려 하심이라"},
+  {"reference":"베드로전서 2:24","book":"베드로전서","chapter":2,"verseStart":24,"verseEnd":24,"text":"친히 나무에 달려 그 몸으로 우리 죄를 담당하셨으니 이는 우리로 죄에 대하여 죽고 의에 대하여 살게 하려 하심이라 그가 채찍에 맞음으로 너희는 나음을 얻었나니"},
+  {"reference":"베드로전서 5:7-8","book":"베드로전서","chapter":5,"verseStart":7,"verseEnd":8,"text":"너희 염려를 다 주께 맡기라 이는 그가 너희를 돌보심이라 근신하라 깨어라 너희 대적 마귀가 우는 사자 같이 두루 다니며 삼킬 자를 찾나니"},
+  {"reference":"베드로후서 1:3-4","book":"베드로후서","chapter":1,"verseStart":3,"verseEnd":4,"text":"그의 신기한 능력으로 생명과 경건에 속한 모든 것을 우리에게 주셨으니 이는 자기의 영광과 덕으로써 우리를 부르신 이를 앎으로 말미암음이라 이로써 그 보배롭고 지극히 큰 약속을 우리에게 주사 이 약속으로 말미암아 너희가 정욕 때문에 세상에서 썩어질 것을 피하여 신성한 성품에 참여하는 자가 되게 하려 하셨느니라"},
+  {"reference":"베드로후서 3:9","book":"베드로후서","chapter":3,"verseStart":9,"verseEnd":9,"text":"주의 약속은 어떤 이들이 더디다고 생각하는 것 같이 더딘 것이 아니라 오직 주께서는 너희를 대하여 오래 참으사 아무도 멸망하지 아니하고 다 회개하기에 이르기를 원하시느니라"},
+  {"reference":"베드로후서 3:18","book":"베드로후서","chapter":3,"verseStart":18,"verseEnd":18,"text":"오직 우리 주 곧 구주 예수 그리스도의 은혜와 그를 아는 지식에서 자라 가라 영광이 이제와 영원한 날까지 그에게 있을지어다"},
+  {"reference":"요한일서 1:7","book":"요한일서","chapter":1,"verseStart":7,"verseEnd":7,"text":"그가 빛 가운데 계신 것 같이 우리도 빛 가운데 행하면 우리가 서로 사귐이 있고 그 아들 예수의 피가 우리를 모든 죄에서 깨끗하게 하실 것이요"},
+  {"reference":"요한일서 2:15-17","book":"요한일서","chapter":2,"verseStart":15,"verseEnd":17,"text":"이 세상이나 세상에 있는 것들을 사랑하지 말라 누구든지 세상을 사랑하면 아버지의 사랑이 그 안에 있지 아니하니 이는 세상에 있는 모든 것이 육신의 정욕과 안목의 정욕과 이생의 자랑이니 다 아버지께로부터 온 것이 아니요 세상으로부터 온 것이라 이 세상도, 그 정욕도 지나가되 오직 하나님의 뜻을 행하는 자는 영원히 거하느니라"},
+  {"reference":"요한일서 3:1","book":"요한일서","chapter":3,"verseStart":1,"verseEnd":1,"text":"보라 아버지께서 어떠한 사랑을 우리에게 베푸사 하나님의 자녀라 일컬음을 받게 하셨는가, 우리가 그러하도다 그러므로 세상이 우리를 알지 못함은 그를 알지 못함이라"},
+  {"reference":"요한일서 3:16","book":"요한일서","chapter":3,"verseStart":16,"verseEnd":16,"text":"그가 우리를 위하여 목숨을 버리셨으니 우리가 이로써 사랑을 알고 우리도 형제들을 위하여 목숨을 버리는 것이 마땅하니라"},
+  {"reference":"요한일서 3:18","book":"요한일서","chapter":3,"verseStart":18,"verseEnd":18,"text":"자녀들아 우리가 말과 혀로만 사랑하지 말고 행함과 진실함으로 하자"},
+  {"reference":"요한일서 4:4","book":"요한일서","chapter":4,"verseStart":4,"verseEnd":4,"text":"자녀들아 너희는 하나님께 속하였고 또 그들을 이기었나니 이는 너희 안에 계신 이가 세상에 있는 자보다 크심이라"},
+  {"reference":"요한일서 4:7-8","book":"요한일서","chapter":4,"verseStart":7,"verseEnd":8,"text":"사랑하는 자들아 우리가 서로 사랑하자 사랑은 하나님께 속한 것이니 사랑하는 자마다 하나님으로부터 나서 하나님을 알고 사랑하지 아니하는 자는 하나님을 알지 못하나니 이는 하나님은 사랑이심이라"},
+  {"reference":"요한일서 4:10-11","book":"요한일서","chapter":4,"verseStart":10,"verseEnd":11,"text":"사랑은 여기 있으니 우리가 하나님을 사랑한 것이 아니요 하나님이 우리를 사랑하사 우리 죄를 속하기 위하여 화목제물로 그 아들을 보내셨음이라 사랑하는 자들아 하나님이 이같이 우리를 사랑하셨은즉 우리도 서로 사랑하는 것이 마땅하도다"},
+  {"reference":"요한일서 4:16","book":"요한일서","chapter":4,"verseStart":16,"verseEnd":16,"text":"하나님이 우리를 사랑하시는 사랑을 우리가 알고 믿었노니 하나님은 사랑이시라 사랑 안에 거하는 자는 하나님 안에 거하고 하나님도 그의 안에 거하시느니라"},
+  {"reference":"요한일서 4:18","book":"요한일서","chapter":4,"verseStart":18,"verseEnd":18,"text":"사랑 안에 두려움이 없고 온전한 사랑이 두려움을 내쫓나니 두려움에는 형벌이 있음이라 두려워하는 자는 사랑 안에서 온전히 이루지 못하였느니라"},
+  {"reference":"요한일서 5:4","book":"요한일서","chapter":5,"verseStart":4,"verseEnd":4,"text":"무릇 하나님께로부터 난 자마다 세상을 이기느니라 세상을 이기는 승리는 이것이니 우리의 믿음이니라"},
+  {"reference":"요한일서 5:14","book":"요한일서","chapter":5,"verseStart":14,"verseEnd":14,"text":"그를 향하여 우리가 가진 바 담대함이 이것이니 그의 뜻대로 무엇을 구하면 들으심이라"},
+  {"reference":"요한삼서 1:2","book":"요한삼서","chapter":1,"verseStart":2,"verseEnd":2,"text":"사랑하는 자여 네 영혼이 잘됨 같이 네가 범사에 잘되고 강건하기를 내가 간구하노라"},
+  {"reference":"유다서 1:24-25","book":"유다서","chapter":1,"verseStart":24,"verseEnd":25,"text":"능히 너희를 보호하사 거침이 없게 하시고 너희로 그 영광 앞에 흠이 없이 기쁨으로 서게 하실 이 곧 우리 구주 홀로 하나이신 하나님께 우리 주 예수 그리스도로 말미암아 영광과 위엄과 권력과 권세가 영원 전부터 이제와 영원토록 있을지어다 아멘"},
+  {"reference":"요한계시록 1:8","book":"요한계시록","chapter":1,"verseStart":8,"verseEnd":8,"text":"주 하나님이 이르시되 나는 알파와 오메가라 이제도 있고 전에도 있었고 장차 올 자요 전능한 자라 하시더라"},
+  {"reference":"요한계시록 3:20","book":"요한계시록","chapter":3,"verseStart":20,"verseEnd":20,"text":"볼지어다 내가 문 밖에 서서 두드리노니 누구든지 내 음성을 듣고 문을 열면 내가 그에게로 들어가 그와 더불어 먹고 그는 나와 더불어 먹으리라"},
+  {"reference":"요한계시록 21:5","book":"요한계시록","chapter":21,"verseStart":5,"verseEnd":5,"text":"보좌에 앉으신 이가 이르시되 보라 내가 만물을 새롭게 하노라 하시고 또 이르시되 이 말은 신실하고 참되니 기록하라 하시고"},
+  {"reference":"요한계시록 22:13","book":"요한계시록","chapter":22,"verseStart":13,"verseEnd":13,"text":"나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"},
+  {"reference":"요한계시록 22:20","book":"요한계시록","chapter":22,"verseStart":20,"verseEnd":20,"text":"이것들을 증언하신 이가 이르시되 내가 진실로 속히 오리라 하시거늘 아멘 주 예수여 오시옵소서"}
+];
+  function referenceStringFromParsed(parsed) {
+    return parsed.verseStart === parsed.verseEnd
+      ? `${parsed.book} ${parsed.chapter}:${parsed.verseStart}`
+      : `${parsed.book} ${parsed.chapter}:${parsed.verseStart}-${parsed.verseEnd}`;
+  }
+  function findVerseText(parsed) {
+    const hit = BIBLE_LOOKUP.find(v => v.book === parsed.book && v.chapter === parsed.chapter
+      && v.verseStart === parsed.verseStart && v.verseEnd === parsed.verseEnd);
+    if (hit) return hit.text;
+    const refStr = referenceStringFromParsed(parsed);
+    const existing = VERSES.find(v => v.reference === refStr);
+    return existing ? existing.text : null;
+  }
+
+  const CATEGORY_KEYWORDS = {
+    "하나님의 사랑": ["사랑하사", "독생자", "하나님의 사랑", "긍휼히", "자비하심"],
+    "구원의 확신": ["구원", "영생을 얻", "죄 사함", "거듭나", "속량", "의롭다"],
+    "하나님의 섭리": ["합력하여 선", "섭리", "인자와 긍휼", "선하시고 기뻐하시고"],
+    "믿음의 삶": ["믿음", "제자로 삼아", "그 나라와 그 의", "계명을 지키"],
+    "평강과 위로": ["평강", "쉬게 하리라", "피난처", "위로", "낙심하며", "안식"],
+    "지혜와 신뢰": ["지혜", "명철", "신뢰하고", "맡기라", "묵상하는도다", "지도하시리라"],
+    "담대함": ["담대", "두려워하지 말라", "놀라지 말라", "강하고 담대"],
+    "성령의 열매": ["성령의 열매", "희락과 화평", "보혜사", "성령이"],
+    "기도": ["기도", "간구", "부르짖으라", "구하라 그리하면"],
+    "말씀": ["말씀은", "율법책", "성경은", "묵상하여"],
+    "감사와 찬양": ["감사", "찬양", "송축", "찬송"],
+    "사랑과 용서": ["용서", "서로 사랑", "이웃을", "용납하여"],
+    "인내와 연단": ["인내", "연단", "시련", "낙심하지 말지니"],
+    "소망과 영생": ["소망", "부활", "산 소망", "영생이"],
+    "순종과 헌신": ["순종", "산 제물", "자기를 부인", "섬기겠노라"],
+    "전도와 사명": ["전도", "증인이 되리라", "복음을", "만민에게"],
+    "창조와 하나님의 성품": ["창조하시니라", "지으심", "천지를", "영광을 선포"],
+    "죄와 회개": ["죄를 범하였으매", "회개", "돌이켜"],
+  };
+  function guessCategory(text) {
+    if (!text) return null;
+    let best = null, bestScore = 0;
+    for (const [cat, words] of Object.entries(CATEGORY_KEYWORDS)) {
+      let score = 0;
+      for (const w of words) if (text.includes(w)) score++;
+      if (score > bestScore) { bestScore = score; best = cat; }
+    }
+    return best;
+  }
+
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const inputRef = document.getElementById('inputRef');
+  const inputText = document.getElementById('inputText');
+  const inputCategory = document.getElementById('inputCategory');
+  const lookupStatus = document.getElementById('lookupStatus');
+  const categoryAutoTag = document.getElementById('categoryAutoTag');
+  let categoryManuallySet = false;
+  Object.keys(CATEGORY_SLUG).forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = cat;
+    inputCategory.appendChild(opt);
+  });
+
+  function openAddModal() {
+    inputRef.value = '';
+    inputText.value = '';
+    inputRef.style.borderColor = '';
+    inputText.style.borderColor = '';
+    lookupStatus.textContent = '';
+    lookupStatus.className = 'lookup-status';
+    categoryAutoTag.textContent = '';
+    categoryManuallySet = false;
+    inputCategory.selectedIndex = 0;
+    modalBackdrop.classList.add('open');
+    inputRef.focus();
+  }
+  function closeAddModal() {
+    modalBackdrop.classList.remove('open');
+  }
+  function applyCategoryGuess(text) {
+    if (categoryManuallySet) return;
+    const guess = guessCategory(text);
+    if (guess) {
+      inputCategory.value = guess;
+      categoryAutoTag.textContent = '(자동 추천)';
+    }
+  }
+  function tryAutoFillFromReference() {
+    const parsed = parseReference(inputRef.value);
+    if (!parsed) {
+      lookupStatus.textContent = '';
+      lookupStatus.className = 'lookup-status';
+      return;
+    }
+    const text = findVerseText(parsed);
+    if (text) {
+      inputText.value = text;
+      inputText.style.borderColor = '';
+      lookupStatus.textContent = '본문을 찾았어요. 확인 후 카드를 만들어주세요.';
+      lookupStatus.className = 'lookup-status found';
+      applyCategoryGuess(text);
+    } else {
+      lookupStatus.textContent = '이 구절은 저장된 목록에 없어요. 본문을 직접 입력해주세요.';
+      lookupStatus.className = 'lookup-status missing';
+    }
+  }
+  document.getElementById('modalCancel').addEventListener('click', closeAddModal);
+  modalBackdrop.addEventListener('click', (e) => { if (e.target === modalBackdrop) closeAddModal(); });
+  [inputRef, inputText].forEach(el => el.addEventListener('input', function () { this.style.borderColor = ''; }));
+  inputRef.addEventListener('blur', tryAutoFillFromReference);
+  inputRef.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); tryAutoFillFromReference(); inputText.focus(); }
+  });
+  inputText.addEventListener('blur', () => { if (!categoryManuallySet) applyCategoryGuess(inputText.value.trim()); });
+  inputCategory.addEventListener('change', () => { categoryManuallySet = true; categoryAutoTag.textContent = ''; });
+  document.getElementById('modalSubmit').addEventListener('click', () => {
+    const reference = inputRef.value.trim();
+    const text = inputText.value.trim();
+    if (!reference) inputRef.style.borderColor = '#b34747';
+    if (!text) inputText.style.borderColor = '#b34747';
+    if (!reference || !text) return;
+    addCustomVerse({ reference, text, category: inputCategory.value });
+    closeAddModal();
+  });
+
+  function currentDeck() {
+    return baseOrder.filter(i => {
+      const v = VERSES[i];
+      if (category === '__favorites__') return favorites.has(v.id);
+      if (category === '__mastered__') return mastered.has(v.id);
+      if (category !== 'all' && v.category !== category) return false;
+      if (hideMastered && mastered.has(v.id)) return false;
+      return true;
+    });
+  }
+
+  function selectCategory(cat) {
+    category = cat;
+    pos = 0;
+    flipped = false;
+    viewMode = isListCategory(cat) ? 'list' : 'deck';
+    render();
+  }
+  els.backToListBtn.addEventListener('click', () => {
+    viewMode = 'list';
+    flipped = false;
+    render();
+  });
+
+  function goNext() {
+    const deck = currentDeck();
+    if (!deck.length) return;
+    pos = (pos + 1) % deck.length;
+    flipped = false;
+    render();
+  }
+  function goPrev() {
+    const deck = currentDeck();
+    if (!deck.length) return;
+    pos = (pos - 1 + deck.length) % deck.length;
+    flipped = false;
+    render();
+  }
+  function flipCard() {
+    if (!currentDeck().length) return;
+    flipped = !flipped;
+    render();
+  }
+  function toggleMastery() {
+    const deck = currentDeck();
+    if (!deck.length) return;
+    const v = VERSES[deck[pos]];
+    if (mastered.has(v.id)) mastered.delete(v.id); else mastered.add(v.id);
+    saveMastered(mastered);
+    render();
+  }
+  function toggleFavorite() {
+    const deck = currentDeck();
+    if (!deck.length) return;
+    const v = VERSES[deck[pos]];
+    if (favorites.has(v.id)) favorites.delete(v.id); else favorites.add(v.id);
+    saveFavorites(favorites);
+    render();
+  }
+  function addCustomVerse({ reference, text, category: cat }) {
+    const id = 'custom_' + Date.now() + '_' + Math.random().toString(36).slice(2, 7);
+    const v = { id, reference, text, category: cat, custom: true };
+    VERSES.push(v);
+    const newIndex = VERSES.length - 1;
+    baseOrder.push(newIndex);
+    saveOrder(baseOrder);
+    const custom = loadCustomVerses();
+    custom.push(v);
+    saveCustomVerses(custom);
+    els.totalLabel.textContent = `총 ${VERSES.length}구절`;
+    category = 'all';
+    hideMastered = false;
+    els.reviewOnly.checked = false;
+    flipped = false;
+    const deck = currentDeck();
+    pos = deck.indexOf(newIndex);
+    if (pos < 0) pos = 0;
+    render();
+  }
+  function deleteCustomVerse(id) {
+    const idx = VERSES.findIndex(v => v.id === id);
+    if (idx === -1) return;
+    VERSES.splice(idx, 1);
+    baseOrder = baseOrder.filter(i => i !== idx).map(i => (i > idx ? i - 1 : i));
+    saveOrder(baseOrder);
+    mastered.delete(id);
+    saveMastered(mastered);
+    favorites.delete(id);
+    saveFavorites(favorites);
+    saveCustomVerses(loadCustomVerses().filter(v => v.id !== id));
+    els.totalLabel.textContent = `총 ${VERSES.length}구절`;
+    flipped = false;
+    const deck = currentDeck();
+    if (pos >= deck.length) pos = Math.max(0, deck.length - 1);
+    render();
+  }
+  function shuffleOrder() {
+    const arr = VERSES.map((_, i) => i);
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    baseOrder = arr;
+    saveOrder(baseOrder);
+    pos = 0;
+    flipped = false;
+    render();
+  }
+
+  function renderVerseList(deck) {
+    els.progressRow.style.display = 'none';
+    els.stage.style.display = 'none';
+    els.controls.style.display = 'none';
+    els.empty.style.display = 'none';
+    els.verseList.classList.add('visible');
+    els.verseList.innerHTML = '';
+
+    if (!deck.length) {
+      const empty = document.createElement('p');
+      empty.className = 'verse-list-empty';
+      empty.textContent = category === '__favorites__'
+        ? '즐겨찾기한 구절이 아직 없어요.'
+        : '아직 암송 완료한 구절이 없어요.';
+      els.verseList.appendChild(empty);
+    } else {
+      deck.forEach((vi, listIdx) => {
+        const v = VERSES[vi];
+        const slug = CATEGORY_SLUG[v.category];
+        const item = document.createElement('button');
+        item.className = 'verse-list-item';
+
+        const dot = document.createElement('span');
+        dot.className = 'dot';
+        dot.style.background = `var(--cat-${slug})`;
+
+        const info = document.createElement('span');
+        info.className = 'info';
+        const ref = document.createElement('span');
+        ref.className = 'ref';
+        ref.textContent = v.reference;
+        const preview = document.createElement('span');
+        preview.className = 'preview';
+        preview.textContent = v.text;
+        info.appendChild(ref);
+        info.appendChild(preview);
+
+        item.appendChild(dot);
+        item.appendChild(info);
+        item.addEventListener('click', () => {
+          pos = listIdx;
+          viewMode = 'deck';
+          flipped = false;
+          render();
+        });
+        els.verseList.appendChild(item);
+      });
+    }
+
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
+  }
+
+  function render() {
+    const deck = currentDeck();
+    const listCat = isListCategory(category);
+    els.backToListBtn.style.display = (listCat && viewMode === 'deck') ? '' : 'none';
+    els.reviewOnly.closest('.switch-label').style.display = listCat ? 'none' : '';
+
+    if (listCat && viewMode === 'list') {
+      renderVerseList(deck);
+      return;
+    }
+
+    els.verseList.classList.remove('visible');
+    els.progressRow.style.display = '';
+
+    if (!deck.length) {
+      els.stage.style.display = 'none';
+      els.controls.style.display = 'none';
+      els.empty.style.display = 'flex';
+      els.posLabel.textContent = '0 / 0';
+      els.progressFill.style.width = '0%';
+      const emptyMessage = document.getElementById('emptyMessage');
+      const emptyResetBtn = document.getElementById('emptyResetBtn');
+      if (category === '__favorites__') {
+        emptyMessage.textContent = '즐겨찾기한 구절이 아직 없어요.';
+        emptyResetBtn.style.display = 'none';
+      } else if (category === '__mastered__') {
+        emptyMessage.textContent = '아직 암송 완료한 구절이 없어요.';
+        emptyResetBtn.style.display = 'none';
+      } else {
+        emptyMessage.textContent = '이 조건에 맞는 카드를 모두 학습했어요.';
+        emptyResetBtn.style.display = '';
+      }
+      document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
+      return;
+    }
+
+    els.stage.style.display = '';
+    els.controls.style.display = '';
+    els.empty.style.display = 'none';
+
+    if (pos >= deck.length) pos = 0;
+    const v = VERSES[deck[pos]];
+    const slug = CATEGORY_SLUG[v.category];
+
+    els.frontCategory.textContent = v.category;
+    els.frontIcon.innerHTML = svgIconMarkup(slug);
+    els.frontRef.textContent = v.reference;
+    els.backText.textContent = v.text;
+    els.backRef.textContent = v.reference;
+    els.card.style.setProperty('--accent', `var(--cat-${slug})`);
+
+    els.card.classList.toggle('flipped', flipped);
+
+    const isMastered = mastered.has(v.id);
+    els.masteryBtn.setAttribute('aria-pressed', String(isMastered));
+    els.masteryBtn.classList.toggle('is-mastered', isMastered);
+    const isFavorite = favorites.has(v.id);
+    els.favoriteBtn.setAttribute('aria-pressed', String(isFavorite));
+    els.favoriteBtn.classList.toggle('is-favorite', isFavorite);
+    els.deleteBtn.classList.toggle('visible', !!v.custom);
+
+    els.posLabel.textContent = `${pos + 1} / ${deck.length}`;
+    els.progressFill.style.width = `${((pos + 1) / deck.length) * 100}%`;
+
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
+  }
+
+  let startX = 0, startY = 0, dragging = false;
+  els.card.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('.mastery-btn') || e.target.closest('.favorite-btn') || e.target.closest('.delete-btn')) return;
+    startX = e.clientX; startY = e.clientY; dragging = true;
+  });
+  els.card.addEventListener('pointerup', (e) => {
+    if (e.target.closest('.mastery-btn') || e.target.closest('.favorite-btn') || e.target.closest('.delete-btn')) return;
+    if (!dragging) return;
+    dragging = false;
+    const dx = e.clientX - startX, dy = e.clientY - startY;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) goNext(); else goPrev();
+    } else if (Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+      flipCard();
+    }
+  });
+  els.card.addEventListener('pointercancel', () => { dragging = false; });
+  els.card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flipCard(); }
+    else if (e.key === 'ArrowRight') { goNext(); }
+    else if (e.key === 'ArrowLeft') { goPrev(); }
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', goPrev);
+  document.getElementById('nextBtn').addEventListener('click', goNext);
+  document.getElementById('flipBtn').addEventListener('click', flipCard);
+  els.masteryBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMastery(); });
+  els.favoriteBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFavorite(); });
+  els.deleteBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const deck = currentDeck();
+    if (!deck.length) return;
+    const v = VERSES[deck[pos]];
+    if (v.custom) deleteCustomVerse(v.id);
+  });
+  document.getElementById('shuffleBtn').addEventListener('click', shuffleOrder);
+  document.getElementById('emptyResetBtn').addEventListener('click', () => {
+    hideMastered = false;
+    els.reviewOnly.checked = false;
+    render();
+  });
+  els.reviewOnly.addEventListener('change', () => {
+    hideMastered = els.reviewOnly.checked;
+    pos = 0;
+    flipped = false;
+    render();
+  });
+
+  // ---------- home screen ----------
+  const homeBtn = document.getElementById('homeBtn');
+  const homeViewEl = document.getElementById('homeView');
+  const studyViewEl = document.getElementById('studyView');
+  const homeCardEl = document.getElementById('homeCard');
+  const homeMasteryBtn = document.getElementById('homeMasteryBtn');
+  const homeFavoriteBtn = document.getElementById('homeFavoriteBtn');
+  let homeFlipped = false;
+
+  function getTodayVerse() {
+    if (!VERSES.length) return null;
+    const dayIndex = Math.floor(Date.now() / 86400000);
+    return VERSES[dayIndex % VERSES.length];
+  }
+  function renderHome() {
+    const v = getTodayVerse();
+    if (!v) return;
+    const slug = CATEGORY_SLUG[v.category];
+    document.getElementById('homeCategory').textContent = v.category;
+    document.getElementById('homeIcon').innerHTML = svgIconMarkup(slug);
+    document.getElementById('homeRef').textContent = v.reference;
+    document.getElementById('homeText').textContent = v.text;
+    document.getElementById('homeRefSmall').textContent = v.reference;
+    homeCardEl.style.setProperty('--accent', `var(--cat-${slug})`);
+    homeFlipped = false;
+    homeCardEl.classList.remove('flipped');
+    const isMastered = mastered.has(v.id);
+    homeMasteryBtn.setAttribute('aria-pressed', String(isMastered));
+    homeMasteryBtn.classList.toggle('is-mastered', isMastered);
+    const isFavorite = favorites.has(v.id);
+    homeFavoriteBtn.setAttribute('aria-pressed', String(isFavorite));
+    homeFavoriteBtn.classList.toggle('is-favorite', isFavorite);
+    document.getElementById('homeStats').textContent = `암송 완료 ${mastered.size} / ${VERSES.length}구절`;
+  }
+  function showScreen(screen) {
+    homeViewEl.style.display = screen === 'home' ? '' : 'none';
+    studyViewEl.style.display = screen === 'study' ? '' : 'none';
+    homeBtn.classList.toggle('active', screen === 'home');
+    if (screen === 'home') renderHome();
+  }
+  function toggleHomeFlip() {
+    homeFlipped = !homeFlipped;
+    homeCardEl.classList.toggle('flipped', homeFlipped);
+  }
+  homeCardEl.addEventListener('click', toggleHomeFlip);
+  homeCardEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleHomeFlip(); }
+  });
+  homeMasteryBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const v = getTodayVerse();
+    if (!v) return;
+    if (mastered.has(v.id)) mastered.delete(v.id); else mastered.add(v.id);
+    saveMastered(mastered);
+    renderHome();
+  });
+  homeFavoriteBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const v = getTodayVerse();
+    if (!v) return;
+    if (favorites.has(v.id)) favorites.delete(v.id); else favorites.add(v.id);
+    saveFavorites(favorites);
+    renderHome();
+  });
+  homeBtn.addEventListener('click', () => showScreen('home'));
+  document.getElementById('homeStartBtn').addEventListener('click', () => {
+    showScreen('study');
+    render();
+  });
+  document.getElementById('homeFavoritesBtn').addEventListener('click', () => {
+    showScreen('study');
+    selectCategory('__favorites__');
+  });
+  document.getElementById('homeMasteredBtn').addEventListener('click', () => {
+    showScreen('study');
+    selectCategory('__mastered__');
+  });
+  document.getElementById('homeAddBtn').addEventListener('click', () => {
+    showScreen('study');
+    selectCategory('all');
+    openAddModal();
+  });
+
+  render();
+  showScreen('home');
+</script>
