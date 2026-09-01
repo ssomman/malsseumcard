@@ -1504,6 +1504,8 @@
   }
 
   let activeSpeakBtn = null;
+  let speakPauseTimer = null;
+  const REPEAT_PAUSE_MS = 1200;
   let repeatCount = 1;
   document.querySelectorAll('.repeat-chip').forEach(chip => {
     chip.addEventListener('click', () => {
@@ -1512,13 +1514,14 @@
     });
   });
   function stopSpeaking() {
+    if (speakPauseTimer) { clearTimeout(speakPauseTimer); speakPauseTimer = null; }
     if ('speechSynthesis' in window) speechSynthesis.cancel();
     if (activeSpeakBtn) activeSpeakBtn.classList.remove('speaking');
     activeSpeakBtn = null;
   }
   function toggleSpeak(text, btn, times) {
     if (!('speechSynthesis' in window)) return;
-    if (speechSynthesis.speaking) {
+    if (speechSynthesis.speaking || speakPauseTimer) {
       stopSpeaking();
       return;
     }
@@ -1530,7 +1533,10 @@
       utter.onend = () => {
         remaining--;
         if (remaining > 0 && activeSpeakBtn === btn) {
-          speakOnce();
+          speakPauseTimer = setTimeout(() => {
+            speakPauseTimer = null;
+            if (activeSpeakBtn === btn) speakOnce();
+          }, REPEAT_PAUSE_MS);
         } else {
           btn.classList.remove('speaking');
           if (activeSpeakBtn === btn) activeSpeakBtn = null;
