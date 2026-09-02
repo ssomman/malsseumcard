@@ -435,7 +435,7 @@
     font-size: 13px;
     color: var(--ink-soft);
   }
-  .repeat-chip { padding: 5px 12px; font-size: 12px; }
+  .repeat-chip, .rate-chip { padding: 5px 12px; font-size: 12px; }
   .footer-row {
     display: flex;
     align-items: center;
@@ -679,6 +679,14 @@
     <button class="chip repeat-chip" data-count="3">3번</button>
     <button class="chip repeat-chip" data-count="5">5번</button>
     <button class="chip repeat-chip" data-count="10">10번</button>
+  </div>
+
+  <div class="repeat-row">
+    <span class="repeat-label">배속</span>
+    <button class="chip rate-chip active" data-rate="1">1배속</button>
+    <button class="chip rate-chip" data-rate="1.2">1.2배속</button>
+    <button class="chip rate-chip" data-rate="1.5">1.5배속</button>
+    <button class="chip rate-chip" data-rate="2">2배속</button>
   </div>
 
   <div class="footer-row">
@@ -1528,6 +1536,13 @@
       document.querySelectorAll('.repeat-chip').forEach(c => c.classList.toggle('active', c === chip));
     });
   });
+  let speechRate = 1;
+  document.querySelectorAll('.rate-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      speechRate = parseFloat(chip.dataset.rate);
+      document.querySelectorAll('.rate-chip').forEach(c => c.classList.toggle('active', c === chip));
+    });
+  });
   let autoplayActive = false;
   let autoplayTimer = null;
   function stopSpeaking() {
@@ -1556,7 +1571,7 @@
       if (itemEl) { itemEl.classList.add('playing'); itemEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
       const utter = new SpeechSynthesisUtterance(`${v.reference}. ${v.text}`);
       utter.lang = 'ko-KR';
-      utter.rate = 0.9;
+      utter.rate = speechRate;
       utter.onend = () => {
         idx++;
         if (!autoplayActive) return;
@@ -1581,7 +1596,7 @@
     const speakOnce = () => {
       const utter = new SpeechSynthesisUtterance(text);
       utter.lang = 'ko-KR';
-      utter.rate = 0.9;
+      utter.rate = speechRate;
       utter.onend = () => {
         remaining--;
         if (remaining > 0 && activeSpeakBtn === btn) {
