@@ -2080,6 +2080,38 @@ const READ_PASSAGES = [
     btn.classList.add('speaking');
     speakOnce();
   }
+  const VERSE_GAP_MS = 350;
+  function toggleSpeakSequence(texts, btn) {
+    if (!('speechSynthesis' in window)) return;
+    if (speechSynthesis.speaking || speakPauseTimer) {
+      stopSpeaking();
+      return;
+    }
+    let idx = 0;
+    const speakNext = () => {
+      if (idx >= texts.length || activeSpeakBtn !== btn) {
+        btn.classList.remove('speaking');
+        if (activeSpeakBtn === btn) activeSpeakBtn = null;
+        return;
+      }
+      const utter = new SpeechSynthesisUtterance(texts[idx]);
+      utter.lang = 'ko-KR';
+      utter.rate = speechRate;
+      utter.onend = () => {
+        idx++;
+        if (activeSpeakBtn !== btn) return;
+        speakPauseTimer = setTimeout(() => {
+          speakPauseTimer = null;
+          speakNext();
+        }, VERSE_GAP_MS);
+      };
+      utter.onerror = () => { btn.classList.remove('speaking'); if (activeSpeakBtn === btn) activeSpeakBtn = null; };
+      speechSynthesis.speak(utter);
+    };
+    activeSpeakBtn = btn;
+    btn.classList.add('speaking');
+    speakNext();
+  }
 
   function selectCategory(cat) {
     stopSpeaking();
@@ -2591,8 +2623,7 @@ const READ_PASSAGES = [
   readSpeakBtn.addEventListener('click', () => {
     const p = currentReadList[currentReadIndex];
     if (!p) return;
-    const fullText = p.verses.map(([, t]) => t).join(' ');
-    toggleSpeak(fullText, readSpeakBtn, 1);
+    toggleSpeakSequence(p.verses.map(([, t]) => t), readSpeakBtn);
   });
   readFavoriteBtn.addEventListener('click', () => {
     const p = currentReadList[currentReadIndex];
