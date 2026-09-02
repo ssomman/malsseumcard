@@ -543,6 +543,18 @@
     font-size: 14px;
     padding: 40px 20px;
   }
+  .autoplay-btn {
+    align-self: flex-start;
+    padding: 0;
+    margin: -6px 0 0;
+    font-weight: 600;
+  }
+  .autoplay-btn.active { color: #c14a5f; }
+  .verse-list-item.playing {
+    border-color: var(--indigo);
+    background: var(--surface-2);
+  }
+  .verse-list-item.playing .ref { color: var(--indigo); }
   .church-footer {
     margin: 6px 0 0;
     text-align: center;
@@ -610,6 +622,8 @@
     <span id="posLabel">0 / 0</span>
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
   </div>
+
+  <button class="text-btn autoplay-btn" id="autoplayBtn" style="display:none;">▶ 전체 자동재생</button>
 
   <div class="verse-list" id="verseList"></div>
 
@@ -986,6 +1000,7 @@
     chipRow: document.getElementById('chipRow'),
     progressRow: document.getElementById('progressRow'),
     verseList: document.getElementById('verseList'),
+    autoplayBtn: document.getElementById('autoplayBtn'),
     backToListBtn: document.getElementById('backToListBtn'),
     stage: document.getElementById('stage'),
     empty: document.getElementById('emptyState'),
@@ -1513,12 +1528,49 @@
       document.querySelectorAll('.repeat-chip').forEach(c => c.classList.toggle('active', c === chip));
     });
   });
+  let autoplayActive = false;
+  let autoplayTimer = null;
   function stopSpeaking() {
     if (speakPauseTimer) { clearTimeout(speakPauseTimer); speakPauseTimer = null; }
+    if (autoplayTimer) { clearTimeout(autoplayTimer); autoplayTimer = null; }
+    autoplayActive = false;
     if ('speechSynthesis' in window) speechSynthesis.cancel();
     if (activeSpeakBtn) activeSpeakBtn.classList.remove('speaking');
     activeSpeakBtn = null;
+    els.autoplayBtn.textContent = '▶ 전체 자동재생';
+    els.autoplayBtn.classList.remove('active');
+    document.querySelectorAll('.verse-list-item.playing').forEach(el => el.classList.remove('playing'));
   }
+  function startAutoplay(deck) {
+    stopSpeaking();
+    if (!deck.length || !('speechSynthesis' in window)) return;
+    autoplayActive = true;
+    els.autoplayBtn.textContent = '■ 정지';
+    els.autoplayBtn.classList.add('active');
+    let idx = 0;
+    const playNext = () => {
+      if (!autoplayActive || idx >= deck.length) { stopSpeaking(); return; }
+      const v = VERSES[deck[idx]];
+      document.querySelectorAll('.verse-list-item.playing').forEach(el => el.classList.remove('playing'));
+      const itemEl = els.verseList.children[idx];
+      if (itemEl) { itemEl.classList.add('playing'); itemEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); }
+      const utter = new SpeechSynthesisUtterance(`${v.reference}. ${v.text}`);
+      utter.lang = 'ko-KR';
+      utter.rate = 0.9;
+      utter.onend = () => {
+        idx++;
+        if (!autoplayActive) return;
+        autoplayTimer = setTimeout(() => { autoplayTimer = null; playNext(); }, REPEAT_PAUSE_MS);
+      };
+      utter.onerror = () => stopSpeaking();
+      speechSynthesis.speak(utter);
+    };
+    playNext();
+  }
+  els.autoplayBtn.addEventListener('click', () => {
+    if (autoplayActive) { stopSpeaking(); return; }
+    startAutoplay(currentDeck());
+  });
   function toggleSpeak(text, btn, times) {
     if (!('speechSynthesis' in window)) return;
     if (speechSynthesis.speaking || speakPauseTimer) {
@@ -1659,6 +1711,7 @@
     els.empty.style.display = 'none';
     els.verseList.classList.add('visible');
     els.verseList.innerHTML = '';
+    els.autoplayBtn.style.display = deck.length ? '' : 'none';
 
     if (!deck.length) {
       const empty = document.createElement('p');
@@ -1692,6 +1745,7 @@
         item.appendChild(dot);
         item.appendChild(info);
         item.addEventListener('click', () => {
+          stopSpeaking();
           pos = listIdx;
           viewMode = 'deck';
           flipped = false;
@@ -1716,6 +1770,7 @@
     }
 
     els.verseList.classList.remove('visible');
+    els.autoplayBtn.style.display = 'none';
     els.progressRow.style.display = '';
 
     if (!deck.length) {
