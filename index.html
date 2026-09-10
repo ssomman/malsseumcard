@@ -346,6 +346,24 @@
     justify-content: center;
     gap: 22px;
   }
+  .card-back-image { display: none; }
+  .card.has-image .card-back {
+    padding: 0;
+    overflow: hidden;
+    border-top: none;
+  }
+  .card.has-image .card-back-image {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card.has-image .card-back .verse-text,
+  .card.has-image .card-back .reference-small {
+    display: none;
+  }
   .verse-text {
     font-family: 'Gowun Batang', serif;
     font-size: clamp(18px, 5.6vw, 23px);
@@ -636,6 +654,7 @@
             <p class="hint">탭하여 말씀 확인</p>
           </div>
           <div class="card-face card-back">
+            <img class="card-back-image" id="homeBackImage" alt="" />
             <p class="verse-text" id="homeText"></p>
             <p class="reference-small" id="homeRefSmall"></p>
           </div>
@@ -690,6 +709,7 @@
           <p class="hint">탭하여 말씀 확인</p>
         </div>
         <div class="card-face card-back">
+          <img class="card-back-image" id="backImage" alt="" />
           <p class="verse-text" id="backText"></p>
           <p class="reference-small" id="backRef"></p>
         </div>
@@ -817,17 +837,17 @@
     {"id":"jhn14_15","reference":"요한복음 14장 15절","text":"너희가 나를 사랑하면 나의 계명을 지키리라","category":"믿음의 삶"},
     {"id":"2ti1_7","reference":"디모데후서 1장 7절","text":"하나님이 우리에게 주신 것은 두려워하는 마음이 아니요 오직 능력과 사랑과 절제하는 마음이니","category":"믿음의 삶"},
     {"id":"php4_6_7","reference":"빌립보서 4장 6-7절","text":"아무 것도 염려하지 말고 다만 모든 일에 기도와 간구로, 너희 구할 것을 감사함으로 하나님께 아뢰라 그리하면 모든 지각에 뛰어난 하나님의 평강이 그리스도 예수 안에서 너희 마음과 생각을 지키시리라","category":"평강과 위로"},
-    {"id":"psa23_1","reference":"시편 23장 1절","text":"여호와는 나의 목자시니 내게 부족함이 없으리로다","category":"평강과 위로"},
-    {"id":"psa46_1","reference":"시편 46장 1절","text":"하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라","category":"평강과 위로"},
+    {"id":"psa23_1","reference":"시편 23편 1절","text":"여호와는 나의 목자시니 내게 부족함이 없으리로다","category":"평강과 위로"},
+    {"id":"psa46_1","reference":"시편 46편 1절","text":"하나님은 우리의 피난처시요 힘이시니 환난 중에 만날 큰 도움이시라","category":"평강과 위로"},
     {"id":"mat11_28","reference":"마태복음 11장 28절","text":"수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라","category":"평강과 위로"},
     {"id":"heb13_5","reference":"히브리서 13장 5절","text":"돈을 사랑하지 말고 있는 바를 족한 줄로 알라 그가 친히 말씀하시기를 내가 결코 너희를 버리지 아니하고 너희를 떠나지 아니하리라 하셨느니라","category":"평강과 위로"},
-    {"id":"psa55_22","reference":"시편 55장 22절","text":"네 짐을 여호와께 맡기라 그가 너를 붙드시고 의인의 요동함을 영원히 허락하지 아니하시리로다","category":"평강과 위로"},
-    {"id":"psa42_11","reference":"시편 42장 11절","text":"내 영혼아 네가 어찌하여 낙심하며 어찌하여 내 속에서 불안해 하는가 너는 하나님께 소망을 두라 나는 그가 나타나 도우심으로 말미암아 내 하나님을 여전히 찬송하리로다","category":"평강과 위로"},
-    {"id":"psa121_1_2","reference":"시편 121장 1-2절","text":"내가 산을 향하여 눈을 들리라 나의 도움이 어디서 올까 나의 도움은 천지를 지으신 여호와에게서로다","category":"평강과 위로"},
-    {"id":"psa91_1_2","reference":"시편 91장 1-2절","text":"지존자의 은밀한 곳에 거주하며 전능자의 그늘 아래에 사는 자여, 나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리니","category":"평강과 위로"},
+    {"id":"psa55_22","reference":"시편 55편 22절","text":"네 짐을 여호와께 맡기라 그가 너를 붙드시고 의인의 요동함을 영원히 허락하지 아니하시리로다","category":"평강과 위로"},
+    {"id":"psa42_11","reference":"시편 42편 11절","text":"내 영혼아 네가 어찌하여 낙심하며 어찌하여 내 속에서 불안해 하는가 너는 하나님께 소망을 두라 나는 그가 나타나 도우심으로 말미암아 내 하나님을 여전히 찬송하리로다","category":"평강과 위로"},
+    {"id":"psa121_1_2","reference":"시편 121편 1-2절","text":"내가 산을 향하여 눈을 들리라 나의 도움이 어디서 올까 나의 도움은 천지를 지으신 여호와에게서로다","category":"평강과 위로"},
+    {"id":"psa91_1_2","reference":"시편 91편 1-2절","text":"지존자의 은밀한 곳에 거주하며 전능자의 그늘 아래에 사는 자여, 나는 여호와를 향하여 말하기를 그는 나의 피난처요 나의 요새요 내가 의뢰하는 하나님이라 하리니","category":"평강과 위로"},
     {"id":"pro3_5_6","reference":"잠언 3장 5-6절","text":"너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라","category":"지혜와 신뢰"},
     {"id":"pro16_3","reference":"잠언 16장 3절","text":"너의 행사를 여호와께 맡기라 그리하면 네가 경영하는 것이 이루어지리라","category":"지혜와 신뢰"},
-    {"id":"psa119_105","reference":"시편 119장 105절","text":"주의 말씀은 내 발에 등이요 내 길에 빛이니이다","category":"지혜와 신뢰"},
+    {"id":"psa119_105","reference":"시편 119편 105절","text":"주의 말씀은 내 발에 등이요 내 길에 빛이니이다","category":"지혜와 신뢰"},
     {"id":"heb11_1","reference":"히브리서 11장 1절","text":"믿음은 바라는 것들의 실상이요 보이지 않는 것들의 증거니","category":"지혜와 신뢰"},
     {"id":"pro4_23","reference":"잠언 4장 23절","text":"모든 지킬 만한 것 중에 더욱 네 마음을 지키라 생명의 근원이 이에서 남이니라","category":"지혜와 신뢰"},
     {"id":"jas1_5","reference":"야고보서 1장 5절","text":"너희 중에 누구든지 지혜가 부족하거든 모든 사람에게 후히 주시고 꾸짖지 아니하시는 하나님께 구하라 그리하면 주시리라","category":"지혜와 신뢰"},
@@ -848,12 +868,12 @@
     {"id":"2ti3_16","reference":"디모데후서 3장 16절","text":"모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니","category":"말씀"},
     {"id":"jos1_8","reference":"여호수아 1장 8절","text":"이 율법책을 네 입에서 떠나지 말게 하며 주야로 그것을 묵상하여 그 안에 기록된 대로 다 지켜 행하라 그리하면 네 길이 평탄하게 될 것이며 네가 형통하리라","category":"말씀"},
     {"id":"heb4_12","reference":"히브리서 4장 12절","text":"하나님의 말씀은 살아 있고 활력이 있어 좌우에 날선 어떤 검보다도 예리하여 혼과 영과 및 관절과 골수를 찔러 쪼개기까지 하며 또 마음의 생각과 뜻을 판단하나니","category":"말씀"},
-    {"id":"psa1_2_3","reference":"시편 1장 2-3절","text":"오직 여호와의 율법을 즐거워하여 그의 율법을 주야로 묵상하는도다 그는 시냇가에 심은 나무가 철을 따라 열매를 맺으며 그 잎사귀가 마르지 아니함 같으니 그가 하는 모든 일이 다 형통하리로다","category":"말씀"},
+    {"id":"psa1_2_3","reference":"시편 1편 2-3절","text":"오직 여호와의 율법을 즐거워하여 그의 율법을 주야로 묵상하는도다 그는 시냇가에 심은 나무가 철을 따라 열매를 맺으며 그 잎사귀가 마르지 아니함 같으니 그가 하는 모든 일이 다 형통하리로다","category":"말씀"},
     {"id":"mat4_4","reference":"마태복음 4장 4절","text":"예수께서 대답하여 이르시되 기록되었으되 사람이 떡으로만 살 것이 아니요 하나님의 입으로부터 나오는 모든 말씀으로 살 것이라 하였느니라","category":"말씀"},
-    {"id":"psa100_4_5","reference":"시편 100장 4-5절","text":"감사함으로 그의 문에 들어가며 찬송함으로 그의 궁정에 들어가서 그에게 감사하며 그의 이름을 송축할지어다 여호와는 선하시니 그의 인자하심이 영원하고 그의 성실하심이 대대에 이르리로다","category":"감사와 찬양"},
+    {"id":"psa100_4_5","reference":"시편 100편 4-5절","text":"감사함으로 그의 문에 들어가며 찬송함으로 그의 궁정에 들어가서 그에게 감사하며 그의 이름을 송축할지어다 여호와는 선하시니 그의 인자하심이 영원하고 그의 성실하심이 대대에 이르리로다","category":"감사와 찬양"},
     {"id":"col3_17","reference":"골로새서 3장 17절","text":"또 무엇을 하든지 말에나 일에나 다 주 예수의 이름으로 하고 그를 힘입어 하나님 아버지께 감사하라","category":"감사와 찬양"},
-    {"id":"psa118_24","reference":"시편 118장 24절","text":"이 날은 여호와께서 정하신 것이라 이 날에 우리가 즐거워하고 기뻐하리로다","category":"감사와 찬양"},
-    {"id":"psa34_1","reference":"시편 34장 1절","text":"내가 여호와를 항상 송축함이여 내 입술로 항상 주를 찬양하리이다","category":"감사와 찬양"},
+    {"id":"psa118_24","reference":"시편 118편 24절","text":"이 날은 여호와께서 정하신 것이라 이 날에 우리가 즐거워하고 기뻐하리로다","category":"감사와 찬양"},
+    {"id":"psa34_1","reference":"시편 34편 1절","text":"내가 여호와를 항상 송축함이여 내 입술로 항상 주를 찬양하리이다","category":"감사와 찬양"},
     {"id":"eph5_20","reference":"에베소서 5장 20절","text":"범사에 우리 주 예수 그리스도의 이름으로 항상 아버지 하나님께 감사하며","category":"감사와 찬양"},
     {"id":"jhn13_34","reference":"요한복음 13장 34절","text":"새 계명을 너희에게 주노니 서로 사랑하라 내가 너희를 사랑한 것 같이 너희도 서로 사랑하라","category":"사랑과 용서"},
     {"id":"1co13_4_5","reference":"고린도전서 13장 4-5절","text":"사랑은 오래 참고 사랑은 온유하며 시기하지 아니하며 사랑은 자랑하지 아니하며 교만하지 아니하며 무례히 행하지 아니하며 자기의 유익을 구하지 아니하며 성내지 아니하며 악한 것을 생각하지 아니하며","category":"사랑과 용서"},
@@ -869,7 +889,7 @@
     {"id":"gal6_9","reference":"갈라디아서 6장 9절","text":"우리가 선을 행하되 낙심하지 말지니 포기하지 아니하면 때가 이르매 거두리라","category":"인내와 연단"},
     {"id":"heb12_1","reference":"히브리서 12장 1절","text":"이러므로 우리에게 구름 같이 둘러싼 허다한 증인들이 있으니 모든 무거운 것과 얽매이기 쉬운 죄를 벗어 버리고 인내로써 우리 앞에 당한 경주를 하며","category":"인내와 연단"},
     {"id":"rom15_13","reference":"로마서 15장 13절","text":"소망의 하나님이 모든 기쁨과 평강을 믿음 안에서 너희에게 충만하게 하사 성령의 능력으로 소망이 넘치게 하시기를 원하노라","category":"소망과 영생"},
-    {"id":"psa130_5","reference":"시편 130장 5절","text":"나 곧 내 영혼은 여호와를 기다리며 나는 주의 말씀을 바라는도다","category":"소망과 영생"},
+    {"id":"psa130_5","reference":"시편 130편 5절","text":"나 곧 내 영혼은 여호와를 기다리며 나는 주의 말씀을 바라는도다","category":"소망과 영생"},
     {"id":"1pe1_3","reference":"베드로전서 1장 3절","text":"우리 주 예수 그리스도의 아버지 하나님을 찬송하리로다 그의 많으신 긍휼대로 예수 그리스도를 죽은 자 가운데서 부활하게 하심으로 말미암아 우리를 거듭나게 하사 산 소망이 있게 하시며","category":"소망과 영생"},
     {"id":"rev21_4","reference":"요한계시록 21장 4절","text":"모든 눈물을 그 눈에서 닦아 주시니 다시는 사망이 없고 애통하는 것이나 곡하는 것이나 아픈 것이 다시 있지 아니하리니 처음 것들이 다 지나갔음이러라","category":"소망과 영생"},
     {"id":"jhn11_25","reference":"요한복음 11장 25절","text":"예수께서 이르시되 나는 부활이요 생명이니 나를 믿는 자는 죽어도 살겠고","category":"소망과 영생"},
@@ -883,13 +903,13 @@
     {"id":"rom1_16","reference":"로마서 1장 16절","text":"내가 복음을 부끄러워하지 아니하노니 이 복음은 모든 믿는 자에게 구원을 주시는 하나님의 능력이 됨이라","category":"전도와 사명"},
     {"id":"act1_8","reference":"사도행전 1장 8절","text":"오직 성령이 너희에게 임하시면 너희가 권능을 받고 예루살렘과 온 유대와 사마리아와 땅 끝까지 이르러 내 증인이 되리라","category":"전도와 사명"},
     {"id":"2co5_20","reference":"고린도후서 5장 20절","text":"그러므로 우리가 그리스도를 대신하여 사신이 되어 하나님이 우리를 통하여 너희를 권면하시는 것 같이 그리스도를 대신하여 간청하노니 너희는 하나님과 화목하라","category":"전도와 사명"},
-    {"id":"psa19_1","reference":"시편 19장 1절","text":"하늘이 하나님의 영광을 선포하고 궁창이 그의 손으로 하신 일을 나타내는도다","category":"창조와 하나님의 성품"},
-    {"id":"psa139_14","reference":"시편 139장 14절","text":"내가 주께 감사하옴은 나를 지으심이 심히 기묘하심이라 주께서 하시는 일이 기이함을 내 영혼이 잘 아나이다","category":"창조와 하나님의 성품"},
+    {"id":"psa19_1","reference":"시편 19편 1절","text":"하늘이 하나님의 영광을 선포하고 궁창이 그의 손으로 하신 일을 나타내는도다","category":"창조와 하나님의 성품"},
+    {"id":"psa139_14","reference":"시편 139편 14절","text":"내가 주께 감사하옴은 나를 지으심이 심히 기묘하심이라 주께서 하시는 일이 기이함을 내 영혼이 잘 아나이다","category":"창조와 하나님의 성품"},
     {"id":"gen1_1","reference":"창세기 1장 1절","text":"태초에 하나님이 천지를 창조하시니라","category":"창조와 하나님의 성품"},
     {"id":"jas1_17","reference":"야고보서 1장 17절","text":"온갖 좋은 은사와 온전한 선물이 다 위로부터 빛들의 아버지께로부터 내려오나니 그는 변함도 없으시고 회전하는 그림자도 없으시니라","category":"창조와 하나님의 성품"},
     {"id":"rom3_23","reference":"로마서 3장 23절","text":"모든 사람이 죄를 범하였으매 하나님의 영광에 이르지 못하더니","category":"죄와 회개"},
     {"id":"rom6_23","reference":"로마서 6장 23절","text":"죄의 삯은 사망이요 하나님의 은사는 그리스도 예수 우리 주 안에 있는 영생이니라","category":"죄와 회개"},
-    {"id":"psa51_10","reference":"시편 51장 10절","text":"하나님이여 내 속에 정한 마음을 창조하시고 내 안에 정직한 영을 새롭게 하소서","category":"죄와 회개"},
+    {"id":"psa51_10","reference":"시편 51편 10절","text":"하나님이여 내 속에 정한 마음을 창조하시고 내 안에 정직한 영을 새롭게 하소서","category":"죄와 회개"},
     {"id":"act3_19","reference":"사도행전 3장 19절","text":"그러므로 너희가 회개하고 돌이켜 너희 죄 없이 함을 받으라 이같이 하면 새롭게 되는 날이 주 앞으로부터 이를 것이요","category":"죄와 회개"}
   ];
 
@@ -1481,6 +1501,7 @@ const READ_PASSAGES = [
     frontCategory: document.getElementById('frontCategory'),
     frontIcon: document.getElementById('frontIcon'),
     frontRef: document.getElementById('frontRef'),
+    backImage: document.getElementById('backImage'),
     backText: document.getElementById('backText'),
     backRef: document.getElementById('backRef'),
     masteryBtn: document.getElementById('masteryBtn'),
@@ -1566,7 +1587,7 @@ const READ_PASSAGES = [
   function parseReference(raw) {
     const input = (raw || '').trim().replace(/\s+/g, ' ');
     if (!input) return null;
-    const m = input.match(/^(.+?)\s*(\d+)\s*[:장]\s*(\d+)(?:\s*[-~]\s*(\d+))?\s*절?$/);
+    const m = input.match(/^(.+?)\s*(\d+)\s*[:장편]\s*(\d+)(?:\s*[-~]\s*(\d+))?\s*절?$/);
     if (!m) return null;
     const book = BOOK_ALIASES[m[1].trim()];
     if (!book) return null;
@@ -1611,41 +1632,41 @@ const READ_PASSAGES = [
     {"reference":"에스더 4장 14절","book":"에스더","chapter":4,"verseStart":14,"verseEnd":14,"text":"이 때에 네가 만일 잠잠하여 말이 없으면 유다인은 다른 데로 말미암아 놓임과 구원을 얻으려니와 너와 네 아버지 집은 멸망하리라 네가 왕후의 자리를 얻은 것이 이 때를 위함이 아닌지 누가 알겠느냐 하니"},
     {"reference":"욥기 23장 10절","book":"욥기","chapter":23,"verseStart":10,"verseEnd":10,"text":"그러나 내가 가는 길을 그가 아시나니 그가 나를 단련하신 후에는 내가 순금 같이 되어 나오리라"},
     {"reference":"욥기 42장 2절","book":"욥기","chapter":42,"verseStart":2,"verseEnd":2,"text":"주께서는 못 하실 일이 없사오며 무슨 계획이든지 못 이루실 것이 없는 줄 아오니"},
-    {"reference":"시편 1장 1절","book":"시편","chapter":1,"verseStart":1,"verseEnd":1,"text":"복 있는 사람은 악인들의 꾀를 따르지 아니하며 죄인들의 길에 서지 아니하며 오만한 자들의 자리에 앉지 아니하고"},
-    {"reference":"시편 8장 3-4절","book":"시편","chapter":8,"verseStart":3,"verseEnd":4,"text":"주의 손가락으로 만드신 주의 하늘과 주께서 베풀어 두신 달과 별들을 내가 보오니 사람이 무엇이기에 주께서 그를 생각하시며 인자가 무엇이기에 주께서 그를 돌보시나이까"},
-    {"reference":"시편 16장 11절","book":"시편","chapter":16,"verseStart":11,"verseEnd":11,"text":"주께서 생명의 길을 내게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다"},
-    {"reference":"시편 18장 2절","book":"시편","chapter":18,"verseStart":2,"verseEnd":2,"text":"여호와는 나의 반석이시요 나의 요새시요 나를 건지시는 이시요 나의 하나님이시요 내가 그 안에 피할 나의 바위시요 나의 방패시요 나의 구원의 뿔이시요 나의 산성이시로다"},
-    {"reference":"시편 19장 14절","book":"시편","chapter":19,"verseStart":14,"verseEnd":14,"text":"나의 반석이시요 나의 구속자이신 여호와여 내 입의 말과 마음의 묵상이 주님 앞에 열납되기를 원하나이다"},
-    {"reference":"시편 27장 1절","book":"시편","chapter":27,"verseStart":1,"verseEnd":1,"text":"여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요"},
-    {"reference":"시편 30장 5절","book":"시편","chapter":30,"verseStart":5,"verseEnd":5,"text":"그의 노염은 잠깐이요 그의 은총은 평생이로다 저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다"},
-    {"reference":"시편 32장 8절","book":"시편","chapter":32,"verseStart":8,"verseEnd":8,"text":"내가 네 갈 길을 가르쳐 보이고 너를 주목하여 훈계하리로다"},
-    {"reference":"시편 34장 8절","book":"시편","chapter":34,"verseStart":8,"verseEnd":8,"text":"너희는 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다"},
-    {"reference":"시편 34장 18절","book":"시편","chapter":34,"verseStart":18,"verseEnd":18,"text":"여호와는 마음이 상한 자를 가까이 하시고 충심으로 통회하는 자를 구원하시는도다"},
-    {"reference":"시편 37장 4-5절","book":"시편","chapter":37,"verseStart":4,"verseEnd":5,"text":"또 여호와를 기뻐하라 그가 네 마음의 소원을 네게 이루어 주시리로다 네 길을 여호와께 맡기라 그를 의지하면 그가 이루시고"},
-    {"reference":"시편 40장 1-3절","book":"시편","chapter":40,"verseStart":1,"verseEnd":3,"text":"내가 여호와를 기다리고 기다렸더니 귀를 기울이사 나의 부르짖음을 들으셨도다 나를 기가 막힐 웅덩이와 수렁에서 끌어올리시고 내 발을 반석 위에 두사 내 걸음을 견고하게 하셨도다 새 노래 곧 우리 하나님께 올릴 찬송을 내 입에 두셨으니 많은 사람이 보고 두려워하여 여호와를 의지하리로다"},
-    {"reference":"시편 46장 10절","book":"시편","chapter":46,"verseStart":10,"verseEnd":10,"text":"이르시기를 너희는 가만히 있어 내가 하나님 됨을 알지어다 내가 뭇 나라 중에서 높임을 받으리라 내가 세계 중에서 높임을 받으리라 하시도다"},
-    {"reference":"시편 56장 3절","book":"시편","chapter":56,"verseStart":3,"verseEnd":3,"text":"내가 두려워하는 날에는 내가 주를 의지하리이다"},
-    {"reference":"시편 62장 1절","book":"시편","chapter":62,"verseStart":1,"verseEnd":1,"text":"나의 영혼이 잠잠히 하나님만 바람이여 나의 구원이 그에게서 나오는도다"},
-    {"reference":"시편 84장 11절","book":"시편","chapter":84,"verseStart":11,"verseEnd":11,"text":"여호와 하나님은 해요 방패이시라 여호와께서 은혜와 영화를 주시며 정직하게 행하는 자에게 좋은 것을 아끼지 아니하실 것임이니이다"},
-    {"reference":"시편 86장 5절","book":"시편","chapter":86,"verseStart":5,"verseEnd":5,"text":"주는 선하사 사죄하기를 즐거워하시며 주께 부르짖는 자에게 인자함이 후하심이니이다"},
-    {"reference":"시편 90장 12절","book":"시편","chapter":90,"verseStart":12,"verseEnd":12,"text":"우리에게 우리 날 계수함을 가르치사 지혜로운 마음을 얻게 하소서"},
-    {"reference":"시편 100장 1-3절","book":"시편","chapter":100,"verseStart":1,"verseEnd":3,"text":"온 땅이여 여호와께 즐거운 찬송을 부를지어다 기쁨으로 여호와를 섬기며 노래하면서 그의 앞에 나아갈지어다 여호와가 우리 하나님이신 줄 너희는 알지어다 그는 우리를 지으신 이요 우리는 그의 것이니 그의 백성이요 그의 기르시는 양이로다"},
-    {"reference":"시편 103장 1-2절","book":"시편","chapter":103,"verseStart":1,"verseEnd":2,"text":"내 영혼아 여호와를 송축하라 내 속에 있는 것들아 다 그의 거룩한 이름을 송축하라 내 영혼아 여호와를 송축하며 그의 모든 은택을 잊지 말지어다"},
-    {"reference":"시편 103장 12절","book":"시편","chapter":103,"verseStart":12,"verseEnd":12,"text":"동이 서에서 먼 것 같이 우리의 죄과를 우리에게서 멀리 옮기셨으며"},
-    {"reference":"시편 107장 1절","book":"시편","chapter":107,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
-    {"reference":"시편 118장 1절","book":"시편","chapter":118,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그의 인자하심이 영원함이로다"},
-    {"reference":"시편 118장 6절","book":"시편","chapter":118,"verseStart":6,"verseEnd":6,"text":"여호와는 내 편이시라 내가 두려워하지 아니하리니 사람이 내게 어찌할까"},
-    {"reference":"시편 119장 11절","book":"시편","chapter":119,"verseStart":11,"verseEnd":11,"text":"내가 주께 범죄하지 아니하려 하여 주의 말씀을 내 마음에 두었나이다"},
-    {"reference":"시편 126장 5-6절","book":"시편","chapter":126,"verseStart":5,"verseEnd":6,"text":"눈물을 흘리며 씨를 뿌리는 자는 기쁨으로 거두리로다 울며 씨를 뿌리러 나가는 자는 반드시 기쁨으로 그 곡식 단을 가지고 돌아오리로다"},
-    {"reference":"시편 127장 1절","book":"시편","chapter":127,"verseStart":1,"verseEnd":1,"text":"여호와께서 집을 세우지 아니하시면 세우는 자의 수고가 헛되며 여호와께서 성을 지키지 아니하시면 파수꾼의 깨어 있음이 헛되도다"},
-    {"reference":"시편 133장 1절","book":"시편","chapter":133,"verseStart":1,"verseEnd":1,"text":"보라 형제가 연합하여 동거함이 어찌 그리 선하고 아름다운고"},
-    {"reference":"시편 136장 1절","book":"시편","chapter":136,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
-    {"reference":"시편 138장 8절","book":"시편","chapter":138,"verseStart":8,"verseEnd":8,"text":"여호와께서 나를 위하여 보상해 주시리이다 여호와여 주의 인자하심이 영원하오니 주의 손으로 지으신 것을 버리지 마옵소서"},
-    {"reference":"시편 139장 1-2절","book":"시편","chapter":139,"verseStart":1,"verseEnd":2,"text":"여호와여 주께서 나를 살펴 보셨으므로 나를 아시나이다 주께서 내가 앉고 일어섬을 아시고 멀리서도 나의 생각을 밝히 아시오며"},
-    {"reference":"시편 139장 23-24절","book":"시편","chapter":139,"verseStart":23,"verseEnd":24,"text":"하나님이여 나를 살피사 내 마음을 아시며 나를 시험하사 내 뜻을 아옵소서 내게 무슨 악한 행위가 있나 보시고 나를 영원한 길로 인도하소서"},
-    {"reference":"시편 143장 8절","book":"시편","chapter":143,"verseStart":8,"verseEnd":8,"text":"아침에 나로 하여금 주의 인자한 말씀을 듣게 하소서 내가 주를 의뢰함이니이다 내가 다닐 길을 알게 하소서 내가 내 영혼을 주께 드림이니이다"},
-    {"reference":"시편 145장 18절","book":"시편","chapter":145,"verseStart":18,"verseEnd":18,"text":"여호와께서는 자기에게 간구하는 모든 자 곧 진실하게 간구하는 모든 자에게 가까이 하시는도다"},
-    {"reference":"시편 150장 6절","book":"시편","chapter":150,"verseStart":6,"verseEnd":6,"text":"호흡이 있는 자마다 여호와를 찬양할지어다 할렐루야"},
+    {"reference":"시편 1편 1절","book":"시편","chapter":1,"verseStart":1,"verseEnd":1,"text":"복 있는 사람은 악인들의 꾀를 따르지 아니하며 죄인들의 길에 서지 아니하며 오만한 자들의 자리에 앉지 아니하고"},
+    {"reference":"시편 8편 3-4절","book":"시편","chapter":8,"verseStart":3,"verseEnd":4,"text":"주의 손가락으로 만드신 주의 하늘과 주께서 베풀어 두신 달과 별들을 내가 보오니 사람이 무엇이기에 주께서 그를 생각하시며 인자가 무엇이기에 주께서 그를 돌보시나이까"},
+    {"reference":"시편 16편 11절","book":"시편","chapter":16,"verseStart":11,"verseEnd":11,"text":"주께서 생명의 길을 내게 보이시리니 주의 앞에는 충만한 기쁨이 있고 주의 오른쪽에는 영원한 즐거움이 있나이다"},
+    {"reference":"시편 18편 2절","book":"시편","chapter":18,"verseStart":2,"verseEnd":2,"text":"여호와는 나의 반석이시요 나의 요새시요 나를 건지시는 이시요 나의 하나님이시요 내가 그 안에 피할 나의 바위시요 나의 방패시요 나의 구원의 뿔이시요 나의 산성이시로다"},
+    {"reference":"시편 19편 14절","book":"시편","chapter":19,"verseStart":14,"verseEnd":14,"text":"나의 반석이시요 나의 구속자이신 여호와여 내 입의 말과 마음의 묵상이 주님 앞에 열납되기를 원하나이다"},
+    {"reference":"시편 27편 1절","book":"시편","chapter":27,"verseStart":1,"verseEnd":1,"text":"여호와는 나의 빛이요 나의 구원이시니 내가 누구를 두려워하리요 여호와는 내 생명의 능력이시니 내가 누구를 무서워하리요"},
+    {"reference":"시편 30편 5절","book":"시편","chapter":30,"verseStart":5,"verseEnd":5,"text":"그의 노염은 잠깐이요 그의 은총은 평생이로다 저녁에는 울음이 깃들일지라도 아침에는 기쁨이 오리로다"},
+    {"reference":"시편 32편 8절","book":"시편","chapter":32,"verseStart":8,"verseEnd":8,"text":"내가 네 갈 길을 가르쳐 보이고 너를 주목하여 훈계하리로다"},
+    {"reference":"시편 34편 8절","book":"시편","chapter":34,"verseStart":8,"verseEnd":8,"text":"너희는 여호와의 선하심을 맛보아 알지어다 그에게 피하는 자는 복이 있도다"},
+    {"reference":"시편 34편 18절","book":"시편","chapter":34,"verseStart":18,"verseEnd":18,"text":"여호와는 마음이 상한 자를 가까이 하시고 충심으로 통회하는 자를 구원하시는도다"},
+    {"reference":"시편 37편 4-5절","book":"시편","chapter":37,"verseStart":4,"verseEnd":5,"text":"또 여호와를 기뻐하라 그가 네 마음의 소원을 네게 이루어 주시리로다 네 길을 여호와께 맡기라 그를 의지하면 그가 이루시고"},
+    {"reference":"시편 40편 1-3절","book":"시편","chapter":40,"verseStart":1,"verseEnd":3,"text":"내가 여호와를 기다리고 기다렸더니 귀를 기울이사 나의 부르짖음을 들으셨도다 나를 기가 막힐 웅덩이와 수렁에서 끌어올리시고 내 발을 반석 위에 두사 내 걸음을 견고하게 하셨도다 새 노래 곧 우리 하나님께 올릴 찬송을 내 입에 두셨으니 많은 사람이 보고 두려워하여 여호와를 의지하리로다"},
+    {"reference":"시편 46편 10절","book":"시편","chapter":46,"verseStart":10,"verseEnd":10,"text":"이르시기를 너희는 가만히 있어 내가 하나님 됨을 알지어다 내가 뭇 나라 중에서 높임을 받으리라 내가 세계 중에서 높임을 받으리라 하시도다"},
+    {"reference":"시편 56편 3절","book":"시편","chapter":56,"verseStart":3,"verseEnd":3,"text":"내가 두려워하는 날에는 내가 주를 의지하리이다"},
+    {"reference":"시편 62편 1절","book":"시편","chapter":62,"verseStart":1,"verseEnd":1,"text":"나의 영혼이 잠잠히 하나님만 바람이여 나의 구원이 그에게서 나오는도다"},
+    {"reference":"시편 84편 11절","book":"시편","chapter":84,"verseStart":11,"verseEnd":11,"text":"여호와 하나님은 해요 방패이시라 여호와께서 은혜와 영화를 주시며 정직하게 행하는 자에게 좋은 것을 아끼지 아니하실 것임이니이다"},
+    {"reference":"시편 86편 5절","book":"시편","chapter":86,"verseStart":5,"verseEnd":5,"text":"주는 선하사 사죄하기를 즐거워하시며 주께 부르짖는 자에게 인자함이 후하심이니이다"},
+    {"reference":"시편 90편 12절","book":"시편","chapter":90,"verseStart":12,"verseEnd":12,"text":"우리에게 우리 날 계수함을 가르치사 지혜로운 마음을 얻게 하소서"},
+    {"reference":"시편 100편 1-3절","book":"시편","chapter":100,"verseStart":1,"verseEnd":3,"text":"온 땅이여 여호와께 즐거운 찬송을 부를지어다 기쁨으로 여호와를 섬기며 노래하면서 그의 앞에 나아갈지어다 여호와가 우리 하나님이신 줄 너희는 알지어다 그는 우리를 지으신 이요 우리는 그의 것이니 그의 백성이요 그의 기르시는 양이로다"},
+    {"reference":"시편 103편 1-2절","book":"시편","chapter":103,"verseStart":1,"verseEnd":2,"text":"내 영혼아 여호와를 송축하라 내 속에 있는 것들아 다 그의 거룩한 이름을 송축하라 내 영혼아 여호와를 송축하며 그의 모든 은택을 잊지 말지어다"},
+    {"reference":"시편 103편 12절","book":"시편","chapter":103,"verseStart":12,"verseEnd":12,"text":"동이 서에서 먼 것 같이 우리의 죄과를 우리에게서 멀리 옮기셨으며"},
+    {"reference":"시편 107편 1절","book":"시편","chapter":107,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
+    {"reference":"시편 118편 1절","book":"시편","chapter":118,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그의 인자하심이 영원함이로다"},
+    {"reference":"시편 118편 6절","book":"시편","chapter":118,"verseStart":6,"verseEnd":6,"text":"여호와는 내 편이시라 내가 두려워하지 아니하리니 사람이 내게 어찌할까"},
+    {"reference":"시편 119편 11절","book":"시편","chapter":119,"verseStart":11,"verseEnd":11,"text":"내가 주께 범죄하지 아니하려 하여 주의 말씀을 내 마음에 두었나이다"},
+    {"reference":"시편 126편 5-6절","book":"시편","chapter":126,"verseStart":5,"verseEnd":6,"text":"눈물을 흘리며 씨를 뿌리는 자는 기쁨으로 거두리로다 울며 씨를 뿌리러 나가는 자는 반드시 기쁨으로 그 곡식 단을 가지고 돌아오리로다"},
+    {"reference":"시편 127편 1절","book":"시편","chapter":127,"verseStart":1,"verseEnd":1,"text":"여호와께서 집을 세우지 아니하시면 세우는 자의 수고가 헛되며 여호와께서 성을 지키지 아니하시면 파수꾼의 깨어 있음이 헛되도다"},
+    {"reference":"시편 133편 1절","book":"시편","chapter":133,"verseStart":1,"verseEnd":1,"text":"보라 형제가 연합하여 동거함이 어찌 그리 선하고 아름다운고"},
+    {"reference":"시편 136편 1절","book":"시편","chapter":136,"verseStart":1,"verseEnd":1,"text":"여호와께 감사하라 그는 선하시며 그 인자하심이 영원함이로다"},
+    {"reference":"시편 138편 8절","book":"시편","chapter":138,"verseStart":8,"verseEnd":8,"text":"여호와께서 나를 위하여 보상해 주시리이다 여호와여 주의 인자하심이 영원하오니 주의 손으로 지으신 것을 버리지 마옵소서"},
+    {"reference":"시편 139편 1-2절","book":"시편","chapter":139,"verseStart":1,"verseEnd":2,"text":"여호와여 주께서 나를 살펴 보셨으므로 나를 아시나이다 주께서 내가 앉고 일어섬을 아시고 멀리서도 나의 생각을 밝히 아시오며"},
+    {"reference":"시편 139편 23-24절","book":"시편","chapter":139,"verseStart":23,"verseEnd":24,"text":"하나님이여 나를 살피사 내 마음을 아시며 나를 시험하사 내 뜻을 아옵소서 내게 무슨 악한 행위가 있나 보시고 나를 영원한 길로 인도하소서"},
+    {"reference":"시편 143편 8절","book":"시편","chapter":143,"verseStart":8,"verseEnd":8,"text":"아침에 나로 하여금 주의 인자한 말씀을 듣게 하소서 내가 주를 의뢰함이니이다 내가 다닐 길을 알게 하소서 내가 내 영혼을 주께 드림이니이다"},
+    {"reference":"시편 145편 18절","book":"시편","chapter":145,"verseStart":18,"verseEnd":18,"text":"여호와께서는 자기에게 간구하는 모든 자 곧 진실하게 간구하는 모든 자에게 가까이 하시는도다"},
+    {"reference":"시편 150편 6절","book":"시편","chapter":150,"verseStart":6,"verseEnd":6,"text":"호흡이 있는 자마다 여호와를 찬양할지어다 할렐루야"},
     {"reference":"잠언 1장 7절","book":"잠언","chapter":1,"verseStart":7,"verseEnd":7,"text":"여호와를 경외하는 것이 지식의 근본이거늘 미련한 자는 지혜와 훈계를 멸시하느니라"},
     {"reference":"잠언 9장 10절","book":"잠언","chapter":9,"verseStart":10,"verseEnd":10,"text":"여호와를 경외하는 것이 지혜의 근본이요 거룩하신 자를 아는 것이 명철이니라"},
     {"reference":"잠언 13장 20절","book":"잠언","chapter":13,"verseStart":20,"verseEnd":20,"text":"지혜로운 자와 동행하면 지혜를 얻고 미련한 자와 사귀면 해를 받느니라"},
@@ -1856,10 +1877,12 @@ const READ_PASSAGES = [
     {"reference":"요한계시록 22장 13절","book":"요한계시록","chapter":22,"verseStart":13,"verseEnd":13,"text":"나는 알파와 오메가요 처음과 마지막이요 시작과 마침이라"},
     {"reference":"요한계시록 22장 20절","book":"요한계시록","chapter":22,"verseStart":20,"verseEnd":20,"text":"이것들을 증언하신 이가 이르시되 내가 진실로 속히 오리라 하시거늘 아멘 주 예수여 오시옵소서"}
 ];
+
   function referenceStringFromParsed(parsed) {
+    const unit = parsed.book === '시편' ? '편' : '장';
     return parsed.verseStart === parsed.verseEnd
-      ? `${parsed.book} ${parsed.chapter}장 ${parsed.verseStart}절`
-      : `${parsed.book} ${parsed.chapter}장 ${parsed.verseStart}-${parsed.verseEnd}절`;
+      ? `${parsed.book} ${parsed.chapter}${unit} ${parsed.verseStart}절`
+      : `${parsed.book} ${parsed.chapter}${unit} ${parsed.verseStart}-${parsed.verseEnd}절`;
   }
   function findVerseText(parsed) {
     const hit = BIBLE_LOOKUP.find(v => v.book === parsed.book && v.chapter === parsed.chapter
@@ -2319,6 +2342,14 @@ const READ_PASSAGES = [
     els.frontRef.textContent = v.reference;
     els.backText.textContent = v.text;
     els.backRef.textContent = v.reference;
+    els.card.classList.toggle('has-image', !v.custom);
+    if (!v.custom) {
+      els.backImage.src = `images/verses/${v.id}.jpg`;
+      els.backImage.alt = `${v.reference}. ${v.text}`;
+      els.backImage.onerror = () => els.card.classList.remove('has-image');
+    } else {
+      els.backImage.removeAttribute('src');
+    }
     els.card.style.setProperty('--accent', `var(--cat-${slug})`);
 
     els.card.classList.toggle('flipped', flipped);
@@ -2400,6 +2431,7 @@ const READ_PASSAGES = [
   const homeMasteryBtn = document.getElementById('homeMasteryBtn');
   const homeFavoriteBtn = document.getElementById('homeFavoriteBtn');
   const homeSpeakBtn = document.getElementById('homeSpeakBtn');
+  const homeBackImage = document.getElementById('homeBackImage');
   let homeFlipped = false;
 
   function getTodayVerse() {
@@ -2418,6 +2450,14 @@ const READ_PASSAGES = [
     document.getElementById('homeRef').textContent = v.reference;
     document.getElementById('homeText').textContent = v.text;
     document.getElementById('homeRefSmall').textContent = v.reference;
+    homeCardEl.classList.toggle('has-image', !v.custom);
+    if (!v.custom) {
+      homeBackImage.src = `images/verses/${v.id}.jpg`;
+      homeBackImage.alt = `${v.reference}. ${v.text}`;
+      homeBackImage.onerror = () => homeCardEl.classList.remove('has-image');
+    } else {
+      homeBackImage.removeAttribute('src');
+    }
     homeCardEl.style.setProperty('--accent', `var(--cat-${slug})`);
     homeFlipped = false;
     homeCardEl.classList.remove('flipped');
