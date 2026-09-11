@@ -256,12 +256,6 @@
     align-items: center;
     gap: 12px;
   }
-  .mode-toggle-btn {
-    padding: 0;
-    font-size: 12.5px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
   #posLabel {
     font-size: 13px;
     color: var(--ink-soft);
@@ -745,7 +739,6 @@
   <div class="progress-row" id="progressRow">
     <span id="posLabel">0 / 0</span>
     <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-    <button class="text-btn mode-toggle-btn" id="modeToggleBtn"></button>
   </div>
 
   <button class="text-btn autoplay-btn" id="autoplayBtn" style="display:none;">▶ 전체 자동재생</button>
@@ -1578,7 +1571,7 @@ const READ_PASSAGES = [
     deleteBtn: document.getElementById('deleteBtn'),
     posLabel: document.getElementById('posLabel'),
     progressFill: document.getElementById('progressFill'),
-    modeToggleBtn: document.getElementById('modeToggleBtn'),
+    flipBtn: document.getElementById('flipBtn'),
     totalLabel: document.getElementById('totalLabel'),
     reviewOnly: document.getElementById('reviewOnly'),
   };
@@ -2382,7 +2375,6 @@ const READ_PASSAGES = [
       els.empty.style.display = 'flex';
       els.posLabel.textContent = '0 / 0';
       els.progressFill.style.width = '0%';
-      els.modeToggleBtn.style.display = 'none';
       const emptyMessage = document.getElementById('emptyMessage');
       const emptyResetBtn = document.getElementById('emptyResetBtn');
       if (category === '__favorites__') {
@@ -2412,8 +2404,9 @@ const READ_PASSAGES = [
     els.frontRef.textContent = v.reference;
     els.backText.textContent = v.text;
     els.backRef.textContent = v.reference;
-    els.modeToggleBtn.style.display = v.custom ? 'none' : '';
-    els.modeToggleBtn.textContent = cardMode === 'illustrated' ? '심플로 보기' : '일러스트로 보기';
+    els.flipBtn.textContent = v.custom
+      ? '뒤집기'
+      : (cardMode === 'illustrated' ? '심플로 보기' : '일러스트로 보기');
     const showImage = !v.custom && cardMode === 'illustrated';
     els.card.classList.toggle('has-image', showImage);
     if (showImage) {
@@ -2466,7 +2459,16 @@ const READ_PASSAGES = [
 
   document.getElementById('prevBtn').addEventListener('click', goPrev);
   document.getElementById('nextBtn').addEventListener('click', goNext);
-  document.getElementById('flipBtn').addEventListener('click', flipCard);
+  els.flipBtn.addEventListener('click', () => {
+    const deck = currentDeck();
+    const v = deck.length ? VERSES[deck[pos]] : null;
+    if (v && !v.custom) {
+      cardMode = cardMode === 'illustrated' ? 'simple' : 'illustrated';
+      render();
+    } else {
+      flipCard();
+    }
+  });
   els.masteryBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleMastery(); });
   els.favoriteBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFavorite(); });
   els.speakBtn.addEventListener('click', (e) => {
@@ -2487,11 +2489,6 @@ const READ_PASSAGES = [
   document.getElementById('emptyResetBtn').addEventListener('click', () => {
     hideMastered = false;
     els.reviewOnly.checked = false;
-    render();
-  });
-  els.modeToggleBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    cardMode = cardMode === 'illustrated' ? 'simple' : 'illustrated';
     render();
   });
   els.reviewOnly.addEventListener('change', () => {
