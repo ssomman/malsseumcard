@@ -328,8 +328,11 @@
     padding: 30px 26px;
     display: flex;
     flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
   }
-  .card-back { transform: rotateY(180deg); overflow-y: auto; }
+  .card-back { transform: rotateY(180deg); overflow-y: auto; touch-action: pan-y; }
 
   .category-chip {
     align-self: flex-start;
