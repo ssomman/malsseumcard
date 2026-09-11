@@ -554,6 +554,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+  .home-mode-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .home-mode-row .ctrl-btn { font-size: 13.5px; padding: 0 4px; }
   .study-view {
     display: flex;
     flex-direction: column;
@@ -710,7 +716,10 @@
       </div>
     </div>
     <p class="home-stats" id="homeStats"></p>
-    <button class="ctrl-btn ctrl-btn-primary" id="homeStartBtn">전체 구절 학습하기</button>
+    <div class="home-mode-row">
+      <button class="ctrl-btn ctrl-btn-primary" id="homeSimpleBtn">심플 말씀카드</button>
+      <button class="ctrl-btn ctrl-btn-primary" id="homeIllustratedBtn">일러스트 말씀카드</button>
+    </div>
     <button class="ctrl-btn read-cta-btn" id="homeReadBtn">성경 단편 읽기</button>
     <div class="home-actions">
       <button class="ctrl-btn" id="homeFavoritesBtn">즐겨찾기</button>
@@ -1534,6 +1543,7 @@ const READ_PASSAGES = [
   let pos = 0;
   let flipped = false;
   let viewMode = 'deck';
+  let cardMode = 'illustrated';
   function isListCategory(cat) { return cat === '__favorites__' || cat === '__mastered__'; }
 
   const els = {
@@ -2390,8 +2400,9 @@ const READ_PASSAGES = [
     els.frontRef.textContent = v.reference;
     els.backText.textContent = v.text;
     els.backRef.textContent = v.reference;
-    els.card.classList.toggle('has-image', !v.custom);
-    if (!v.custom) {
+    const showImage = !v.custom && cardMode === 'illustrated';
+    els.card.classList.toggle('has-image', showImage);
+    if (showImage) {
       els.backImage.src = `images/verses/${v.id}.jpg`;
       els.backImage.alt = `${v.reference}. ${v.text}`;
       els.backImage.onerror = () => els.card.classList.remove('has-image');
@@ -2557,7 +2568,13 @@ const READ_PASSAGES = [
     toggleSpeak(`${v.reference}. ${v.text}`, homeSpeakBtn, repeatCount);
   });
   homeBtn.addEventListener('click', () => showScreen('home'));
-  document.getElementById('homeStartBtn').addEventListener('click', () => {
+  document.getElementById('homeSimpleBtn').addEventListener('click', () => {
+    cardMode = 'simple';
+    showScreen('study');
+    render();
+  });
+  document.getElementById('homeIllustratedBtn').addEventListener('click', () => {
+    cardMode = 'illustrated';
     showScreen('study');
     render();
   });
