@@ -186,6 +186,78 @@
     .chip:not(.active):hover { color: var(--indigo); }
   }
 
+  .category-nav { display: flex; flex-direction: column; gap: 10px; }
+  .segmented-control { display: flex; background: var(--surface-2); border-radius: 13px; padding: 4px; gap: 2px; }
+  .segment {
+    flex: 1;
+    text-align: center;
+    padding: 9px 4px;
+    border-radius: 10px;
+    border: none;
+    background: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .segment.active { background: var(--surface); color: var(--ink); font-weight: 700; box-shadow: 0 1px 3px var(--shadow); }
+  .topic-filter-row { display: flex; gap: 8px; align-items: center; }
+  .topic-filter-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: var(--surface);
+    border: none;
+    border-radius: 13px;
+    padding: 11px 14px;
+    box-shadow: 0 1px 3px var(--shadow);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .topic-filter-btn.has-topic { color: var(--indigo); font-weight: 700; }
+  .topic-filter-btn svg { flex: none; width: 16px; height: 16px; color: var(--ink-soft); }
+  .topic-add-btn {
+    flex: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    border: 1px dashed var(--indigo);
+    background: transparent;
+    color: var(--indigo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .topic-sheet-list { display: flex; flex-direction: column; gap: 6px; max-height: 50vh; overflow-y: auto; }
+  .topic-sheet-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: none;
+    background: var(--paper);
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--ink);
+  }
+  .topic-sheet-item.active { background: color-mix(in srgb, var(--indigo) 14%, var(--paper)); color: var(--indigo); }
+  .topic-sheet-item .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .topic-sheet-item .name { flex: 1; font-size: 14px; font-weight: 600; }
+  .topic-sheet-item .count { font-size: 11.5px; color: var(--ink-soft); }
+
   .modal-backdrop {
     position: fixed;
     inset: 0;
@@ -754,15 +826,35 @@
   .group-share-btn { display: inline-flex; align-items: center; gap: 5px; }
   .group-share-btn svg { width: 14px; height: 14px; }
 
-  .group-verse-card {
-    padding: 20px 18px; border-radius: 20px; background: var(--surface);
-    box-shadow: 0 1px 3px var(--shadow); display: flex; flex-direction: column; gap: 10px;
-  }
-  .group-verse-card .ref { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 17px; color: var(--indigo); }
-  .group-verse-card .text { margin: 0; font-size: 15px; line-height: 1.7; }
   .group-verse-empty { text-align: center; color: var(--ink-soft); font-size: 13.5px; padding: 20px; background: var(--surface-2); border-radius: 16px; }
   .group-card-mode-btn { display: block; margin: 8px auto 0; text-align: center; font-weight: 600; }
-  .group-my-complete-row { display: flex; align-items: center; gap: 10px; }
+  .group-week-ribbon {
+    position: absolute; top: 2px; left: -6px; z-index: 2;
+    background: var(--gold); color: #fff; font-size: 10.5px; font-weight: 700;
+    padding: 4px 12px 4px 16px; border-radius: 0 999px 999px 0;
+    box-shadow: 0 3px 8px -3px var(--shadow);
+  }
+
+  .group-avatar-strip { display: flex; justify-content: center; margin: 4px 0 2px; }
+  .group-avatar {
+    position: relative; width: 42px; height: 42px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 14px; font-weight: 700; border: 3px solid var(--paper); margin-left: -10px; flex: none;
+  }
+  .group-avatar:first-child { margin-left: 0; }
+  .group-avatar-more { background: var(--surface-2); color: var(--ink-soft); font-size: 12px; }
+  .group-avatar-check {
+    position: absolute; bottom: -2px; right: -2px; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--gold); display: flex; align-items: center; justify-content: center; border: 2px solid var(--paper);
+  }
+  .group-avatar-check svg { width: 9px; height: 9px; }
+  .group-avatar-sm { width: 28px; height: 28px; font-size: 11px; border: none; margin-left: 0; }
+
+  .group-progress-ring { position: relative; width: 104px; height: 104px; margin: 6px auto 6px; }
+  .group-progress-ring svg { width: 100%; height: 100%; }
+  .group-progress-ring-label { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .group-progress-ring-label .count { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 900; font-size: 19px; color: var(--gold); }
+  .group-progress-ring-label .sub { margin: 2px 0 0; font-size: 10.5px; color: var(--ink-soft); }
 
   .group-section { display: flex; flex-direction: column; gap: 8px; }
   .group-section-title { margin: 0; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
@@ -772,12 +864,12 @@
   .group-member-row .not-done { font-size: 12px; color: var(--ink-soft); }
   .group-member-row .kick-btn { font-size: 11px; color: #b34747; background: none; border: none; cursor: pointer; padding: 2px 4px; }
 
-  .group-comment-item { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-  .group-comment-item:last-child { border-bottom: none; }
-  .group-comment-item .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
-  .group-comment-item .nickname { font-size: 12.5px; font-weight: 700; color: var(--indigo); }
-  .group-comment-item .del-btn { font-size: 11px; color: var(--ink-soft); background: none; border: none; cursor: pointer; }
-  .group-comment-item .text { margin: 0; font-size: 13.5px; line-height: 1.55; }
+  .group-comment-bubble-row { display: flex; gap: 9px; padding: 6px 0; }
+  .group-comment-bubble { flex: 1; min-width: 0; background: var(--surface); border-radius: 15px 15px 15px 4px; padding: 9px 13px; box-shadow: 0 1px 3px var(--shadow); }
+  .group-comment-bubble .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .group-comment-bubble .nickname { font-size: 12px; font-weight: 700; color: var(--indigo); }
+  .group-comment-bubble .del-btn { font-size: 10.5px; color: var(--ink-soft); background: none; border: none; cursor: pointer; }
+  .group-comment-bubble .text { margin: 2px 0 0; font-size: 13.5px; line-height: 1.55; }
   .group-comment-empty { font-size: 13px; color: var(--ink-soft); padding: 8px 0; }
   .group-comment-input-row { display: flex; gap: 8px; }
   .group-comment-input-row input { flex: 1; margin: 0; }
@@ -853,7 +945,30 @@
   </div>
 
   <div class="study-view" id="studyView">
-  <div class="chip-row" id="chipRow"></div>
+  <div class="category-nav">
+    <div class="segmented-control" id="segmentedControl">
+      <button class="segment" data-cat="all">전체</button>
+      <button class="segment" data-cat="__favorites__">즐겨찾기</button>
+      <button class="segment" data-cat="__mastered__">암송 완료</button>
+    </div>
+    <div class="topic-filter-row">
+      <button class="topic-filter-btn" id="topicFilterBtn">
+        <span id="topicFilterLabel">주제로 찾기</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <button class="topic-add-btn" id="topicAddBtn" aria-label="말씀 추가">+</button>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="topicSheetBackdrop">
+    <div class="modal-panel">
+      <h2 class="modal-title">주제로 찾기</h2>
+      <div class="topic-sheet-list" id="topicSheetList"></div>
+      <div class="modal-actions">
+        <button class="text-btn" id="topicSheetCancel">닫기</button>
+      </div>
+    </div>
+  </div>
 
   <button class="text-btn back-to-list-btn" id="backToListBtn" style="display:none;">← 목록으로</button>
 
@@ -1017,6 +1132,8 @@
         </button>
         <button class="text-btn" id="groupLeaveBtn">그룹 나가기</button>
       </div>
+
+      <div id="groupProgressSummary"></div>
 
       <div id="groupCurrentVerseBox"></div>
 
@@ -1823,7 +1940,6 @@ const READ_PASSAGES = [
   function isListCategory(cat) { return cat === '__favorites__' || cat === '__mastered__'; }
 
   const els = {
-    chipRow: document.getElementById('chipRow'),
     progressRow: document.getElementById('progressRow'),
     verseList: document.getElementById('verseList'),
     autoplayBtn: document.getElementById('autoplayBtn'),
@@ -1852,22 +1968,63 @@ const READ_PASSAGES = [
 
   els.totalLabel.textContent = `총 ${VERSES.length}구절`;
 
-  const SPECIAL_CHIP_LABELS = { all: '전체', __favorites__: '즐겨찾기', __mastered__: '암송 완료' };
   const categories = ['all', '__favorites__', '__mastered__', ...Array.from(new Set(VERSES.map(v => v.category)))];
-  categories.forEach(cat => {
-    const btn = document.createElement('button');
-    btn.className = 'chip';
-    btn.dataset.cat = cat;
-    btn.textContent = SPECIAL_CHIP_LABELS[cat] || cat;
-    btn.addEventListener('click', () => selectCategory(cat));
-    els.chipRow.appendChild(btn);
+  const TOPIC_CATEGORIES = categories.slice(3);
+
+  document.querySelectorAll('#segmentedControl .segment').forEach((btn) => {
+    btn.addEventListener('click', () => selectCategory(btn.dataset.cat));
   });
 
-  const addChip = document.createElement('button');
-  addChip.className = 'chip add-chip';
-  addChip.textContent = '+ 추가';
-  addChip.addEventListener('click', openAddModal);
-  els.chipRow.prepend(addChip);
+  function topicVerseCount(cat) {
+    return VERSES.filter((v) => v.category === cat).length;
+  }
+  function renderTopicSheetList() {
+    const listEl = document.getElementById('topicSheetList');
+    listEl.innerHTML = TOPIC_CATEGORIES.map((cat) => {
+      const slug = CATEGORY_SLUG[cat];
+      const isActive = category === cat;
+      return `<button class="topic-sheet-item${isActive ? ' active' : ''}" data-cat="${escapeHtml(cat)}">
+        <span class="dot" style="background:var(--cat-${slug})"></span>
+        <span class="name">${escapeHtml(cat)}</span>
+        <span class="count">${topicVerseCount(cat)}구절</span>
+      </button>`;
+    }).join('');
+  }
+  function openTopicSheet() {
+    renderTopicSheetList();
+    document.getElementById('topicSheetBackdrop').classList.add('open');
+  }
+  function closeTopicSheet() {
+    document.getElementById('topicSheetBackdrop').classList.remove('open');
+  }
+  document.getElementById('topicFilterBtn').addEventListener('click', openTopicSheet);
+  document.getElementById('topicSheetCancel').addEventListener('click', closeTopicSheet);
+  document.getElementById('topicSheetBackdrop').addEventListener('click', (e) => {
+    if (e.target.id === 'topicSheetBackdrop') closeTopicSheet();
+  });
+  document.getElementById('topicSheetList').addEventListener('click', (e) => {
+    const btn = e.target.closest('.topic-sheet-item');
+    if (!btn) return;
+    selectCategory(btn.dataset.cat);
+    closeTopicSheet();
+  });
+  document.getElementById('topicAddBtn').addEventListener('click', openAddModal);
+
+  function updateCategoryNavUI() {
+    const isSpecial = category === 'all' || category === '__favorites__' || category === '__mastered__';
+    document.querySelectorAll('#segmentedControl .segment').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.cat === category);
+    });
+    const labelEl = document.getElementById('topicFilterLabel');
+    const btnEl = document.getElementById('topicFilterBtn');
+    if (isSpecial) {
+      labelEl.textContent = '주제로 찾기';
+      btnEl.classList.remove('has-topic');
+    } else {
+      labelEl.textContent = category;
+      btnEl.classList.add('has-topic');
+    }
+  }
 
   // ---------- reference parsing + verse auto-fill ----------
   const BOOK_ALIASES = {
@@ -2624,12 +2781,11 @@ const READ_PASSAGES = [
         els.verseList.appendChild(item);
       });
     }
-
-    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
   }
 
   function render() {
     saveAppState();
+    updateCategoryNavUI();
     const deck = currentDeck();
     const listCat = isListCategory(category);
     els.backToListBtn.style.display = (listCat && viewMode === 'deck') ? '' : 'none';
@@ -2662,7 +2818,6 @@ const READ_PASSAGES = [
         emptyMessage.textContent = '이 조건에 맞는 카드를 모두 학습했어요.';
         emptyResetBtn.style.display = '';
       }
-      document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
       return;
     }
 
@@ -2705,8 +2860,6 @@ const READ_PASSAGES = [
 
     els.posLabel.textContent = `${pos + 1} / ${deck.length}`;
     els.progressFill.style.width = `${((pos + 1) / deck.length) * 100}%`;
-
-    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c.dataset.cat === category));
   }
 
   let startX = 0, startY = 0, dragging = false;
@@ -3085,6 +3238,17 @@ const READ_PASSAGES = [
   function escapeHtml(str) {
     return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
+  const AVATAR_COLORS = ['#3B4CCB', '#DB8A1E', '#c8425a', '#2f8f6f', '#7a5cc9', '#1f8fa6'];
+  function avatarColorFor(id) {
+    const str = String(id || '');
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
+    return AVATAR_COLORS[hash % AVATAR_COLORS.length];
+  }
+  function avatarInitial(nickname) {
+    const trimmed = String(nickname || '').trim();
+    return trimmed ? trimmed.charAt(0) : '?';
+  }
   async function sha256Hex(text) {
     const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
     return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -3304,6 +3468,7 @@ const READ_PASSAGES = [
       currentMembers = snap.docs.map((d) => ({ id: d.id, ...d.data() })).filter((m) => !m.kicked);
       renderGroupRoomHeader();
       renderCompletionList();
+      renderGroupProgressSummary();
       renderComments();
     });
 
@@ -3329,11 +3494,12 @@ const READ_PASSAGES = [
     if (commentsUnsub) { commentsUnsub(); commentsUnsub = null; }
     currentCompletions = {};
     currentComments = [];
-    if (!verseId) { renderCompletionList(); renderComments(); return; }
+    if (!verseId) { renderCompletionList(); renderGroupProgressSummary(); renderComments(); return; }
     completionsUnsub = fs.onSnapshot(fs.collection(db, 'groups', currentGroupId, 'verses', verseId, 'completions'), (snap) => {
       currentCompletions = {};
       snap.docs.forEach((d) => { currentCompletions[d.id] = d.data(); });
       renderCompletionList();
+      renderGroupProgressSummary();
       renderCurrentVerseBox();
     });
     commentsUnsub = fs.onSnapshot(
@@ -3353,6 +3519,38 @@ const READ_PASSAGES = [
     document.getElementById('groupAdminLockedBox').style.display = adminUnlocked ? 'none' : '';
   }
 
+  function renderGroupProgressSummary() {
+    const el = document.getElementById('groupProgressSummary');
+    if (!currentMembers.length) { el.innerHTML = ''; return; }
+    const doneCount = currentMembers.filter((m) => currentCompletions[m.id] && currentCompletions[m.id].done).length;
+    const total = currentMembers.length;
+    const pct = total ? doneCount / total : 0;
+    const radius = 46;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference * (1 - pct);
+    const shown = currentMembers.slice(0, 4);
+    const extra = currentMembers.length - shown.length;
+    el.innerHTML = `
+      <div class="group-avatar-strip">
+        ${shown.map((m) => {
+          const done = !!(currentCompletions[m.id] && currentCompletions[m.id].done);
+          return `<div class="group-avatar" style="background:${avatarColorFor(m.id)}">${escapeHtml(avatarInitial(m.nickname))}${done ? `<span class="group-avatar-check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>` : ''}</div>`;
+        }).join('')}
+        ${extra > 0 ? `<div class="group-avatar group-avatar-more">+${extra}</div>` : ''}
+      </div>
+      <div class="group-progress-ring">
+        <svg viewBox="0 0 104 104">
+          <circle cx="52" cy="52" r="${radius}" fill="none" stroke="var(--surface-2)" stroke-width="9"></circle>
+          <circle cx="52" cy="52" r="${radius}" fill="none" stroke="var(--gold)" stroke-width="9" stroke-linecap="round" stroke-dasharray="${circumference}" stroke-dashoffset="${offset}" transform="rotate(-90 52 52)"></circle>
+        </svg>
+        <div class="group-progress-ring-label">
+          <p class="count">${doneCount}/${total}</p>
+          <p class="sub">이번주 완료</p>
+        </div>
+      </div>
+    `;
+  }
+
   function renderCurrentVerseBox() {
     const box = document.getElementById('groupCurrentVerseBox');
     if (!currentVerseDoc) {
@@ -3368,6 +3566,7 @@ const READ_PASSAGES = [
         <div class="deck-shadow deck-shadow-2"></div>
         <div class="deck-shadow deck-shadow-1"></div>
         <div class="card${showImage ? ' has-image' : ''}${groupCardFlipped ? ' flipped' : ''}" style="--accent:var(--cat-${slug})" data-action="flip-group-card" tabindex="0" role="button" aria-label="탭하여 말씀 확인">
+          <span class="group-week-ribbon">이번주</span>
           <button class="mastery-btn${myDone ? ' is-mastered' : ''}" data-action="toggle-complete" aria-label="암송 완료 표시">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </button>
@@ -3402,6 +3601,7 @@ const READ_PASSAGES = [
       const done = !!(currentCompletions[m.id] && currentCompletions[m.id].done);
       const isMe = m.id === currentUid;
       return `<div class="group-member-row">
+        <div class="group-avatar group-avatar-sm" style="background:${avatarColorFor(m.id)}">${escapeHtml(avatarInitial(m.nickname))}</div>
         <span class="nickname">${escapeHtml(m.nickname)}${isMe ? ' (나)' : ''}</span>
         <span class="${done ? 'done-badge' : 'not-done'}">${done ? '✓ 완료' : '아직'}</span>
         ${adminUnlocked && !isMe ? `<button class="kick-btn" data-action="kick-member" data-member-id="${m.id}">내보내기</button>` : ''}
@@ -3418,12 +3618,15 @@ const READ_PASSAGES = [
       const nickname = author ? author.nickname : (c.memberId === currentUid ? currentNickname : '(알 수 없음)');
       const isMine = c.memberId === currentUid;
       const canDelete = isMine || adminUnlocked;
-      return `<div class="group-comment-item">
-        <div class="head">
-          <span class="nickname">${escapeHtml(nickname)}</span>
-          ${canDelete ? `<button class="del-btn" data-action="delete-comment" data-comment-id="${c.id}">삭제</button>` : ''}
+      return `<div class="group-comment-bubble-row">
+        <div class="group-avatar group-avatar-sm" style="background:${avatarColorFor(c.memberId)}">${escapeHtml(avatarInitial(nickname))}</div>
+        <div class="group-comment-bubble">
+          <div class="head">
+            <span class="nickname">${escapeHtml(nickname)}</span>
+            ${canDelete ? `<button class="del-btn" data-action="delete-comment" data-comment-id="${c.id}">삭제</button>` : ''}
+          </div>
+          <p class="text">${escapeHtml(c.text)}</p>
         </div>
-        <p class="text">${escapeHtml(c.text)}</p>
       </div>`;
     }).join('');
   }
