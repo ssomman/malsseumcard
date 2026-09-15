@@ -759,6 +759,7 @@
   .group-verse-card .ref { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 17px; color: var(--indigo); }
   .group-verse-card .text { margin: 0; font-size: 15px; line-height: 1.7; }
   .group-verse-empty { text-align: center; color: var(--ink-soft); font-size: 13.5px; padding: 20px; background: var(--surface-2); border-radius: 16px; }
+  .group-card-mode-btn { display: block; margin: 8px auto 0; text-align: center; font-weight: 600; }
   .group-my-complete-row { display: flex; align-items: center; gap: 10px; }
 
   .group-section { display: flex; flex-direction: column; gap: 8px; }
@@ -3134,6 +3135,7 @@ const READ_PASSAGES = [
   let groupUnsub = null, membersUnsub = null, versesUnsub = null, completionsUnsub = null, commentsUnsub = null;
   let attachedVerseSubId = null;
   let groupCardFlipped = false;
+  let groupCardMode = 'illustrated';
 
   function detachGroupListeners() {
     if (groupUnsub) { groupUnsub(); groupUnsub = null; }
@@ -3355,11 +3357,12 @@ const READ_PASSAGES = [
     const v = currentVerseDoc;
     const myDone = !!(currentCompletions[currentUid] && currentCompletions[currentUid].done);
     const slug = CATEGORY_SLUG[v.category] || 'faith';
+    const showImage = groupCardMode === 'illustrated';
     box.innerHTML = `
       <div class="stage group-card-stage">
         <div class="deck-shadow deck-shadow-2"></div>
         <div class="deck-shadow deck-shadow-1"></div>
-        <div class="card has-image${groupCardFlipped ? ' flipped' : ''}" style="--accent:var(--cat-${slug})" data-action="flip-group-card" tabindex="0" role="button" aria-label="탭하여 말씀 확인">
+        <div class="card${showImage ? ' has-image' : ''}${groupCardFlipped ? ' flipped' : ''}" style="--accent:var(--cat-${slug})" data-action="flip-group-card" tabindex="0" role="button" aria-label="탭하여 말씀 확인">
           <button class="mastery-btn${myDone ? ' is-mastered' : ''}" data-action="toggle-complete" aria-label="암송 완료 표시">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
           </button>
@@ -3371,14 +3374,14 @@ const READ_PASSAGES = [
               <p class="hint">탭하여 말씀 확인</p>
             </div>
             <div class="card-face card-back">
-              <img class="card-back-image" src="images/verses/${escapeHtml(v.cardId || '')}.jpg" alt="" onerror="this.closest('.card').classList.remove('has-image')" />
-              <p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>
+              ${showImage ? `<img class="card-back-image" src="images/verses/${escapeHtml(v.cardId || '')}.jpg" alt="" onerror="this.closest('.card').classList.remove('has-image')" /><p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>` : ''}
               <p class="verse-text">${escapeHtml(v.text)}</p>
               <p class="reference-small">${escapeHtml(v.reference)}</p>
             </div>
           </div>
         </div>
       </div>
+      <button class="text-btn group-card-mode-btn" data-action="toggle-card-mode">${showImage ? '심플로 보기' : '일러스트로 보기'}</button>
     `;
   }
 
@@ -3450,6 +3453,11 @@ const READ_PASSAGES = [
   }
   document.getElementById('groupCurrentVerseBox').addEventListener('click', (e) => {
     if (e.target.closest('[data-action="toggle-complete"]')) { toggleMyCompletion(); return; }
+    if (e.target.closest('[data-action="toggle-card-mode"]')) {
+      groupCardMode = groupCardMode === 'illustrated' ? 'simple' : 'illustrated';
+      renderCurrentVerseBox();
+      return;
+    }
     if (e.target.closest('[data-action="flip-group-card"]')) {
       groupCardFlipped = !groupCardFlipped;
       renderCurrentVerseBox();
