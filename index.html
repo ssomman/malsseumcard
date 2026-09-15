@@ -232,7 +232,8 @@
     color: var(--indigo);
     font-weight: 600;
   }
-  .modal-panel input, .modal-panel textarea, .modal-panel select {
+  .modal-panel input, .modal-panel textarea, .modal-panel select,
+  .group-panel input, .group-panel select {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     padding: 11px 13px;
@@ -720,6 +721,62 @@
     color: var(--ink-soft);
     letter-spacing: 0.02em;
   }
+
+  /* ---------- 그룹 암송반 ---------- */
+  .group-cta-btn { color: var(--indigo); }
+  .group-view { display: flex; flex-direction: column; gap: 16px; }
+  .group-panel { display: flex; flex-direction: column; gap: 12px; }
+  .group-list { display: flex; flex-direction: column; gap: 8px; }
+  .group-list-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 14px 16px; border-radius: 16px; border: none;
+    background: var(--surface); box-shadow: 0 1px 3px var(--shadow);
+    cursor: pointer; text-align: left; font-family: 'Noto Sans KR', sans-serif; color: var(--ink);
+  }
+  .group-list-item .name { font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 15px; }
+  .group-list-item .meta { font-size: 12px; color: var(--ink-soft); }
+  .group-list-empty { text-align: center; color: var(--ink-soft); font-size: 14px; padding: 24px 20px; }
+
+  .group-room-header { display: flex; flex-direction: column; gap: 2px; }
+  .group-room-name { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 20px; }
+  .group-room-meta { margin: 0; font-size: 12.5px; color: var(--ink-soft); }
+  .group-room-actions { display: flex; gap: 16px; }
+
+  .group-verse-card {
+    padding: 20px 18px; border-radius: 20px; background: var(--surface);
+    box-shadow: 0 1px 3px var(--shadow); display: flex; flex-direction: column; gap: 10px;
+  }
+  .group-verse-card .ref { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 17px; color: var(--indigo); }
+  .group-verse-card .text { margin: 0; font-size: 15px; line-height: 1.7; }
+  .group-verse-empty { text-align: center; color: var(--ink-soft); font-size: 13.5px; padding: 20px; background: var(--surface-2); border-radius: 16px; }
+  .group-my-complete-row { display: flex; align-items: center; gap: 10px; }
+
+  .group-section { display: flex; flex-direction: column; gap: 8px; }
+  .group-section-title { margin: 0; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+  .group-member-row { display: flex; align-items: center; gap: 10px; padding: 4px 0; }
+  .group-member-row .nickname { flex: 1; font-size: 14px; font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .group-member-row .done-badge { font-size: 12px; color: var(--gold); font-weight: 700; }
+  .group-member-row .not-done { font-size: 12px; color: var(--ink-soft); }
+  .group-member-row .kick-btn { font-size: 11px; color: #b34747; background: none; border: none; cursor: pointer; padding: 2px 4px; }
+
+  .group-comment-item { display: flex; flex-direction: column; gap: 2px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .group-comment-item:last-child { border-bottom: none; }
+  .group-comment-item .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .group-comment-item .nickname { font-size: 12.5px; font-weight: 700; color: var(--indigo); }
+  .group-comment-item .del-btn { font-size: 11px; color: var(--ink-soft); background: none; border: none; cursor: pointer; }
+  .group-comment-item .text { margin: 0; font-size: 13.5px; line-height: 1.55; }
+  .group-comment-empty { font-size: 13px; color: var(--ink-soft); padding: 8px 0; }
+  .group-comment-input-row { display: flex; gap: 8px; }
+  .group-comment-input-row input { flex: 1; margin: 0; }
+  .group-comment-input-row .ctrl-btn { width: auto; padding: 0 16px; height: 42px; flex: none; }
+
+  .group-history-item { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .group-history-item:last-child { border-bottom: none; }
+  .group-history-item .ref { margin: 0; font-size: 13px; font-weight: 700; }
+  .group-history-item .meta { margin: 0; font-size: 11.5px; color: var(--ink-soft); }
+
+  .group-admin-box { padding: 14px 16px; border-radius: 16px; background: var(--surface-2); display: flex; flex-direction: column; gap: 10px; }
+  .group-admin-box .ctrl-btn, .group-admin-box .text-btn { width: 100%; text-align: center; }
 </style>
 
 <div class="app">
@@ -773,6 +830,7 @@
       <button class="ctrl-btn ctrl-btn-primary" id="homeIllustratedBtn">일러스트 말씀카드</button>
     </div>
     <button class="ctrl-btn read-cta-btn" id="homeReadBtn">성경 단편 읽기</button>
+    <button class="ctrl-btn read-cta-btn group-cta-btn" id="homeGroupBtn">그룹 암송반</button>
     <div class="home-actions">
       <button class="ctrl-btn" id="homeFavoritesBtn">즐겨찾기</button>
       <button class="ctrl-btn" id="homeMasteredBtn">암송 완료</button>
@@ -899,6 +957,94 @@
         <button class="ctrl-btn" id="readPrevBtn">← 이전</button>
         <button class="ctrl-btn" id="readNextBtn">다음 →</button>
       </div>
+    </div>
+  </div>
+
+  <div class="group-view" id="groupView" style="display:none;">
+    <div class="group-panel" id="groupLobbyPanel">
+      <p class="read-intro">목장이나 소그룹과 함께 이번주 암송 구절 진도를 나눠보세요. 관리자가 매주 구절을 올리면, 그룹원들이 각자 완료 체크를 하고 서로 응원할 수 있어요.</p>
+      <div class="group-list" id="groupList"></div>
+      <button class="ctrl-btn ctrl-btn-primary" id="groupCreateOpenBtn">새 그룹 만들기</button>
+      <button class="ctrl-btn" id="groupJoinOpenBtn">초대 코드로 참여하기</button>
+    </div>
+
+    <div class="group-panel" id="groupCreatePanel" style="display:none;">
+      <button class="text-btn back-to-list-btn" id="groupCreateBackBtn">← 뒤로</button>
+      <label class="field-label" for="groupCreateName">그룹 이름</label>
+      <input type="text" id="groupCreateName" placeholder="예: 은혜목장" maxlength="30" />
+      <label class="field-label" for="groupCreatePin">관리자 PIN (숫자 4~6자리, 잊지 않게 적어두세요)</label>
+      <input type="text" id="groupCreatePin" inputmode="numeric" placeholder="예: 1234" maxlength="6" />
+      <label class="field-label" for="groupCreateNickname">내 닉네임</label>
+      <input type="text" id="groupCreateNickname" placeholder="예: 김집사" maxlength="20" />
+      <p class="lookup-status" id="groupCreateStatus"></p>
+      <button class="ctrl-btn ctrl-btn-primary" id="groupCreateSubmitBtn">그룹 만들기</button>
+    </div>
+
+    <div class="group-panel" id="groupJoinPanel" style="display:none;">
+      <button class="text-btn back-to-list-btn" id="groupJoinBackBtn">← 뒤로</button>
+      <label class="field-label" for="groupJoinCode">초대 코드</label>
+      <input type="text" id="groupJoinCode" placeholder="예: AB12CD34EF" maxlength="12" />
+      <label class="field-label" for="groupJoinNickname">내 닉네임</label>
+      <input type="text" id="groupJoinNickname" placeholder="예: 김집사" maxlength="20" />
+      <p class="lookup-status" id="groupJoinStatus"></p>
+      <button class="ctrl-btn ctrl-btn-primary" id="groupJoinSubmitBtn">참여하기</button>
+    </div>
+
+    <div class="group-panel" id="groupRoomPanel" style="display:none;">
+      <button class="text-btn back-to-list-btn" id="groupRoomBackBtn">← 그룹 목록으로</button>
+      <div class="group-room-header">
+        <p class="group-room-name" id="groupRoomName"></p>
+        <p class="group-room-meta" id="groupRoomMeta"></p>
+      </div>
+      <div class="group-room-actions">
+        <button class="text-btn" id="groupShareBtn">초대 코드 공유</button>
+        <button class="text-btn" id="groupLeaveBtn">그룹 나가기</button>
+      </div>
+
+      <div id="groupCurrentVerseBox"></div>
+
+      <div class="group-section">
+        <p class="group-section-title">완료자 명단</p>
+        <div id="groupCompletionList"></div>
+      </div>
+
+      <div class="group-section">
+        <p class="group-section-title">댓글</p>
+        <div id="groupComments"></div>
+        <div class="group-comment-input-row">
+          <input type="text" id="groupCommentInput" placeholder="응원 한마디 남겨보세요" maxlength="300" />
+          <button class="ctrl-btn ctrl-btn-primary" id="groupCommentSubmitBtn">등록</button>
+        </div>
+      </div>
+
+      <div class="group-section" id="groupHistorySection" style="display:none;">
+        <p class="group-section-title">지난 구절</p>
+        <div id="groupHistoryList"></div>
+      </div>
+
+      <div class="group-admin-box" id="groupAdminLockedBox">
+        <p class="field-label">관리자이신가요?</p>
+        <div class="group-comment-input-row">
+          <input type="text" id="groupAdminPinInput" inputmode="numeric" placeholder="관리자 PIN" maxlength="6" />
+          <button class="ctrl-btn" id="groupAdminUnlockBtn">확인</button>
+        </div>
+        <p class="lookup-status" id="groupAdminStatus"></p>
+      </div>
+
+      <div class="group-admin-box" id="groupAdminPanel" style="display:none;">
+        <p class="field-label">관리자 메뉴</p>
+        <button class="ctrl-btn ctrl-btn-primary" id="groupPostVerseBtn">이번주 구절 올리기</button>
+        <button class="text-btn" id="groupRenameBtn">그룹 이름 수정</button>
+        <button class="text-btn" id="groupResetPinBtn">PIN 재설정</button>
+        <button class="text-btn" id="groupDeleteBtn">그룹 삭제</button>
+      </div>
+    </div>
+
+    <div class="group-panel" id="groupPickVersePanel" style="display:none;">
+      <button class="text-btn back-to-list-btn" id="groupPickVerseBackBtn">← 취소</button>
+      <p class="read-list-title">이번주 구절 고르기</p>
+      <div class="chip-row" id="groupPickVerseChipRow"></div>
+      <div class="verse-list visible" id="groupPickVerseList"></div>
     </div>
   </div>
 
@@ -2670,6 +2816,7 @@ const READ_PASSAGES = [
     homeViewEl.style.display = screen === 'home' ? '' : 'none';
     studyViewEl.style.display = screen === 'study' ? '' : 'none';
     readViewEl.style.display = screen === 'read' ? '' : 'none';
+    groupViewEl.style.display = screen === 'group' ? '' : 'none';
     homeBtn.classList.toggle('active', screen === 'home');
     if (screen === 'home') renderHome();
     if (screen === 'read') { readMode = 'categories'; renderReadScreen(); }
@@ -2737,6 +2884,10 @@ const READ_PASSAGES = [
   });
   document.getElementById('homeReadBtn').addEventListener('click', () => {
     showScreen('read');
+  });
+  document.getElementById('homeGroupBtn').addEventListener('click', () => {
+    showScreen('group');
+    showGroupLobby();
   });
 
   // ---------- 성경단편읽기 ----------
@@ -2882,6 +3033,611 @@ const READ_PASSAGES = [
     renderReadDetail();
   });
 
+  // ---------- 그룹 암송반 ----------
+  const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyD-cHwTUNDaLeAZwW55h_VjAaSfc82k3IY",
+    authDomain: "malsseumcard.firebaseapp.com",
+    projectId: "malsseumcard",
+    storageBucket: "malsseumcard.firebasestorage.app",
+    messagingSenderId: "948137519988",
+    appId: "1:948137519988:web:39e4bfed89185f97395a21"
+  };
+  let db = null, fs = null, currentUid = null;
+  const firebaseReady = (async () => {
+    try {
+      const [{ initializeApp }, firestoreMod, authMod] = await Promise.all([
+        import('https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js'),
+        import('https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js'),
+        import('https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js'),
+      ]);
+      const app = initializeApp(FIREBASE_CONFIG);
+      db = firestoreMod.getFirestore(app);
+      fs = firestoreMod;
+      const auth = authMod.getAuth(app);
+      await new Promise((resolve, reject) => {
+        const unsub = authMod.onAuthStateChanged(auth, (user) => {
+          if (user) { currentUid = user.uid; unsub(); resolve(); }
+        }, reject);
+        authMod.signInAnonymously(auth).catch(reject);
+      });
+    } catch (e) {
+      console.error('Firebase init failed', e);
+    }
+  })();
+
+  function escapeHtml(str) {
+    return String(str == null ? '' : str).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+  async function sha256Hex(text) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+  }
+  function randomInviteCode(len) {
+    const chars = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+    const arr = new Uint8Array(len);
+    crypto.getRandomValues(arr);
+    return Array.from(arr).map((b) => chars[b % chars.length]).join('');
+  }
+
+  const MY_GROUPS_KEY = 'malsseumcard.groups.v1';
+  function loadMyGroups() {
+    try {
+      const raw = localStorage.getItem(MY_GROUPS_KEY);
+      const arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+  function saveMyGroups(list) {
+    try { localStorage.setItem(MY_GROUPS_KEY, JSON.stringify(list)); } catch (e) {}
+  }
+  function upsertMyGroup(entry) {
+    const list = loadMyGroups().filter((g) => g.groupId !== entry.groupId);
+    list.unshift(entry);
+    saveMyGroups(list);
+  }
+  function removeMyGroup(groupId) {
+    saveMyGroups(loadMyGroups().filter((g) => g.groupId !== groupId));
+  }
+  function findMyGroup(groupId) {
+    return loadMyGroups().find((g) => g.groupId === groupId) || null;
+  }
+
+  const groupViewEl = document.getElementById('groupView');
+  const GROUP_PANEL_IDS = ['groupLobbyPanel', 'groupCreatePanel', 'groupJoinPanel', 'groupRoomPanel', 'groupPickVersePanel'];
+  function showGroupPanel(name) {
+    GROUP_PANEL_IDS.forEach((id) => {
+      document.getElementById(id).style.display = id === name ? '' : 'none';
+    });
+  }
+
+  let currentGroupId = null;
+  let currentGroupData = null;
+  let currentNickname = null;
+  let currentMembers = [];
+  let currentVerseDoc = null;
+  let historyDocs = [];
+  let currentCompletions = {};
+  let currentComments = [];
+  let adminUnlocked = false;
+  let adminPinHash = null;
+  let groupUnsub = null, membersUnsub = null, versesUnsub = null, completionsUnsub = null, commentsUnsub = null;
+  let attachedVerseSubId = null;
+
+  function detachGroupListeners() {
+    if (groupUnsub) { groupUnsub(); groupUnsub = null; }
+    if (membersUnsub) { membersUnsub(); membersUnsub = null; }
+    if (versesUnsub) { versesUnsub(); versesUnsub = null; }
+    if (completionsUnsub) { completionsUnsub(); completionsUnsub = null; }
+    if (commentsUnsub) { commentsUnsub(); commentsUnsub = null; }
+    attachedVerseSubId = null;
+    currentGroupId = null; currentGroupData = null; currentMembers = [];
+    currentVerseDoc = null; historyDocs = []; currentCompletions = {}; currentComments = [];
+    adminUnlocked = false; adminPinHash = null;
+  }
+
+  function showGroupLobby() {
+    detachGroupListeners();
+    showGroupPanel('groupLobbyPanel');
+    renderGroupLobbyList();
+  }
+
+  async function renderGroupLobbyList() {
+    const listEl = document.getElementById('groupList');
+    let mine = loadMyGroups();
+    if (!mine.length) {
+      listEl.innerHTML = '<p class="group-list-empty">아직 참여한 그룹이 없어요. 새 그룹을 만들거나 초대 코드로 참여해보세요.</p>';
+      return;
+    }
+    listEl.innerHTML = '<p class="group-list-empty">불러오는 중...</p>';
+    await firebaseReady;
+    if (db) {
+      for (const g of mine) {
+        try {
+          const snap = await fs.getDoc(fs.doc(db, 'groups', g.groupId));
+          const gone = !snap.exists() || !!snap.data().deleted;
+          g.missing = gone;
+          if (!gone) g.name = snap.data().name;
+        } catch (e) {}
+      }
+      saveMyGroups(mine);
+    }
+    if (currentScreen !== 'group') return;
+    listEl.innerHTML = mine.map((g) => {
+      if (g.missing) {
+        return `<div class="group-list-item" style="cursor:default;">
+          <span><span class="name">${escapeHtml(g.name || '그룹')}</span><br><span class="meta">삭제된 그룹이에요</span></span>
+          <button class="text-btn" data-action="remove-group" data-group-id="${g.groupId}" style="padding:0;">지우기</button>
+        </div>`;
+      }
+      return `<button class="group-list-item" data-action="open-group" data-group-id="${g.groupId}">
+        <span><span class="name">${escapeHtml(g.name || '그룹')}</span><br><span class="meta">${escapeHtml(g.nickname)}(으)로 참여중</span></span>
+        <span class="meta">입장 →</span>
+      </button>`;
+    }).join('');
+  }
+  document.getElementById('groupList').addEventListener('click', (e) => {
+    const openBtn = e.target.closest('[data-action="open-group"]');
+    if (openBtn) {
+      const entry = findMyGroup(openBtn.dataset.groupId);
+      if (entry) openGroupRoom(entry.groupId, entry.nickname);
+      return;
+    }
+    const rmBtn = e.target.closest('[data-action="remove-group"]');
+    if (rmBtn) { removeMyGroup(rmBtn.dataset.groupId); renderGroupLobbyList(); }
+  });
+
+  document.getElementById('groupCreateOpenBtn').addEventListener('click', () => {
+    document.getElementById('groupCreateName').value = '';
+    document.getElementById('groupCreatePin').value = '';
+    document.getElementById('groupCreateNickname').value = '';
+    document.getElementById('groupCreateStatus').textContent = '';
+    showGroupPanel('groupCreatePanel');
+  });
+  document.getElementById('groupCreateBackBtn').addEventListener('click', showGroupLobby);
+  document.getElementById('groupJoinOpenBtn').addEventListener('click', () => {
+    document.getElementById('groupJoinCode').value = '';
+    document.getElementById('groupJoinNickname').value = '';
+    document.getElementById('groupJoinStatus').textContent = '';
+    showGroupPanel('groupJoinPanel');
+  });
+  document.getElementById('groupJoinBackBtn').addEventListener('click', showGroupLobby);
+  document.getElementById('groupRoomBackBtn').addEventListener('click', showGroupLobby);
+
+  document.getElementById('groupCreateSubmitBtn').addEventListener('click', async () => {
+    const name = document.getElementById('groupCreateName').value.trim();
+    const pin = document.getElementById('groupCreatePin').value.trim();
+    const nickname = document.getElementById('groupCreateNickname').value.trim();
+    const statusEl = document.getElementById('groupCreateStatus');
+    if (!name) { statusEl.textContent = '그룹 이름을 입력해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    if (!/^\d{4,6}$/.test(pin)) { statusEl.textContent = 'PIN은 숫자 4~6자리로 입력해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    if (!nickname) { statusEl.textContent = '닉네임을 입력해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    statusEl.textContent = '만드는 중...';
+    statusEl.className = 'lookup-status';
+    await firebaseReady;
+    if (!db) { statusEl.textContent = '연결에 실패했어요. 인터넷 연결을 확인해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    try {
+      const pinHash = await sha256Hex(pin);
+      const groupId = randomInviteCode(10);
+      await fs.setDoc(fs.doc(db, 'groups', groupId), {
+        name, pinHash, createdAt: fs.serverTimestamp(),
+      });
+      await fs.setDoc(fs.doc(db, 'groups', groupId, 'members', currentUid), {
+        nickname, joinedAt: fs.serverTimestamp(),
+      });
+      upsertMyGroup({ groupId, nickname, name });
+      openGroupRoom(groupId, nickname);
+    } catch (e) {
+      statusEl.textContent = '그룹 생성에 실패했어요. 다시 시도해주세요.';
+      statusEl.className = 'lookup-status missing';
+    }
+  });
+
+  document.getElementById('groupJoinSubmitBtn').addEventListener('click', async () => {
+    const code = document.getElementById('groupJoinCode').value.trim().toUpperCase();
+    const nickname = document.getElementById('groupJoinNickname').value.trim();
+    const statusEl = document.getElementById('groupJoinStatus');
+    if (!code) { statusEl.textContent = '초대 코드를 입력해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    if (!nickname) { statusEl.textContent = '닉네임을 입력해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    statusEl.textContent = '확인하는 중...';
+    statusEl.className = 'lookup-status';
+    await firebaseReady;
+    if (!db) { statusEl.textContent = '연결에 실패했어요. 인터넷 연결을 확인해주세요.'; statusEl.className = 'lookup-status missing'; return; }
+    try {
+      const snap = await fs.getDoc(fs.doc(db, 'groups', code));
+      if (!snap.exists() || snap.data().deleted) { statusEl.textContent = '초대 코드를 찾을 수 없어요.'; statusEl.className = 'lookup-status missing'; return; }
+      await fs.setDoc(fs.doc(db, 'groups', code, 'members', currentUid), {
+        nickname, joinedAt: fs.serverTimestamp(),
+      });
+      upsertMyGroup({ groupId: code, nickname, name: snap.data().name });
+      openGroupRoom(code, nickname);
+    } catch (e) {
+      statusEl.textContent = '참여에 실패했어요. 다시 시도해주세요.';
+      statusEl.className = 'lookup-status missing';
+    }
+  });
+
+  async function openGroupRoom(groupId, nickname) {
+    await firebaseReady;
+    if (!db) { showToast('그룹 기능을 불러오지 못했어요.'); return; }
+    detachGroupListeners();
+    currentGroupId = groupId;
+    currentNickname = nickname;
+    showScreen('group');
+    showGroupPanel('groupRoomPanel');
+    document.getElementById('groupAdminPanel').style.display = 'none';
+    document.getElementById('groupAdminLockedBox').style.display = '';
+    document.getElementById('groupAdminPinInput').value = '';
+    document.getElementById('groupAdminStatus').textContent = '';
+
+    groupUnsub = fs.onSnapshot(fs.doc(db, 'groups', groupId), (snap) => {
+      if (!snap.exists() || snap.data().deleted) {
+        showToast('그룹을 찾을 수 없어요.');
+        removeMyGroup(groupId);
+        showGroupLobby();
+        return;
+      }
+      currentGroupData = snap.data();
+      upsertMyGroup({ groupId, nickname: currentNickname, name: currentGroupData.name });
+      renderGroupRoomHeader();
+    });
+
+    membersUnsub = fs.onSnapshot(fs.collection(db, 'groups', groupId, 'members'), (snap) => {
+      currentMembers = snap.docs.map((d) => ({ id: d.id, ...d.data() })).filter((m) => !m.kicked);
+      renderGroupRoomHeader();
+      renderCompletionList();
+      renderComments();
+    });
+
+    versesUnsub = fs.onSnapshot(
+      fs.query(fs.collection(db, 'groups', groupId, 'verses'), fs.orderBy('postedAt', 'desc'), fs.limit(20)),
+      (snap) => {
+        const docs = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+        currentVerseDoc = docs[0] || null;
+        historyDocs = docs.slice(1);
+        renderCurrentVerseBox();
+        renderHistoryList();
+        syncVerseSubListeners();
+      }
+    );
+  }
+
+  function syncVerseSubListeners() {
+    const verseId = currentVerseDoc ? currentVerseDoc.id : null;
+    if (verseId === attachedVerseSubId) return;
+    attachedVerseSubId = verseId;
+    if (completionsUnsub) { completionsUnsub(); completionsUnsub = null; }
+    if (commentsUnsub) { commentsUnsub(); commentsUnsub = null; }
+    currentCompletions = {};
+    currentComments = [];
+    if (!verseId) { renderCompletionList(); renderComments(); return; }
+    completionsUnsub = fs.onSnapshot(fs.collection(db, 'groups', currentGroupId, 'verses', verseId, 'completions'), (snap) => {
+      currentCompletions = {};
+      snap.docs.forEach((d) => { currentCompletions[d.id] = d.data(); });
+      renderCompletionList();
+      renderCurrentVerseBox();
+    });
+    commentsUnsub = fs.onSnapshot(
+      fs.query(fs.collection(db, 'groups', currentGroupId, 'verses', verseId, 'comments'), fs.orderBy('createdAt', 'asc'), fs.limit(200)),
+      (snap) => {
+        currentComments = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+        renderComments();
+      }
+    );
+  }
+
+  function renderGroupRoomHeader() {
+    if (!currentGroupData) return;
+    document.getElementById('groupRoomName').textContent = currentGroupData.name || '그룹';
+    document.getElementById('groupRoomMeta').textContent = `멤버 ${currentMembers.length}명 · 초대코드 ${currentGroupId}`;
+    document.getElementById('groupAdminPanel').style.display = adminUnlocked ? '' : 'none';
+    document.getElementById('groupAdminLockedBox').style.display = adminUnlocked ? 'none' : '';
+  }
+
+  function renderCurrentVerseBox() {
+    const box = document.getElementById('groupCurrentVerseBox');
+    if (!currentVerseDoc) {
+      box.innerHTML = '<div class="group-verse-empty">아직 올라온 이번주 구절이 없어요. 관리자가 구절을 올리면 여기 표시돼요.</div>';
+      return;
+    }
+    const v = currentVerseDoc;
+    const myDone = !!(currentCompletions[currentUid] && currentCompletions[currentUid].done);
+    box.innerHTML = `
+      <div class="group-verse-card">
+        <p class="ref">${escapeHtml(v.reference)}</p>
+        <p class="text">${escapeHtml(v.text)}</p>
+        <div class="group-my-complete-row">
+          <button class="ctrl-btn ${myDone ? 'ctrl-btn-primary' : ''}" data-action="toggle-complete">${myDone ? '✓ 암송 완료했어요' : '암송 완료 체크하기'}</button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCompletionList() {
+    const listEl = document.getElementById('groupCompletionList');
+    if (!currentMembers.length) { listEl.innerHTML = '<p class="group-list-empty">멤버 정보를 불러오는 중...</p>'; return; }
+    const sorted = [...currentMembers].sort((a, b) => {
+      const ad = currentCompletions[a.id] && currentCompletions[a.id].done ? 1 : 0;
+      const bd = currentCompletions[b.id] && currentCompletions[b.id].done ? 1 : 0;
+      return bd - ad;
+    });
+    listEl.innerHTML = sorted.map((m) => {
+      const done = !!(currentCompletions[m.id] && currentCompletions[m.id].done);
+      const isMe = m.id === currentUid;
+      return `<div class="group-member-row">
+        <span class="nickname">${escapeHtml(m.nickname)}${isMe ? ' (나)' : ''}</span>
+        <span class="${done ? 'done-badge' : 'not-done'}">${done ? '✓ 완료' : '아직'}</span>
+        ${adminUnlocked && !isMe ? `<button class="kick-btn" data-action="kick-member" data-member-id="${m.id}">내보내기</button>` : ''}
+      </div>`;
+    }).join('');
+  }
+
+  function renderComments() {
+    const el = document.getElementById('groupComments');
+    const visible = currentComments.filter((c) => !c.deleted);
+    if (!visible.length) { el.innerHTML = '<p class="group-comment-empty">아직 댓글이 없어요. 첫 댓글을 남겨보세요!</p>'; return; }
+    el.innerHTML = visible.map((c) => {
+      const author = currentMembers.find((m) => m.id === c.memberId);
+      const nickname = author ? author.nickname : (c.memberId === currentUid ? currentNickname : '(알 수 없음)');
+      const isMine = c.memberId === currentUid;
+      const canDelete = isMine || adminUnlocked;
+      return `<div class="group-comment-item">
+        <div class="head">
+          <span class="nickname">${escapeHtml(nickname)}</span>
+          ${canDelete ? `<button class="del-btn" data-action="delete-comment" data-comment-id="${c.id}">삭제</button>` : ''}
+        </div>
+        <p class="text">${escapeHtml(c.text)}</p>
+      </div>`;
+    }).join('');
+  }
+
+  function renderHistoryList() {
+    const section = document.getElementById('groupHistorySection');
+    const el = document.getElementById('groupHistoryList');
+    if (!historyDocs.length) { section.style.display = 'none'; return; }
+    section.style.display = '';
+    el.innerHTML = historyDocs.map((v) => {
+      let dateStr = '';
+      try {
+        if (v.postedAt && v.postedAt.toDate) {
+          const date = v.postedAt.toDate();
+          dateStr = `${date.getMonth() + 1}/${date.getDate()}`;
+        }
+      } catch (e) {}
+      return `<div class="group-history-item"><p class="ref">${escapeHtml(v.reference)}</p><p class="meta">${dateStr}</p></div>`;
+    }).join('');
+  }
+
+  async function toggleMyCompletion() {
+    if (!currentVerseDoc || !currentUid) return;
+    const wasDone = !!(currentCompletions[currentUid] && currentCompletions[currentUid].done);
+    try {
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId, 'verses', currentVerseDoc.id, 'completions', currentUid), {
+        done: !wasDone, updatedAt: fs.serverTimestamp(),
+      });
+    } catch (e) {
+      showToast('완료 체크에 실패했어요.');
+    }
+  }
+  document.getElementById('groupCurrentVerseBox').addEventListener('click', (e) => {
+    if (e.target.closest('[data-action="toggle-complete"]')) toggleMyCompletion();
+  });
+
+  async function kickMember(memberId) {
+    if (!adminUnlocked) return;
+    const m = currentMembers.find((x) => x.id === memberId);
+    if (!m) return;
+    if (!confirm(`${m.nickname}님을 그룹에서 내보낼까요?`)) return;
+    try {
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId, 'members', memberId), {
+        nickname: m.nickname, joinedAt: m.joinedAt, kicked: true, authPinHash: adminPinHash,
+      });
+    } catch (e) {
+      showToast('내보내기에 실패했어요.');
+    }
+  }
+  document.getElementById('groupCompletionList').addEventListener('click', (e) => {
+    const kickBtn = e.target.closest('[data-action="kick-member"]');
+    if (kickBtn) kickMember(kickBtn.dataset.memberId);
+  });
+
+  async function submitGroupComment() {
+    const input = document.getElementById('groupCommentInput');
+    const text = input.value.trim();
+    if (!text || !currentVerseDoc) return;
+    try {
+      await fs.addDoc(fs.collection(db, 'groups', currentGroupId, 'verses', currentVerseDoc.id, 'comments'), {
+        memberId: currentUid, text, createdAt: fs.serverTimestamp(),
+      });
+      input.value = '';
+    } catch (e) {
+      showToast('댓글 등록에 실패했어요.');
+    }
+  }
+  document.getElementById('groupCommentSubmitBtn').addEventListener('click', submitGroupComment);
+  document.getElementById('groupCommentInput').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') submitGroupComment();
+  });
+
+  async function deleteGroupComment(commentId) {
+    const c = currentComments.find((x) => x.id === commentId);
+    if (!c || !currentVerseDoc) return;
+    const isMine = c.memberId === currentUid;
+    const payload = { deleted: true, text: '' };
+    if (!isMine) {
+      if (!adminUnlocked) return;
+      payload.authPinHash = adminPinHash;
+    }
+    try {
+      await fs.updateDoc(fs.doc(db, 'groups', currentGroupId, 'verses', currentVerseDoc.id, 'comments', commentId), payload);
+    } catch (e) {
+      showToast('삭제에 실패했어요.');
+    }
+  }
+  document.getElementById('groupComments').addEventListener('click', (e) => {
+    const delBtn = e.target.closest('[data-action="delete-comment"]');
+    if (delBtn) deleteGroupComment(delBtn.dataset.commentId);
+  });
+
+  document.getElementById('groupAdminUnlockBtn').addEventListener('click', async () => {
+    const pin = document.getElementById('groupAdminPinInput').value.trim();
+    const statusEl = document.getElementById('groupAdminStatus');
+    if (!currentGroupData) return;
+    if (!/^\d{4,6}$/.test(pin)) { statusEl.textContent = 'PIN 형식이 올바르지 않아요.'; statusEl.className = 'lookup-status missing'; return; }
+    const hash = await sha256Hex(pin);
+    if (hash !== currentGroupData.pinHash) {
+      statusEl.textContent = 'PIN이 일치하지 않아요.';
+      statusEl.className = 'lookup-status missing';
+      return;
+    }
+    adminUnlocked = true;
+    adminPinHash = hash;
+    statusEl.textContent = '';
+    renderGroupRoomHeader();
+    renderCompletionList();
+    renderComments();
+  });
+
+  document.getElementById('groupPostVerseBtn').addEventListener('click', () => {
+    showGroupPanel('groupPickVersePanel');
+    renderPickVerseChips();
+    renderPickVerseList('all');
+  });
+  document.getElementById('groupPickVerseBackBtn').addEventListener('click', () => {
+    showGroupPanel('groupRoomPanel');
+  });
+  function renderPickVerseChips() {
+    const row = document.getElementById('groupPickVerseChipRow');
+    row.innerHTML = '';
+    const cats = ['all', ...Array.from(new Set(VERSES.map((v) => v.category)))];
+    cats.forEach((cat) => {
+      const btn = document.createElement('button');
+      btn.className = 'chip' + (cat === 'all' ? ' active' : '');
+      btn.textContent = cat === 'all' ? '전체' : cat;
+      btn.addEventListener('click', () => {
+        row.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', c === btn));
+        renderPickVerseList(cat);
+      });
+      row.appendChild(btn);
+    });
+  }
+  function renderPickVerseList(cat) {
+    const listEl = document.getElementById('groupPickVerseList');
+    const filtered = cat === 'all' ? VERSES : VERSES.filter((v) => v.category === cat);
+    if (!filtered.length) { listEl.innerHTML = '<p class="verse-list-empty">구절이 없어요.</p>'; return; }
+    listEl.innerHTML = filtered.map((v) => {
+      const slug = CATEGORY_SLUG[v.category];
+      return `<button class="verse-list-item" data-verse-id="${v.id}">
+        <span class="dot" style="background:var(--cat-${slug})"></span>
+        <span class="info"><span class="ref">${escapeHtml(v.reference)}</span><span class="preview">${escapeHtml(v.text)}</span></span>
+      </button>`;
+    }).join('');
+  }
+  document.getElementById('groupPickVerseList').addEventListener('click', async (e) => {
+    const btn = e.target.closest('.verse-list-item');
+    if (!btn) return;
+    const v = VERSES.find((x) => x.id === btn.dataset.verseId);
+    if (!v || !adminUnlocked) return;
+    try {
+      await fs.addDoc(fs.collection(db, 'groups', currentGroupId, 'verses'), {
+        reference: v.reference, text: v.text, postedAt: fs.serverTimestamp(), authPinHash: adminPinHash,
+      });
+      showGroupPanel('groupRoomPanel');
+      showToast('이번주 구절을 올렸어요.');
+    } catch (e2) {
+      showToast('구절 올리기에 실패했어요.');
+    }
+  });
+
+  document.getElementById('groupRenameBtn').addEventListener('click', async () => {
+    if (!adminUnlocked || !currentGroupData) return;
+    const name = prompt('새 그룹 이름을 입력해주세요.', currentGroupData.name || '');
+    if (!name || !name.trim()) return;
+    try {
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId), {
+        name: name.trim(), pinHash: currentGroupData.pinHash, createdAt: currentGroupData.createdAt, authPinHash: adminPinHash,
+      });
+    } catch (e) {
+      showToast('이름 수정에 실패했어요.');
+    }
+  });
+
+  document.getElementById('groupResetPinBtn').addEventListener('click', async () => {
+    if (!adminUnlocked || !currentGroupData) return;
+    const newPin = prompt('새 관리자 PIN을 입력해주세요 (숫자 4~6자리).', '');
+    if (!newPin || !/^\d{4,6}$/.test(newPin.trim())) { showToast('PIN은 숫자 4~6자리로 입력해주세요.'); return; }
+    try {
+      const newHash = await sha256Hex(newPin.trim());
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId), {
+        name: currentGroupData.name, pinHash: newHash, createdAt: currentGroupData.createdAt, authPinHash: adminPinHash,
+      });
+      adminPinHash = newHash;
+      showToast('PIN이 변경됐어요.');
+    } catch (e) {
+      showToast('PIN 변경에 실패했어요.');
+    }
+  });
+
+  document.getElementById('groupDeleteBtn').addEventListener('click', async () => {
+    if (!adminUnlocked || !currentGroupData) return;
+    if (!confirm('정말 이 그룹을 삭제할까요? 되돌릴 수 없어요.')) return;
+    try {
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId), {
+        name: currentGroupData.name, pinHash: currentGroupData.pinHash, createdAt: currentGroupData.createdAt,
+        authPinHash: adminPinHash, deleted: true,
+      });
+      removeMyGroup(currentGroupId);
+      showToast('그룹을 삭제했어요.');
+      showGroupLobby();
+    } catch (e) {
+      showToast('삭제에 실패했어요.');
+    }
+  });
+
+  document.getElementById('groupLeaveBtn').addEventListener('click', async () => {
+    if (!currentGroupId || !currentUid) return;
+    if (!confirm('정말 이 그룹에서 나가시겠어요?')) return;
+    try {
+      const m = currentMembers.find((x) => x.id === currentUid);
+      await fs.setDoc(fs.doc(db, 'groups', currentGroupId, 'members', currentUid), {
+        nickname: (m && m.nickname) || currentNickname, joinedAt: (m && m.joinedAt) || fs.serverTimestamp(), kicked: true,
+      });
+    } catch (e) {}
+    removeMyGroup(currentGroupId);
+    showGroupLobby();
+  });
+
+  document.getElementById('groupShareBtn').addEventListener('click', async () => {
+    if (!currentGroupId || !currentGroupData) return;
+    const url = `${SHARE_URL}?group=${currentGroupId}`;
+    const text = `${currentGroupData.name} 그룹 암송반에 초대해요!\n초대 코드: ${currentGroupId}\n${url}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: currentGroupData.name, text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; }
+    }
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast('초대 코드가 복사됐어요!');
+    } catch (e) {
+      showToast(`초대 코드: ${currentGroupId}`);
+    }
+  });
+
+  function checkGroupInviteParam() {
+    const params = new URLSearchParams(location.search);
+    const code = params.get('group');
+    if (!code) return;
+    const normalized = code.toUpperCase();
+    const existing = findMyGroup(normalized);
+    showScreen('group');
+    if (existing) {
+      openGroupRoom(existing.groupId, existing.nickname);
+    } else {
+      showGroupPanel('groupJoinPanel');
+      document.getElementById('groupJoinCode').value = normalized;
+      document.getElementById('groupJoinNickname').value = '';
+      document.getElementById('groupJoinStatus').textContent = '';
+    }
+  }
+
   const savedAppState = loadAppState();
   if (savedAppState) {
     if (typeof savedAppState.category === 'string' && (isListCategory(savedAppState.category) || categories.includes(savedAppState.category))) {
@@ -2899,5 +3655,8 @@ const READ_PASSAGES = [
     }
   }
   render();
-  showScreen(savedAppState && ['home', 'study', 'read'].includes(savedAppState.screen) ? savedAppState.screen : 'home');
+  const initialScreen = savedAppState && ['home', 'study', 'read', 'group'].includes(savedAppState.screen) ? savedAppState.screen : 'home';
+  showScreen(initialScreen);
+  if (initialScreen === 'group') showGroupLobby();
+  checkGroupInviteParam();
 </script>
