@@ -751,6 +751,8 @@
   .group-room-name { margin: 0; font-family: 'Gothic A1', sans-serif; font-weight: 800; font-size: 20px; }
   .group-room-meta { margin: 0; font-size: 12.5px; color: var(--ink-soft); }
   .group-room-actions { display: flex; gap: 16px; }
+  .group-share-btn { display: inline-flex; align-items: center; gap: 5px; }
+  .group-share-btn svg { width: 14px; height: 14px; }
 
   .group-verse-card {
     padding: 20px 18px; border-radius: 20px; background: var(--surface);
@@ -1009,7 +1011,10 @@
         <p class="group-room-meta" id="groupRoomMeta"></p>
       </div>
       <div class="group-room-actions">
-        <button class="text-btn" id="groupShareBtn">초대 코드 공유</button>
+        <button class="text-btn group-share-btn" id="groupShareBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="M7.5 8.5 12 4l4.5 4.5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>
+          초대 코드 공유
+        </button>
         <button class="text-btn" id="groupLeaveBtn">그룹 나가기</button>
       </div>
 
