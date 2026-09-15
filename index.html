@@ -371,7 +371,12 @@
     justify-content: center;
     gap: 22px;
   }
-  .card-back-image { display: none; }
+  .card-back-image {
+    display: none;
+    -webkit-touch-callout: default;
+    -webkit-user-select: auto;
+    user-select: auto;
+  }
   .card.has-image .card-back {
     padding: 0;
     overflow: hidden;
@@ -389,6 +394,23 @@
   .card.has-image .card-back .reference-small {
     display: none;
   }
+  .image-save-hint {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    background: rgba(20, 22, 27, 0.55);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .card.has-image .image-save-hint { display: block; }
   .verse-text {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
@@ -405,7 +427,7 @@
     margin: 0;
   }
 
-  .mastery-btn, .favorite-btn, .delete-btn, .speak-btn {
+  .mastery-btn, .favorite-btn, .delete-btn, .speak-btn, .share-btn {
     position: absolute;
     width: 34px;
     height: 34px;
@@ -421,7 +443,7 @@
     z-index: 2;
     transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease, box-shadow 0.18s ease;
   }
-  .mastery-btn:active, .favorite-btn:active, .delete-btn:active, .speak-btn:active { transform: scale(0.88); }
+  .mastery-btn:active, .favorite-btn:active, .delete-btn:active, .speak-btn:active, .share-btn:active { transform: scale(0.88); }
   .mastery-btn.is-mastered, .favorite-btn.is-favorite, .speak-btn.speaking {
     box-shadow: 0 6px 14px -6px var(--shadow);
   }
@@ -429,6 +451,8 @@
   .favorite-btn { top: 22px; right: 64px; }
   .delete-btn { bottom: 22px; left: 22px; display: none; color: #b34747; }
   .delete-btn.visible { display: flex; }
+  .share-btn { bottom: 22px; left: 22px; }
+  .delete-btn.visible ~ .share-btn { left: 64px; }
   .speak-btn { bottom: 22px; right: 22px; }
   .mastery-btn.is-mastered {
     background: var(--gold);
@@ -444,7 +468,28 @@
     background: var(--indigo);
     color: #fff;
   }
-  .mastery-btn svg, .favorite-btn svg, .delete-btn svg, .speak-btn svg { width: 16px; height: 16px; }
+  .mastery-btn svg, .favorite-btn svg, .delete-btn svg, .speak-btn svg, .share-btn svg { width: 16px; height: 16px; }
+
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%) translateY(8px);
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px -6px var(--shadow);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 50;
+    max-width: 88vw;
+    text-align: center;
+  }
+  .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
 
   .controls {
     display: grid;
@@ -703,6 +748,9 @@
         <button class="speak-btn" id="homeSpeakBtn" aria-label="말씀 읽어주기">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
         </button>
+        <button class="share-btn" id="homeShareBtn" aria-label="공유하기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="M7.5 8.5 12 4l4.5 4.5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>
+        </button>
         <div class="card-inner">
           <div class="card-face card-front">
             <span class="chip category-chip" id="homeCategory"></span>
@@ -712,6 +760,7 @@
           </div>
           <div class="card-face card-back">
             <img class="card-back-image" id="homeBackImage" alt="" />
+            <p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>
             <p class="verse-text" id="homeText"></p>
             <p class="reference-small" id="homeRefSmall"></p>
           </div>
@@ -761,6 +810,9 @@
       <button class="speak-btn" id="speakBtn" aria-label="말씀 읽어주기">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
       </button>
+      <button class="share-btn" id="shareBtn" aria-label="공유하기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="M7.5 8.5 12 4l4.5 4.5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>
+      </button>
       <div class="card-inner">
         <div class="card-face card-front">
           <span class="chip category-chip" id="frontCategory"></span>
@@ -770,6 +822,7 @@
         </div>
         <div class="card-face card-back">
           <img class="card-back-image" id="backImage" alt="" />
+          <p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>
           <p class="verse-text" id="backText"></p>
           <p class="reference-small" id="backRef"></p>
         </div>
@@ -851,6 +904,8 @@
 
   <p class="church-footer">세움교회</p>
 </div>
+
+<div class="toast" id="toast"></div>
 
 <div class="modal-backdrop" id="modalBackdrop">
   <div class="modal-panel">
@@ -1538,6 +1593,60 @@ const READ_PASSAGES = [
     try { localStorage.setItem(ORDER_KEY, JSON.stringify(order)); } catch (e) {}
   }
 
+  const STATE_KEY = 'malsseumcard.state.v1';
+  function loadAppState() {
+    try {
+      const raw = localStorage.getItem(STATE_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  function saveAppState() {
+    try {
+      localStorage.setItem(STATE_KEY, JSON.stringify({ screen: currentScreen, category, pos, cardMode, hideMastered }));
+    } catch (e) {}
+  }
+
+  const SHARE_URL = 'https://ssomman.github.io/malsseumcard/';
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('visible');
+    clearTimeout(showToast._timer);
+    showToast._timer = setTimeout(() => toast.classList.remove('visible'), 2200);
+  }
+  async function shareVerse(v, hasImage) {
+    if (!v) return;
+    const caption = `${v.reference}\n"${v.text}"\n\n${SHARE_URL}`;
+    if (hasImage && navigator.canShare) {
+      try {
+        const res = await fetch(`images/verses/${v.id}.jpg`);
+        const blob = await res.blob();
+        const file = new File([blob], `${v.id}.jpg`, { type: blob.type || 'image/jpeg' });
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file], title: v.reference, text: caption });
+          return;
+        }
+      } catch (e) {
+        if (e && e.name === 'AbortError') return;
+      }
+    }
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: v.reference, text: `${v.reference}\n"${v.text}"`, url: SHARE_URL });
+        return;
+      } catch (e) {
+        if (e && e.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(caption);
+      showToast('말씀이 복사되었어요. 카카오톡에 붙여넣어 보세요!');
+    } catch (e) {
+      showToast('이 브라우저에서는 공유가 지원되지 않아요.');
+    }
+  }
+
   let mastered = loadMastered();
   let favorites = loadFavorites();
   let baseOrder = loadOrder() || VERSES.map((_, i) => i);
@@ -1547,6 +1656,7 @@ const READ_PASSAGES = [
   let flipped = false;
   let viewMode = 'deck';
   let cardMode = 'illustrated';
+  let currentScreen = 'home';
   function isListCategory(cat) { return cat === '__favorites__' || cat === '__mastered__'; }
 
   const els = {
@@ -1568,6 +1678,7 @@ const READ_PASSAGES = [
     masteryBtn: document.getElementById('masteryBtn'),
     favoriteBtn: document.getElementById('favoriteBtn'),
     speakBtn: document.getElementById('speakBtn'),
+    shareBtn: document.getElementById('shareBtn'),
     deleteBtn: document.getElementById('deleteBtn'),
     posLabel: document.getElementById('posLabel'),
     progressFill: document.getElementById('progressFill'),
@@ -2355,6 +2466,7 @@ const READ_PASSAGES = [
   }
 
   function render() {
+    saveAppState();
     const deck = currentDeck();
     const listCat = isListCategory(category);
     els.backToListBtn.style.display = (listCat && viewMode === 'deck') ? '' : 'none';
@@ -2485,6 +2597,13 @@ const READ_PASSAGES = [
     const v = VERSES[deck[pos]];
     if (v.custom) deleteCustomVerse(v.id);
   });
+  els.shareBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const deck = currentDeck();
+    if (!deck.length) return;
+    const v = VERSES[deck[pos]];
+    shareVerse(v, els.card.classList.contains('has-image'));
+  });
   document.getElementById('shuffleBtn').addEventListener('click', shuffleOrder);
   document.getElementById('emptyResetBtn').addEventListener('click', () => {
     hideMastered = false;
@@ -2506,6 +2625,7 @@ const READ_PASSAGES = [
   const homeMasteryBtn = document.getElementById('homeMasteryBtn');
   const homeFavoriteBtn = document.getElementById('homeFavoriteBtn');
   const homeSpeakBtn = document.getElementById('homeSpeakBtn');
+  const homeShareBtn = document.getElementById('homeShareBtn');
   const homeBackImage = document.getElementById('homeBackImage');
   let homeFlipped = false;
 
@@ -2546,12 +2666,14 @@ const READ_PASSAGES = [
   }
   function showScreen(screen) {
     stopSpeaking();
+    currentScreen = screen;
     homeViewEl.style.display = screen === 'home' ? '' : 'none';
     studyViewEl.style.display = screen === 'study' ? '' : 'none';
     readViewEl.style.display = screen === 'read' ? '' : 'none';
     homeBtn.classList.toggle('active', screen === 'home');
     if (screen === 'home') renderHome();
     if (screen === 'read') { readMode = 'categories'; renderReadScreen(); }
+    saveAppState();
   }
   function toggleHomeFlip() {
     homeFlipped = !homeFlipped;
@@ -2582,6 +2704,12 @@ const READ_PASSAGES = [
     const v = getTodayVerse();
     if (!v) return;
     toggleSpeak(`${v.reference}. ${v.text}`, homeSpeakBtn, repeatCount);
+  });
+  homeShareBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const v = getTodayVerse();
+    if (!v) return;
+    shareVerse(v, homeCardEl.classList.contains('has-image'));
   });
   homeBtn.addEventListener('click', () => showScreen('home'));
   document.getElementById('homeSimpleBtn').addEventListener('click', () => {
@@ -2754,6 +2882,22 @@ const READ_PASSAGES = [
     renderReadDetail();
   });
 
+  const savedAppState = loadAppState();
+  if (savedAppState) {
+    if (typeof savedAppState.category === 'string' && (isListCategory(savedAppState.category) || categories.includes(savedAppState.category))) {
+      category = savedAppState.category;
+    }
+    if (savedAppState.cardMode === 'simple' || savedAppState.cardMode === 'illustrated') {
+      cardMode = savedAppState.cardMode;
+    }
+    hideMastered = !!savedAppState.hideMastered;
+    els.reviewOnly.checked = hideMastered;
+    viewMode = isListCategory(category) ? 'list' : 'deck';
+    const savedDeck = currentDeck();
+    if (Number.isInteger(savedAppState.pos) && savedAppState.pos >= 0 && savedAppState.pos < savedDeck.length) {
+      pos = savedAppState.pos;
+    }
+  }
   render();
-  showScreen('home');
+  showScreen(savedAppState && ['home', 'study', 'read'].includes(savedAppState.screen) ? savedAppState.screen : 'home');
 </script>
