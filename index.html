@@ -306,7 +306,7 @@
   }
   .modal-panel input, .modal-panel textarea, .modal-panel select {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     padding: 11px 13px;
     border-radius: 13px;
     border: none;
@@ -317,7 +317,7 @@
   .modal-panel textarea { resize: vertical; line-height: 1.5; }
   .group-panel input, .group-panel select {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     padding: 11px 13px;
     border-radius: 13px;
     border: none;
@@ -1127,8 +1127,8 @@
       </div>
       <div class="group-room-actions">
         <button class="text-btn group-share-btn" id="groupShareBtn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="M7.5 8.5 12 4l4.5 4.5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>
-          초대 코드 공유
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          초대 코드 복사
         </button>
         <button class="text-btn" id="groupLeaveBtn">그룹 나가기</button>
       </div>
@@ -3306,6 +3306,12 @@ const READ_PASSAGES = [
   let groupCardFlipped = false;
   let groupCardMode = 'illustrated';
 
+  function resolveVerseCardId(v) {
+    if (v.cardId) return v.cardId;
+    const match = VERSES.find((x) => x.reference === v.reference);
+    return match ? match.id : '';
+  }
+
   function detachGroupListeners() {
     if (groupUnsub) { groupUnsub(); groupUnsub = null; }
     if (membersUnsub) { membersUnsub(); membersUnsub = null; }
@@ -3578,7 +3584,7 @@ const READ_PASSAGES = [
               <p class="hint">탭하여 말씀 확인</p>
             </div>
             <div class="card-face card-back">
-              ${showImage ? `<img class="card-back-image" src="images/verses/${escapeHtml(v.cardId || '')}.jpg" alt="" onerror="this.closest('.card').classList.remove('has-image')" /><p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>` : ''}
+              ${showImage ? `<img class="card-back-image" src="images/verses/${escapeHtml(resolveVerseCardId(v))}.jpg" alt="" onerror="this.closest('.card').classList.remove('has-image')" /><p class="image-save-hint">이미지를 꾹 눌러 저장해보세요</p>` : ''}
               <p class="verse-text">${escapeHtml(v.text)}</p>
               <p class="reference-small">${escapeHtml(v.reference)}</p>
             </div>
@@ -3864,15 +3870,10 @@ const READ_PASSAGES = [
   });
 
   document.getElementById('groupShareBtn').addEventListener('click', async () => {
-    if (!currentGroupId || !currentGroupData) return;
-    const url = `${SHARE_URL}?group=${currentGroupId}`;
-    const text = `${currentGroupData.name} 그룹 암송반에 초대해요!\n초대 코드: ${currentGroupId}\n${url}`;
-    if (navigator.share) {
-      try { await navigator.share({ title: currentGroupData.name, text, url }); return; } catch (e) { if (e && e.name === 'AbortError') return; }
-    }
+    if (!currentGroupId) return;
     try {
-      await navigator.clipboard.writeText(text);
-      showToast('초대 코드가 복사됐어요!');
+      await navigator.clipboard.writeText(currentGroupId);
+      showToast('초대 코드가 복사됐어요! 그룹원에게 코드를 전달해 주세요.');
     } catch (e) {
       showToast(`초대 코드: ${currentGroupId}`);
     }
