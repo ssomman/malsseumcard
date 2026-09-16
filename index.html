@@ -749,7 +749,16 @@
     background: var(--surface-2);
   }
   .verse-list-item.playing .ref { color: var(--indigo); }
-  .read-cta-btn { width: 100%; font-weight: 700; color: var(--gold); }
+  .read-cta-btn {
+    width: 100%;
+    background: var(--gold);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 14px 24px -12px var(--gold);
+  }
+  @media (hover: hover) {
+    .read-cta-btn:hover { filter: brightness(1.08); color: #fff; }
+  }
   /* ---------- 성경단편읽기 ---------- */
   .read-view { display: flex; flex-direction: column; gap: 16px; }
   .read-panel { display: flex; flex-direction: column; gap: 14px; }
@@ -802,7 +811,14 @@
   }
 
   /* ---------- 그룹 암송반 ---------- */
-  .group-cta-btn { color: var(--teal); }
+  .group-cta-btn {
+    background: var(--teal);
+    color: #fff;
+    box-shadow: 0 14px 24px -12px var(--teal);
+  }
+  @media (hover: hover) {
+    .group-cta-btn:hover { filter: brightness(1.08); color: #fff; }
+  }
   .group-view { display: flex; flex-direction: column; gap: 16px; }
   .group-panel { display: flex; flex-direction: column; gap: 12px; }
   .group-list { display: flex; flex-direction: column; gap: 8px; }
