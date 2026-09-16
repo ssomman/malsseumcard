@@ -20,6 +20,7 @@
     --gold: #DB8A1E;
     --gold-soft: #F0B564;
     --indigo: #3B4CCB;
+    --teal: #1C8F6B;
     --line: rgba(20, 22, 27, 0.07);
     --shadow: rgba(20, 22, 30, 0.16);
 
@@ -40,6 +41,7 @@
       --gold: #F0A63E;
       --gold-soft: #F5C179;
       --indigo: #7C89F0;
+      --teal: #4FD9A6;
       --line: rgba(255, 255, 255, 0.09);
       --shadow: rgba(0, 0, 0, 0.55);
 
@@ -60,6 +62,7 @@
     --gold: #F0A63E;
     --gold-soft: #F5C179;
     --indigo: #7C89F0;
+    --teal: #4FD9A6;
     --line: rgba(255, 255, 255, 0.09);
     --shadow: rgba(0, 0, 0, 0.55);
 
@@ -685,12 +688,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
-  .home-mode-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  .home-mode-row .ctrl-btn { font-size: 13.5px; padding: 0 4px; }
   .study-view {
     display: flex;
     flex-direction: column;
@@ -805,7 +802,7 @@
   }
 
   /* ---------- 그룹 암송반 ---------- */
-  .group-cta-btn { color: var(--indigo); }
+  .group-cta-btn { color: var(--teal); }
   .group-view { display: flex; flex-direction: column; gap: 16px; }
   .group-panel { display: flex; flex-direction: column; gap: 12px; }
   .group-list { display: flex; flex-direction: column; gap: 8px; }
@@ -931,10 +928,7 @@
       </div>
     </div>
     <p class="home-stats" id="homeStats"></p>
-    <div class="home-mode-row">
-      <button class="ctrl-btn ctrl-btn-primary" id="homeSimpleBtn">심플 말씀카드</button>
-      <button class="ctrl-btn ctrl-btn-primary" id="homeIllustratedBtn">일러스트 말씀카드</button>
-    </div>
+    <button class="ctrl-btn ctrl-btn-primary" id="homeStudyBtn">말씀카드</button>
     <button class="ctrl-btn read-cta-btn" id="homeReadBtn">성경 단편 읽기</button>
     <button class="ctrl-btn read-cta-btn group-cta-btn" id="homeGroupBtn">그룹 암송반</button>
     <div class="home-actions">
@@ -3029,12 +3023,7 @@ const READ_PASSAGES = [
     shareVerse(v, homeCardEl.classList.contains('has-image'));
   });
   homeBtn.addEventListener('click', () => showScreen('home'));
-  document.getElementById('homeSimpleBtn').addEventListener('click', () => {
-    cardMode = 'simple';
-    showScreen('study');
-    render();
-  });
-  document.getElementById('homeIllustratedBtn').addEventListener('click', () => {
+  document.getElementById('homeStudyBtn').addEventListener('click', () => {
     cardMode = 'illustrated';
     showScreen('study');
     render();
